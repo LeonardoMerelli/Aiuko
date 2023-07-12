@@ -1,0 +1,45 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #1f6845e6;
+    background-size: cover;
+}
+
+.sfondo_container {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.sfumatura {
+    background-image: linear-gradient(to top, #1f6845e6 0%,rgba(255, 255, 255, 0) 60%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color:  rgba(255, 255, 255, 0.2);
+}
+
+.sfondo_iniziale {
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    background-image: url(/images/img_iniziale.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titolo {
+    width: 294.7133483886719px;
+    height: 277px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0px;
+    background-image: url(/images/senza_cerchi_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
