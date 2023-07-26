@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intolleranze</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+            background-image:linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%) ;
+            background-size: cover;
+        }
+
+        .titolo {
+            position: relative;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 50%;
+            max-width: 200px;
+            height: 20%;
+        }
+
+        .titolo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .descrizione {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            align-items: center;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .descrizione span {
+            color:rgba(255, 255, 255, 1);
+            text-align: center;
+            font-size:30px;
+            letter-spacing:0;
+        }
+
+        .grid-container {
+            display: grid;
+            place-items: center;
+            }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .intolleranza {
+            margin: 10px;
+            padding: 10px;
+            background-color:rgba(0, 0, 0, 0.5);
+            width: 6em;
+            height: 6em;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            color: #fff;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .intolleranza.selected {
+            background-color:rgba(244.0000006556511, 170.0000050663948, 65.0000037252903, 0.8999999761581421);
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color:rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421);
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+            border: none;
+            padding: 5px 15px;
+            color: #fff;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            font-size: 15px;
+            letter-spacing: 0;
+        }
+
+        button:active, button:hover, button::after{
+            background-color:rgba(255, 255, 255, 0.6299999952316284);
+            color: #000;
+        }
+
+        button.indietro {
+            margin-right: 28px;
+            margin-top: 10px;
+        }
+
+        button.avanti {
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="titolo">
+        <img src="senza_cerchi_1.png">
+    </div>
+    <div class="descrizione">
+        <span>STO <b>SEGUENDO</b> UNA <b>DIETA</b></span>
+    </div>
+
+    <div class="grid-container">
+        <div class="row">
+            <div class="intolleranza" data-value="1" onclick="toggleSelection(this)">
+                <br>
+                <i class="fa-solid fa-wheat-awn fa-2xl" style="color: #ffffff;"></i>
+                <br>
+                <div class="testo">Glutine</div>
+            </div>
+            <div class="intolleranza" data-value="2" onclick="toggleSelection(this)"></div>
+        </div>
+        <div class="row">
+            <div class="intolleranza" data-value="3" onclick="toggleSelection(this)"></div>
+            <div class="intolleranza" data-value="4" onclick="toggleSelection(this)"></div>
+        </div>
+        <div class="row">
+            <div class="intolleranza" data-value="5" onclick="toggleSelection(this)"></div>
+            <div class="intolleranza" data-value="6" onclick="toggleSelection(this)"></div>
+        </div>
+        <div class="row">
+            <div class="intolleranza" data-value="5" onclick="toggleSelection(this)"></div>
+            <div class="intolleranza" data-value="6" onclick="toggleSelection(this)"></div>
+        </div>
+    </div>
+    <form id="menuForm" action="" method="POST">
+        <input type="hidden" id="divSelezionateInput" name="div_selezionate" value="">
+        <button class="indietro">INDIETRO</button>
+        <button type="submit" class="avanti">AVANTI</button>
+    </form>
+
+
+    <script>
+        function toggleSelection(div) {
+        div.classList.toggle('selected');
+            updateSelectedDivs();
+        }
+
+        function updateSelectedDivs() {
+            // Seleziona tutte le div con la classe "selected"
+            const selectedDivs = document.querySelectorAll('.intolleranza.selected');
+            
+            // Array per memorizzare gli identificatori delle div selezionate
+            const selectedDivIds = [];
+            
+            // Scansiona le div selezionate e aggiungi i loro identificatori all'array
+            selectedDivs.forEach(div => {
+                selectedDivIds.push(div.dataset.value);
+            });
+        
+            // Aggiorna il valore dell'input nascosto con l'elenco degli identificatori delle div selezionate
+            document.getElementById('divSelezionateInput').value = selectedDivIds.join(',');
+        }
+    </script>
+</body>
+</html>
