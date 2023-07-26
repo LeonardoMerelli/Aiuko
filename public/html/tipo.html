@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipologia pasto</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Prompt:wght@500&display=swap" rel="stylesheet">
     <style>
         body {
             background-image:linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 5.20833320915699%,rgba(105.89583367109299, 212.4999949336052, 88.54167088866234, 1) 80.72916865348816%) ;
@@ -31,6 +34,8 @@
             color: #ffffff;
             font-size: 40px;
             margin-left: 1%;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Prompt', sans-serif;  
         }
 
         .scritta b{
@@ -41,20 +46,42 @@
             font-size: 20px;
         }
 
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1%;
+        }
+
         .lista_giorni {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            width: 60%;
             background-color:rgba(0, 0, 0, 0.5899999737739563);
             border-top-left-radius:10px;
             border-top-right-radius:10px;
             border-bottom-left-radius:10px;
             border-bottom-right-radius:10px;
+            padding: 10px 40px;
         }
 
         .lista_giorni>div {
-            background-color:rgba(0, 0, 0, 0.6000000238418579);
+            background-color:rgba(255, 255, 255, 0.5);
             color: #000000;
+            text-align: center;
+            font-size: 40px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
         }
+
+        .lista_giorni>div::after, .lista_giorni>div:active, .lista_giorni>div:hover {
+            background-color:rgba(30.803647488355637, 104.12499949336052, 68.93074840307236, 1);
+            color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
@@ -65,14 +92,16 @@
             <span class="sotto_scritta">Come stai oggi?</span>
         </div>
     </div>
-    <div class="lista_giorni">
-        <div class="lu">L</div>
-        <div class="ma">M</div>
-        <div class="me">M</div>
-        <div class="gi">G</div>
-        <div class="ve">V</div>
-        <div class="sa">S</div>
-        <div class="do">D</div>
+    <div class="main">
+        <div class="lista_giorni">
+            <div class="lu">L</div>
+            <div class="ma">M</div>
+            <div class="me">M</div>
+            <div class="gi">G</div>
+            <div class="ve">V</div>
+            <div class="sa">S</div>
+            <div class="do">D</div>
+        </div>
     </div>
 </body>
 </html>
