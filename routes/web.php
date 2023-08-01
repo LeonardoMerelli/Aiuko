@@ -26,5 +26,3 @@ Route::post('/register', [UserProfileController::class, 'update'])
 Route::middleware(['can:isUser'])->group(function () {
     
 });
-
-
