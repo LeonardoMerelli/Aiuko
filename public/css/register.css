@@ -17,12 +17,13 @@
     gap:30px;
     max-width: 900px;
     width: 100%;
+    margin-top: 30px;
   }
   .input-container-form .input-div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 75%;
+    justify-content: center;
+    width: 85%;
     gap: 10px;
     font-size: 19px;
   }
@@ -50,21 +51,29 @@
   }
   
   .input-container-form .input-div  input{
-    width: 90%;
-    max-width: 250px;
+    width: 70%;
     height: 25px;
     font-size: 18px;
     color: #fff;
     border: none;
-    border-bottom: 1.5px solid #fff;
-    background-color: transparent;
-    padding-bottom: 0;
+    border-bottom: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
     outline: none;
+    margin-left: 5px;
+  }
+  
+  .input-container-form .input-div  label {
+    width: 30%;
   }
 
-  .input-container-form .input-div  label {
-    min-width: 80px;
-  }
+    @media (max-width: 768px) {
+        .input-container-form .input-div  input {
+            max-width: 200px;
+        }
+    }
+
   .input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
   .input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -141,6 +150,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
   }
   .input-container-form .input-container-btn-div .input-container-btn {
     background-color:  #0d1b2a8b;
