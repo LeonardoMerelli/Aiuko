@@ -20,7 +20,7 @@ return new class extends Migration
             #metiamo come data YYYY/MM/dd non come lunedi martedi ecc
             $table->string('giorno');
             $table->foreign('idPasto')->references('idPasto')->on('meals');
-            $table->foreign('idUtente')->references('idUtente')->on('users');
+            
         });
     }
 
