@@ -14,24 +14,17 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/Aiuko', [UserProfileController::class, 'show'])
+        ->name('aiuko');
+
+Route::get('/register', [UserProfileController::class, 'edit'])
+        ->name('register.edit');
+
+Route::post('/register', [UserProfileController::class, 'update'])
+        ->name('profilo.update');
+
+Route::middleware(['can:isUser'])->group(function () {
+    
 });
 
-Route::get('auth/google', function () {
-    return Socialite::driver('google')->redirect();
-});
 
-Route::get('auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-    // Esempio di utilizzo dei dati dell'utente ottenuti da Google
-    // $user->getId(); // ID univoco dell'utente su Google
-    // $user->getName(); // Nome completo dell'utente
-    // $user->getEmail(); // Email dell'utente
-
-    // Aggiungi qui la logica per l'autenticazione dell'utente nel tuo sistema
-    // ...
-
-    return redirect('/')->with('success', 'Accesso con Google riuscito!');
-});
