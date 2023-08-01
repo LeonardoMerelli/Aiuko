@@ -6,7 +6,7 @@
         <!--titolo-->
         <h2>Registrazione</h2>
         <!--inizio form-->
-        {{Form::open(array('route'=>'register', 'class'=>'input-container-form'))}}
+        {{Form::open(array('route'=>'register.store', 'class'=>'input-container-form'))}}
         {{Form::token()}}
 
             <div class= "input-div">
