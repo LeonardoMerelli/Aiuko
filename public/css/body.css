@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1f6845e6;
+}
+main {
+  background-color: #1f6845e6;
+}
+
+
+
+
+@font-face {
+	font-family: 'SF-Pro-Display-BI';
+	src: url('public/css/SF-Pro-Fonts/SFPRODISPLAYBLACKITALIC.OTF');
+	}
+@font-face {
+	font-family: 'Black Rose Regular';
+	src: url('BLACKR.eot');
+	src: local('Black Rose Regular'), url('BLACKR.TTF') format('truetype');
+}
