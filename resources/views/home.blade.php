@@ -10,5 +10,4 @@
         <a class="signup" href="#">Sign up with email</a>
         <span>Already have an account? <a href="#  ">Log In</a></span>
     </div>
-
 @endsection
