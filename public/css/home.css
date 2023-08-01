@@ -96,29 +96,3 @@ span {
 .home-bottom-div div p a {
     color: #FFFFFF;
 }
-
-/*VISUALIZZAZIONE DA LAPTOP*/
-@media (max-width: 1200px) {
-    
-}
-
-
-/*VISUALIZZAZIONE DA TABLET*/
-@media (max-width: 980px) { 
-
-}
-
-
-
-/*VISUALIZZAZIONE DA MOBILE ORIZZONTALE*/
-@media (max-width: 767px) {
-
-}
-
-
-
-
-/*VISUALIZZAZIONE DA MOBILE VERTICALE*/
-@media (max-width: 480px) {
-
-}

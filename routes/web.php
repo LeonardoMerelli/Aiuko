@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/Aiuko', [UserProfileController::class, 'show'])
+        ->name('aiuko');
+
+Route::get('/register', [UserProfileController::class, 'edit'])
+        ->name('register.edit');
+
+Route::post('/register', [UserProfileController::class, 'update'])
+        ->name('profilo.update');
+
+Route::middleware(['can:isUser'])->group(function () {
+    
 });
