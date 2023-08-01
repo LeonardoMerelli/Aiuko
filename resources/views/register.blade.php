@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="input-container-btn-div">
-                {{ Form::submit('Invia',['class'=>'input-container-btn'])}} 
+                {{ Form::submit('Avanti',['class'=>'input-container-btn'])}} 
             </div>
         {{Form::close()}}
         <!--fine form-->
