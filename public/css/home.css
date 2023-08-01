@@ -1,75 +1,98 @@
-body {
-    margin: 0 auto;
-    padding: 0;
-    background-color: #1f6845e6;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Prompt', sans-serif;
-    font-family: 'Red Hat Display', sans-serif;
-}
-
-.sfondo_container {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    left: 0px;
-    top: 0px;
-}
-
-.sfumatura {
-    background-image: linear-gradient(to top, #1f6845e6 0%,rgba(255, 255, 255, 0) 60%);
+.home-div {
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background-color:  rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    background-color: #1f6845e6;
 }
-
-.sfondo_iniziale {
+.home-top-div {
     width: 100%;
-    min-width: 900px;
     height: 100%;
     background-image: url(/images/img_iniziale.png);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.titolo {
+.home-bottom-div{
+    height: 100%;
+    background-color: #1f6845e6;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shade {
+    background-image: linear-gradient(to top, #1f6845e6 0%,rgba(255, 255, 255, 0) 50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(/images/senza_cerchi_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 294.7133483886719px;
     height: 277px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 0px;
-    background-image: url(/images/senza_cerchi_1.png);
+}
+
+.background {
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.accesso_container {
-    position: relative;
+.home-bottom-div div {
+    width: 320px;
+    height: 360px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3%;
 }
 
-.accesso_container .signup {
-    padding: 12px;
-    background-color: #000;
+.home-bottom-div div .go-to-registration,.home-bottom-div div .social-registration  {
+    width: 310px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    background-color: #060606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    color: #fff;
     border-radius: 5px;
-    font-size: larger;
-    font-weight: bold;
 }
 
-.accesso_container span {
-    margin: 10px 0 0 0;
-    font-weight: bold;
+span {
+    align-self: center;
+    margin: 8px 0;
+    color: #FFFFFF;
+    font-size: 14px;
 }
-
-.accesso_container span a {
-    color: #fff;
+.home-bottom-div div .social-registration {
+    color:  #060606;
+    background-color: #FFFFFF;
+    margin: 5px 0;
+}
+.home-bottom-div div p {
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    align-self: center;
+}
+.home-bottom-div div p a {
+    color: #FFFFFF;
 }
