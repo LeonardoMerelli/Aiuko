@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ingredients', function (Blueprint $table) {
-            $table->bigIncrements('idIngrediente');
+        Schema::create('meal_ingredients', function (Blueprint $table) {
+            $table->string('idIngrediente');
             $table->string('nome');
             $table->string('calorie');
             $table->string('grassi');
