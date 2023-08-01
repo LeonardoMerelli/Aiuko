@@ -9,7 +9,7 @@
     </div>
     <div class="home-bottom-div">
         <div>
-            <a href="#" class="go-to-registration">Sign up with email</a>
+            <a href=" {{route('register.create')}} " class="go-to-registration">Sign up with email</a>
             <span> or use social sign up</span>
             <a href="#" class="social-registration">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
