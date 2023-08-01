@@ -2,58 +2,35 @@
   .register-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: #fff;
+    width: 100%;
+    height: 100%;
+    outline: none;
   }
   
   .input-container-form{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
     max-width: 900px;
     width: 100%;
-    flex-wrap: wrap;
   }
-  .input-container-form .input-div,
-  .input-container-form .input-div-textarea{
+  .input-container-form .input-div {
     display: flex;
     align-items: center;
-    vertical-align: bottom;
-    justify-content: left;
-    width: 45%;
+    justify-content: space-between;
+    width: 75%;
     gap: 10px;
     font-size: 19px;
-  }
-  .input-container-form .input-div label {
-    min-width: 100px; 
-  }
-  
-  .input-container-form .input-div-textarea textarea {
-    resize: none;
-    border: 1.5px solid var(--oxford-blue);
-    border-radius: 2px;
-    font-family: Roboto,Arial;
-    overflow-y:  scroll;
-    font-size: 16px;
-    min-width: 250px;
-    width: 250px;
-    height: 100px;
-    padding: 5px;
-    margin: 20px 0 20px 20px;
-    background: transparent;
-  }
-  
-  .input-container-form .input-div-textarea textarea:focus {
-    outline: none;
-  }-id {
-    display: none;
   }
   
   /*titolo*/
   .register-section h2{
     font-size: 35px;
-    margin: 50px 0;
+    margin: 40px 0;
   }
   
   /*form*/
@@ -71,23 +48,22 @@
     position: relative;
     transform: translateX(-300px);
   }
-  .input-container-form .input-div-textarea ul{
-    transform: translateY(70px);
-  }
-  .input-container-form .input-div-textarea ul li {
-    transform: translateX(-260px);
-  }
+  
   .input-container-form .input-div  input{
     width: 90%;
-    min-width: 295px;
+    max-width: 250px;
     height: 25px;
     font-size: 18px;
-    color: var(--text-color-rich-black);
+    color: #fff;
     border: none;
-    border-bottom: 1.5px solid var(--text-color-rich-black);
+    border-bottom: 1.5px solid #fff;
     background-color: transparent;
     padding-bottom: 0;
     outline: none;
+  }
+
+  .input-container-form .input-div  label {
+    min-width: 80px;
   }
   .input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
   .input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
@@ -109,7 +85,7 @@
     align-items: center;
     font-size: 19px;
     gap: 10px;
-    width: 50%;
+    width: 80%;
   }
   .input-container-form .radio-div .radio-label {
     padding: 0;
@@ -159,17 +135,17 @@
     padding: 0 8px;
   }
   .input-container-form .input-container-btn-div {
-    width: 405px;
-    margin-top: 20px ;
+    width: 150px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   .input-container-form .input-container-btn-div .input-container-btn {
-    background-color: var(--Y-blue);
-    color: var(--background-color-platino);
-    padding: 12px 24px;
+    background-color:  #0d1b2a8b;
+    color: #fff;
+    padding: 12px 34px;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -185,70 +161,4 @@
   }
   .input-container-form .input-container-btn-div .input-container-btn:active {
     scale: 0.95;
-  }
-  /*link per il login*/
-  .login-register {
-    margin-top: 30px;
-    font-size: 16px;
-    text-align: center;
-  }
-  .login-register a {
-    text-decoration: underline;
-    color: var(--text-color-rich-black);
-    transition: 0.25s;
-    font-size: 17px;
-  }
-  .login-register a:hover {
-    color: var(--silver-blue);
-  }
-  
-  /*logo aziende*/
-  .input-container-form .input-div-logo {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    width: 405px;
-    height: auto;
-  }
-  .input-container-form .input-div-logo label {
-    width: 100px;
-  }
-  .input-container-form .input-div-logo input {
-    display: none;
-  }
-    
-  .input-container-form .input-div-logo>div .label-input-logo {
-    background-color: var(--oxford-blue);
-    color: var(--background-color-platino);
-    padding: 7px 15px;
-    border-radius: 7px;
-    font-size: 15px;
-    width: auto;
-    transition: 0.25s;
-    cursor: pointer;
-    }
-  .input-container-form .input-div-logo>div .label-input-logo:hover {
-    box-shadow: 0 0 10px 0 #0d1b2a8b;
-    }
-  .input-container-form .input-div-logo>div .label-input-logo:active {
-    scale: 0.90;
-    }
-    
-  .input-container-form .input-div-logo>div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    }
-  .input-container-form .input-div-logo>div .display-logo {
-    display: none;
-  }
-  .input-container-form .input-div-logo>div .display-logo>img{
-    max-height: 100px;
-    min-height: 90px;
-    max-width: 290px;
-    min-width: 230px;
-    object-fit:contain;
-    align-self: center;
   }
