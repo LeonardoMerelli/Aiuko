@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('eta');
             $table->string('prefisso', 3);
             $table->string('telefono', 10)->unique();
+            $table->string('citta');
             $table->string('email')->unique();
         });
     }

@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('meal_ingredients', function (Blueprint $table) {
-            $table->string('idIngrediente');
+        Schema::create('meals', function (Blueprint $table) {
+            $table->bigIncrements('idPasto');
             $table->string('nome');
-            $table->string('calorie');
-            $table->string('grassi');
-            $table->string('proteine');
-            $table->string('carboidrati');
-            $table->string('dataConservazione');
-            $table->string('costoKg');
+            $table->string('immagine');
+            $table->string('descrizione');
+            $table->string('tempo');
+            $table->unsignedBigInteger('idDieta');
+            $table->foreign('idDieta')->references('idDieta')->on('diets');
         });
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meal_ingredients');
+        Schema::dropIfExists('meals');
     }
 };
