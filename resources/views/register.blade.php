@@ -1,4 +1,4 @@
-@extends('layout/body')
+@extends('body')
 
 @section('content')
 <!--div esterna-->
@@ -6,7 +6,7 @@
         <!--titolo-->
         <h2>Registrazione</h2>
         <!--inizio form-->
-        {{Form::open(array('route'=>'register', 'class'=>'input-container-form'))}}
+        {{Form::open(array('route'=>'register.store', 'class'=>'input-container-form'))}}
         {{Form::token()}}
 
             <div class= "input-div">
@@ -124,10 +124,6 @@
         {{Form::close()}}
         <!--fine form-->
         <!--div sul fondo-->
-        <div class="login-register">
-                    <p>Possiedi già un account?
-                    <a href="{{ route('login') }}"> Login</a>
-                    </p>  
-        </div>
+       
   </section>
   @endsection
