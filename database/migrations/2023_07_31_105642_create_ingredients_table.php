@@ -13,16 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('idUtente');
+        Schema::create('ingredients', function (Blueprint $table) {
+            $table->bigIncrements('idIngrediente');
             $table->string('nome');
-            $table->string('cognome');
-            $table->string('password');
-            $table->string('genere');
-            $table->string('eta');
-            $table->string('prefisso', 3);
-            $table->string('telefono', 10)->unique();
-            $table->string('email')->unique();
+            $table->string('calorie');
+            $table->string('grassi');
+            $table->string('proteine');
+            $table->string('carboidrati');
+            $table->string('dataConservazione');
+            $table->string('costoKg');
         });
     }
 
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('ingredients');
     }
 };
