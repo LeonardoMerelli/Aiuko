@@ -6,7 +6,7 @@
         <!--titolo-->
         <h2>Registrazione</h2>
         <!--inizio form-->
-        {{Form::open(array('route'=>'register.store', 'class'=>'input-container-form'))}}
+        {{Form::open(array('route'=>'register', 'class'=>'input-container-form'))}}
         {{Form::token()}}
 
             <div class= "input-div">
@@ -75,19 +75,6 @@
                 @endif
             </div>
             <div class= "input-div">
-                {{ Form::label('username','Username')}}
-                {{ Form::text('username')}}
-                @if ($errors->first('username'))
-                <ul>
-                    @foreach($errors->get('username') as $message)
-                    <li>
-                        {{$message}}
-                    </li>   
-                    @endforeach
-                </ul>
-                @endif
-            </div>
-            <div class= "input-div">
                 {{ Form::label('password','Password')}}
                 {{ Form::password('password')}}
                 @if ($errors->first('password'))
@@ -123,7 +110,5 @@
             </div>
         {{Form::close()}}
         <!--fine form-->
-        <!--div sul fondo-->
-       
   </section>
   @endsection
