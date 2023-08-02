@@ -20,8 +20,9 @@
     gap:25px;
     max-width: 900px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
   }
+
   .input-container-form .input-div {
     display: flex;
     align-items: center;
@@ -46,9 +47,12 @@
     white-space: nowrap;
     flex-basis: 100%;
   }
+
   .input-container-form ul li{
     width: 0;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
   }
   
   .input-container-form .input-div  input{
@@ -65,16 +69,16 @@
     margin-left: 5px;
   }
   
-  .input-container-form .input-div  label {
+  .input-container-form .input-div label {
     width: 30%;
     flex: 1;
   }
 
-    @media (max-width: 768px) {
-        .input-container-form .input-div  input {
-            max-width: 200px;
-        }
-    }
+  @media (max-width: 768px) {
+      .input-container-form .input-div  input {
+          max-width: 200px;
+      }
+  }
 
   .input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
   .input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
@@ -86,9 +90,11 @@
     padding: 0 5px;
     cursor: pointer;
   }
+
   .input-div  #date::-webkit-calendar-picker-indicator{
     cursor: pointer;
   }
+
   .input-container-form .radio-div {
     display: flex;
     flex-wrap: wrap;
@@ -98,55 +104,13 @@
     gap: 10px;
     width: 80%;
   }
+
   .input-container-form .radio-div .radio-label {
     padding: 0;
     margin: 0;
   }
   
-  /*radio buttons*/
-  .radio-label input {
-    color: var(--oxford-blue);
-  }
-
-  .input-container-form .radio-div .radio-label {
-    padding: 6px;
-    border-radius: 50px;
-    display: inline-flex;
-    transition: 0.05s;
-    cursor: pointer;
-  
-    &:hover,
-    &:focus-within {
-      background-color: #1b263b1f;
-    }
-  }
-
-  .input-container-form .radio-div .radio-label input{
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    overflow: hidden;
-  
-    &:focus {
-      outline: none;
-    }
-
-  }
-  
-  .input-container-form .radio-div .radio-label label {
-    vertical-align: middle;
-    display: inline-block;  
-    line-height: 20px;
-    padding: 0 8px;
-  }
   .input-container-form .input-container-btn-div {
-    width: 50%;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -154,11 +118,11 @@
     align-items: center;
     margin-bottom: 10px;
   }
+
   .input-container-form .input-container-btn-div .input-container-btn,
   .input-container-form .input-container-btn-div .torna-indietro {
     background-color:  #0d1b2a8b;
     color: #fff;
-    padding: 12px 34px;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -168,14 +132,164 @@
     transition: 0.05;
     margin-left: 10px;
     text-decoration: none;
+    height: 30px;
+    width: 100px;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .input-container-form .input-container-btn-div .input-container-btn:hover,
   .input-container-form .input-container-btn-div .torna-indietro:hover {
     scale: 1.05;
     box-shadow: 0px 0px 45px 0px #415a779f;
-  
   }
+
   .input-container-form .input-container-btn-div .input-container-btn:active,
   .input-container-form .input-container-btn-div .torna-indietro:active {
     scale: 0.95;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOGIN*/
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-image: linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%);
+  background-size: cover;
+}
+/*Titolo*/
+.login-section h2 {
+  font-size: 35px;
+  margin: 40px 0;
+}
+/*Form*/
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:30px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login-form div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  gap: 10px;
+  font-size: 19px;
+  flex-wrap: wrap;
+}
+
+.label-form {
+  width: 30%;
+  flex: 1;
+}
+
+#username, 
+.login-form div #password {
+  width: 70%;
+  height: 25px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  outline: none;
+  margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+  #username, 
+  .login-form div #password {
+      max-width: 200px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  #username, 
+  .login-form div #password {
+      max-width: 400px;
+  }
+}
+
+.login-form ul{
+  list-style: none;
+  white-space: nowrap;
+  flex-basis: 100%;
+  margin: -19px;
+}
+.login-form ul li{
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
+
+.login-form .login-container-btn {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.login-btn,
+.torna-indietro {
+  background-color:  #0d1b2a8b;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.05;
+  margin-left: 10px;
+  text-decoration: none;
+  height: 30px;
+  width: 100px;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn:hover,
+.torna-indietro:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 45px 0px #415a779f;
+  
+}
+.login-btn:active,
+.torna-indietro:active {
+  scale: 0.95;
+}
