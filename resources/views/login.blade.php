@@ -4,7 +4,7 @@
 <section class="login-section">
     <h2>Login</h2>
     <div class = "login-div">
-              {{Form::open(array('route'=>'login', 'class'=>'login-form'))}}
+              {{Form::open(array('route'=>'login.store', 'class'=>'login-form'))}}
               {{Form::token()}}
             <div>
                 {{ Form::label('username','Username',['class'=>'label-form'])}}
@@ -36,12 +36,6 @@
               {{ Form::submit('Login',['class'=>'login-btn'])}}
             </div>
               {{ Form::close() }}  
-
-          <div class="login-register">
-                <p>Non hai ancora un account?
-                    <a href="{{ route('register') }}"> Registrati</a>
-                </p>
-            </div>
       </div>
 </section>
 @endsection
