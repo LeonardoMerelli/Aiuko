@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/Aiuko', function () {
-    auth()->logout();
+    #auth()->logout();
     return view('home');
 })->name('home');
 
