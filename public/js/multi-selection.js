@@ -88,4 +88,3 @@ document.querySelectorAll(".custom-select").forEach(selectElement => {
   })
 });
 
-

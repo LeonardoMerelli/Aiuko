@@ -44,15 +44,16 @@
       </div>
       Nessuna</div>
   </div>
-  <form action="">
+  <form action="{{route('diets.store')}}" method="post">
+    @csrf
     <select name="diet" class="custom-select" multiple>
       <option value="vegetariana">vegetariana</option>
       <option value="vegana">vegana</option>
       <option value="low-carbo">bassi carboidrati</option>
       <option value="nessuna">nessuna</option>
     </select>
-    <a href="#">INDIETRO</a>
-    <input type="button" class="confirm-button" value="AVANTI">
+    <a href="{{route('home')}}">INDIETRO</a>
+    <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>
 

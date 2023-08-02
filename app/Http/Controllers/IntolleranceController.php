@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\diet;
 use Illuminate\Http\Request;
 
-class DietController extends Controller
+class IntolleranceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,21 +18,27 @@ class DietController extends Controller
 
     public function create()
     {
-        return view('diets');
+        return view('intollerances');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        redirect()->route('intollerances.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\diet  $diet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(diet $diet)
+    public function show($id)
     {
         //
     }
@@ -41,10 +46,10 @@ class DietController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\diet  $diet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(diet $diet)
+    public function edit($id)
     {
         //
     }
@@ -53,10 +58,10 @@ class DietController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\diet  $diet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, diet $diet)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -64,10 +69,10 @@ class DietController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\diet  $diet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(diet $diet)
+    public function destroy($id)
     {
         //
     }
