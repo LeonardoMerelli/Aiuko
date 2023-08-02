@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('immagine');
             $table->string('descrizione');
             $table->string('tempo');
-            $table->unsignedBigInteger('idDieta');
-            $table->foreign('idDieta')->references('idDieta')->on('diets');
+            $table->string('dieta');
         });
     }
 

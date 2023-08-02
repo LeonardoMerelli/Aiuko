@@ -46,7 +46,7 @@
   </div>
   <form action="{{route('diets.store')}}" method="post">
     @csrf
-    <select name="diet" class="custom-select" multiple>
+    <select name="diet[]" class="custom-select" multiple>
       <option value="vegetariana">vegetariana</option>
       <option value="vegana">vegana</option>
       <option value="low-carbo">bassi carboidrati</option>

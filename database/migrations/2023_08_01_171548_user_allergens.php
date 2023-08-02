@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('user_allergens', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
-            $table->unsignedBigInteger('idAllergene');
+            $table->unsignedBigInteger('allergeni');
             $table->foreign('idUtente')->references('idUtente')->on('users');
-            $table->foreign('idAllergene')->references('idAllergene')->on('allergens');
         });
     }
 

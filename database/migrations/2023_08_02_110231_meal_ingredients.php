@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('meal_ingredients', function (Blueprint $table) {
-            $table->bigIncrements('idPastoIngredienti');
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('idPasto');
             $table->unsignedBigInteger('idIngrediente');
             $table->string('quantita');
