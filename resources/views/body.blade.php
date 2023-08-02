@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Prompt:wght@500&family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/body.css')}}"> 
     <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{asset('css/diet-intollerances.css')}}"> 
+
+    
     <link rel="stylesheet" type="text/css" href="{{asset('css/register.css')}}"> 
 </head>
 <body>
