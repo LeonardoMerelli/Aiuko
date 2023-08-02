@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::middleware(['guest'])->prefix('Aiuko')->group(function () {
-    Route::get('/Aiuko', function () {
-        return view('home');
-    });
+Route::get('/Aiuko', function () {
+    return view('home');
 });
 
 Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
