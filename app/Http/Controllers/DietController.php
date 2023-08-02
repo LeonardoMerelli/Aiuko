@@ -10,7 +10,7 @@ class DietController extends Controller
 {
     public function __construct() {
         $this->userDiets = new userDiets;
-     }
+    }
 
     public function index()
     {
@@ -26,7 +26,7 @@ class DietController extends Controller
     {
         $this->userDiets->salvaDieteUtente($request->diet);
 
-        redirect()->route('intollerances.create');
+        return redirect()->route('intollerances.create');
     }
 
     /**

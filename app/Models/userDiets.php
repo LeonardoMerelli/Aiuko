@@ -18,7 +18,11 @@ class userDiets extends Model
 
     public function salvaDieteUtente($diete) {
         $idUser = auth()->user()->idUtente;
+        $dieteUtente = userDiets::where('idUtente', $idUser);
 
+        if(count($dieteUtente->get()) != 0) {
+            $dieteUtente->delete();
+        }
         foreach($diete as $dieta) {
             userDiets::create([
                 'idUtente' => $idUser,
