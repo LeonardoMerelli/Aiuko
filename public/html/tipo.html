@@ -93,7 +93,31 @@
             cursor: pointer;
         }
 
-        .scritta-pasto
+        .scritta-pasto {
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            font-size: 30px;
+            margin-left: 1%;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Prompt', sans-serif; 
+            margin-left: 5%;
+        }
+
+        .scelta-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1%;
+        }
+
+        .scelta-tipo {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+        }
 
     </style>
 </head>
@@ -117,5 +141,13 @@
         </div>
     </div>
     <span class="scritta-pasto">PRANZO</span>
+    <div class="scelta-container">
+        <div class="scelta-tipo">
+            <div class="veloce">VELOCE</div>
+            <div class="pre-workout">PRE WORKOUT</div>
+            <div class="ricco">RICCO</div>
+            <div class="originale">ORIGINALE</div>
+        </div>
+    </div>
 </body>
 </html>
