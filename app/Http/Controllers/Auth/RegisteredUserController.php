@@ -52,6 +52,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('diets');
+        return redirect()->route('diets.create');
     }
 }
