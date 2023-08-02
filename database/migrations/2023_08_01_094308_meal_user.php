@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('meal_person', function (Blueprint $table) {
-            $table->bigIncrements('idMealPerson');
+        Schema::create('meal_user', function (Blueprint $table) {
+            $table->bigIncrements('idMealUser');
             $table->unsignedBigInteger('idPasto');
             $table->unsignedBigInteger('idUtente');
             #metiamo come data YYYY/MM/dd non come lunedi martedi ecc
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meal_person');
+        Schema::dropIfExists('meal_user');
     }
 };

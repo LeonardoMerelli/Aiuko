@@ -1,0 +1,177 @@
+  /*REGISTER*/
+  .register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-image: linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%);
+    background-size: cover;
+  }
+  
+  .input-container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .input-container-form .input-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    gap: 10px;
+    font-size: 19px;
+  }
+  
+  /*titolo*/
+  .register-section h2{
+    font-size: 35px;
+    margin: 40px 0;
+  }
+  
+  /*form*/
+  .input-container-form ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    color: var(--error-color);
+    white-space: nowrap;
+    transform: translateY(30px);
+  }
+  .input-container-form ul li{
+    width: 0;
+    font-size: 15px;
+    position: relative;
+    transform: translateX(-300px);
+  }
+  
+  .input-container-form .input-div  input{
+    width: 70%;
+    height: 25px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+    outline: none;
+    margin-left: 5px;
+  }
+  
+  .input-container-form .input-div  label {
+    width: 30%;
+  }
+
+    @media (max-width: 768px) {
+        .input-container-form .input-div  input {
+            max-width: 200px;
+        }
+    }
+
+  .input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
+  .input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+  } 
+  
+  .input-container-form .input-div  #date{
+    color: var(--text-color-rich-black);
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .input-div  #date::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+  }
+  .input-container-form .radio-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    gap: 10px;
+    width: 80%;
+  }
+  .input-container-form .radio-div .radio-label {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /*radio buttons*/
+  .radio-label input {
+    color: var(--oxford-blue);
+  }
+
+  .input-container-form .radio-div .radio-label {
+    padding: 6px;
+    border-radius: 50px;
+    display: inline-flex;
+    transition: 0.05s;
+    cursor: pointer;
+  
+    &:hover,
+    &:focus-within {
+      background-color: #1b263b1f;
+    }
+  }
+
+  .input-container-form .radio-div .radio-label input{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+  
+    &:focus {
+      outline: none;
+    }
+
+  }
+  
+  .input-container-form .radio-div .radio-label label {
+    vertical-align: middle;
+    display: inline-block;  
+    line-height: 20px;
+    padding: 0 8px;
+  }
+  .input-container-form .input-container-btn-div {
+    width: 150px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .input-container-form .input-container-btn-div .input-container-btn {
+    background-color:  #0d1b2a8b;
+    color: #fff;
+    padding: 12px 34px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.05;
+  }
+  .input-container-form .input-container-btn-div .input-container-btn:hover {
+    scale: 1.05;
+    box-shadow: 0px 0px 45px 0px #415a779f;
+  
+  }
+  .input-container-form .input-container-btn-div .input-container-btn:active {
+    scale: 0.95;
+  }

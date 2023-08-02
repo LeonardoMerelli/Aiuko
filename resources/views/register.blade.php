@@ -40,11 +40,9 @@
                 {{Form::number('eta')}}
                 @if ($errors->first('eta'))
                 <ul>
-                    @foreach($errors->get('eta') as $message)
                     <li>
-                        {{$message}}
+                        L'età è sbagliata
                     </li>   
-                    @endforeach
                 </ul>
                 @endif
             </div>
@@ -62,24 +60,22 @@
                 @endif
             </div>
             <div class= "input-div">
+                {{Form::label('citta','Città')}}
+                {{Form::text('citta')}}
+                @if ($errors->first('citta'))
+                <ul>
+                    <li>
+                        La città è obbligatoria
+                    </li>   
+                </ul>
+                @endif
+            </div>
+            <div class= "input-div">
                 {{ Form::label('email','E-mail')}}
                 {{ Form::text('email')}}
                 @if ($errors->first('email'))
                 <ul>
                     @foreach($errors->get('email') as $message)
-                    <li>
-                        {{$message}}
-                    </li>   
-                    @endforeach
-                </ul>
-                @endif
-            </div>
-            <div class= "input-div">
-                {{ Form::label('username','Username')}}
-                {{ Form::text('username')}}
-                @if ($errors->first('username'))
-                <ul>
-                    @foreach($errors->get('username') as $message)
                     <li>
                         {{$message}}
                     </li>   
@@ -119,11 +115,9 @@
                 </div>
             </div>
             <div class="input-container-btn-div">
-                {{ Form::submit('Register',['class'=>'input-container-btn'])}} 
+                {{ Form::submit('Avanti',['class'=>'input-container-btn'])}} 
             </div>
         {{Form::close()}}
         <!--fine form-->
-        <!--div sul fondo-->
-       
   </section>
   @endsection

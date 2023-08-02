@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/diet-intollerances.css')}}"> 
 
     
+    <link rel="stylesheet" type="text/css" href="{{asset('css/register.css')}}"> 
 </head>
 <body>
     <main>
