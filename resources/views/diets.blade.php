@@ -44,7 +44,7 @@
       </div>
       Nessuna</div>
   </div>
-  <form action="{{route('diets.store')}}">
+  <form action="{{route('diets.store')}}" method="post">
     @csrf
     <select name="diet" class="custom-select" multiple>
       <option value="vegetariana">vegetariana</option>

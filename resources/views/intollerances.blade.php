@@ -98,7 +98,7 @@
       Nessuna
     </div>
   </div>
-  <form action="">
+  <form action="{{route('intollerances.store')}}" method="post">
     <select name="diet" class="custom-select" multiple>
       <option value="glutine">glutine</option>
       <option value="latticini">latticini</option>
