@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="input-container-btn-div">
-                <a href="" class="torna-indietro">Torna indietro</a>
+                <a href="" class="torna-indietro">Indietro</a>
                 {{ Form::submit('Avanti',['class'=>'input-container-btn'])}} 
             </div>
         {{Form::close()}}
