@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:30px;
+    gap:25px;
     max-width: 900px;
     width: 100%;
     margin-top: 30px;
@@ -29,6 +29,7 @@
     width: 85%;
     gap: 10px;
     font-size: 19px;
+    flex-wrap: wrap;
   }
   
   /*titolo*/
@@ -40,17 +41,14 @@
   /*form*/
   .input-container-form ul{
     list-style: none;
-    margin:0;
+    margin: -20px;
     padding: 0;
-    color: var(--error-color);
     white-space: nowrap;
-    transform: translateY(30px);
+    flex-basis: 100%;
   }
   .input-container-form ul li{
     width: 0;
     font-size: 15px;
-    position: relative;
-    transform: translateX(-300px);
   }
   
   .input-container-form .input-div  input{
@@ -69,6 +67,7 @@
   
   .input-container-form .input-div  label {
     width: 30%;
+    flex: 1;
   }
 
     @media (max-width: 768px) {
