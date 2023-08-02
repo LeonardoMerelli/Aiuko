@@ -9,7 +9,7 @@ class EmailRule implements Rule
 {
     private $emailInUso;
 
-    public function passes($value)
+    public function passes($attribute, $value)
     {
         $user = auth()->user();
         if (!is_null($user)) {
