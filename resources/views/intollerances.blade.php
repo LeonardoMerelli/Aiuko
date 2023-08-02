@@ -99,7 +99,7 @@
     </div>
   </div>
   <form action="{{route('intollerances.store')}}" method="post">
-    <select name="diet" class="custom-select" multiple>
+    <select name="intollerances[]" class="custom-select" multiple>
       <option value="glutine">glutine</option>
       <option value="latticini">latticini</option>
       <option value="soia">soia</option>
@@ -110,7 +110,7 @@
       <option value="crostacei">crostacei</option>
       <option value="nessuna">nessuna</option>
     </select>
-    <a href="">INDIETRO</a>
+    <a href="{{route('diets.create')}}">INDIETRO</a>
     <input type="button" class="confirm-button" value="AVANTI">
   </form>
 </div>
