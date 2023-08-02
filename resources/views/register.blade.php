@@ -61,7 +61,7 @@
             </div>
             <div class= "input-div">
                 {{Form::label('citta','Città')}}
-                {{Form::number('citta')}}
+                {{Form::text('citta')}}
                 @if ($errors->first('citta'))
                 <ul>
                     <li>

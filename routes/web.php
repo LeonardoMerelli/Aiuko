@@ -18,8 +18,8 @@ Route::get('/Aiuko', function () {
     return view('home');
 });
 
-Route::get('/Aiuko/diet', function () {
-    return view('diet');
+Route::get('/Aiuko/diets', function () {
+    return view('diets');
 });
 
 require __DIR__.'/auth.php';
