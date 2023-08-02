@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/Aiuko', function () {
-    return view('home');
+Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
+    Route::get('/Aiuko', function () {
+        return view('home');
+    });
 });
 
 Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
@@ -23,9 +24,9 @@ Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
         return view('diets');
     })->name('diets');
 
-    Route::get('/allergens', function () {
-        return view('allergens');
-    })->name('allergens');
+    Route::get('/intollerances', function () {
+        return view('intollerances');
+    })->name('intollerances');
 });
 
 require __DIR__.'/auth.php';
