@@ -18,8 +18,14 @@ Route::get('/Aiuko', function () {
     return view('home');
 });
 
-Route::get('/Aiuko/diet', function () {
-    return view('diet');
+Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
+    Route::get('/diets', function () {
+        return view('diets');
+    })->name('diets');
+
+    Route::get('/allergens', function () {
+        return view('allergens');
+    })->name('allergens');
 });
 
 require __DIR__.'/auth.php';
