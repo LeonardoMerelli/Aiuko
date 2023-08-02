@@ -10,4 +10,6 @@ class diet extends Model
     use HasFactory;
     protected $table = 'diets';
     protected $primaryKey = 'idDieta';
+    public $timestamps = false;
+
 }
