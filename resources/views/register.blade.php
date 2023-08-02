@@ -13,13 +13,11 @@
                 {{ Form::label('nome','Nome')}}
                 {{ Form::text('nome')}}
                     @if ($errors->first('nome'))
-                        <ul>
-                            @foreach($errors->get('nome') as $message)
-                            <li>
-                                    {{$message}}
-                            </li>   
-                                @endforeach
-                        </ul>
+                    <ul>
+                        <li>
+                            Nome è obbligatorio
+                        </li>   
+                    </ul>
                             @endif
             </div>
             <div class= "input-div">
@@ -27,11 +25,9 @@
                 {{ Form::text('cognome')}}
                     @if ($errors->first('cognome'))
                     <ul>
-                        @foreach($errors->get('cognome') as $message)
                         <li>
-                                {{$message}}
+                            Cognome è obbligatorio
                         </li>   
-                            @endforeach
                     </ul>
                     @endif
             </div>
@@ -41,7 +37,7 @@
                 @if ($errors->first('eta'))
                 <ul>
                     <li>
-                        L'età è sbagliata
+                        Età è obbligatoria
                     </li>   
                 </ul>
                 @endif
@@ -51,11 +47,9 @@
                 {{ Form::text('telefono')}}
                 @if ($errors->first('telefono'))
                 <ul>
-                    @foreach($errors->get('telefono') as $message)
                     <li>
-                        {{$message}}
+                        Telefono non valido
                     </li>   
-                    @endforeach
                 </ul>
                 @endif
             </div>
@@ -65,7 +59,7 @@
                 @if ($errors->first('citta'))
                 <ul>
                     <li>
-                        La città è obbligatoria
+                        Città è obbligatoria
                     </li>   
                 </ul>
                 @endif
@@ -74,13 +68,11 @@
                 {{ Form::label('email','E-mail')}}
                 {{ Form::text('email')}}
                 @if ($errors->first('email'))
-                <ul>
-                    @foreach($errors->get('email') as $message)
-                    <li>
-                        {{$message}}
-                    </li>   
-                    @endforeach
-                </ul>
+                    <ul>
+                        <li>
+                            Email non valida
+                        </li>   
+                    </ul>
                 @endif
             </div>
             <div class= "input-div">
