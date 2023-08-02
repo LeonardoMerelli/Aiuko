@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\diet;
+use App\Models\userDiets;
 use Illuminate\Http\Request;
 
 class DietController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct() {
+        $this->userDiets = new userDiets;
+    }
+
     public function index()
     {
         //
@@ -24,7 +24,9 @@ class DietController extends Controller
 
     public function store(Request $request)
     {
-        redirect()->route('intollerances.create');
+        $this->userDiets->salvaDieteUtente($request->diet);
+
+        return redirect()->route('intollerances.create');
     }
 
     /**

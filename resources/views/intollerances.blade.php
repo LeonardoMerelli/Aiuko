@@ -6,6 +6,7 @@
   <span>HAI QUALCHE <br><strong>INTOLLERANZA ?</strong></span>
 
   <div class="select-div">
+    #TODO aggiungi selected dentro le virgolette ""
     <div class="select-item">
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,8 +100,10 @@
     </div>
   </div>
   <form action="{{route('intollerances.store')}}" method="post">
-    <select name="diet" class="custom-select" multiple>
-      <option value="glutine">glutine</option>
+    @csrf
+    <select name="intollerances[]" class="custom-select" multiple>
+      #TODO metti 700 if per controlla tutto e ricorda a tommaso de non cambia js
+      <option value="glutine" selected>glutine</option>
       <option value="latticini">latticini</option>
       <option value="soia">soia</option>
       <option value="uova">uova</option>
@@ -110,8 +113,8 @@
       <option value="crostacei">crostacei</option>
       <option value="nessuna">nessuna</option>
     </select>
-    <a href="">INDIETRO</a>
-    <input type="button" class="confirm-button" value="AVANTI">
+    <a href="{{route('diets.create')}}">INDIETRO</a>
+    <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>
 

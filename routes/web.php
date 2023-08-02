@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DietController;
+use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/Aiuko', function () {
-    auth()->logout();
+    #auth()->logout();
     return view('home');
 })->name('home');
 
@@ -26,10 +27,10 @@ Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
     Route::post('/diete', [DietController::class, 'store'])
         ->name('diets.store');
     
-    Route::get('/intolleranze', [DietController::class, 'create'])
+    Route::get('/intolleranze', [IntolleranceController::class, 'create'])
         ->name('intollerances.create');
     
-    Route::post('/intolleranze', [DietController::class, 'store'])
+    Route::post('/intolleranze', [IntolleranceController::class, 'store'])
         ->name('intollerances.store');
 
     Route::get('/intollerances', function () {

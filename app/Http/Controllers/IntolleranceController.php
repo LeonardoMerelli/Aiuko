@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\userIntollerances;
 use Illuminate\Http\Request;
 
 class IntolleranceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct() {
+        $this->userIntollerances = new userIntollerances;
+    }
+
     public function index()
     {
         //
@@ -21,15 +21,11 @@ class IntolleranceController extends Controller
         return view('intollerances');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->userIntollerances->salvaIntolleranzeUtente($request->intollerances);
+
+        return redirect()->route('home');
     }
 
     /**

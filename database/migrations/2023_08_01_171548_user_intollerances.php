@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('allergens', function (Blueprint $table) {
-            $table->bigIncrements('idAllergene');
-            $table->string('nome');
+        Schema::create('user_intollerances', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('idUtente');
+            $table->string('intolleranza');
+            $table->foreign('idUtente')->references('idUtente')->on('users');
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('allergens');
+        Schema::dropIfExists('user_intollerances');
     }
 };

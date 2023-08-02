@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('user_diets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
-            $table->unsignedBigInteger('idDieta');
+            $table->string('dieta');
             $table->foreign('idUtente')->references('idUtente')->on('users');
-            $table->foreign('idDieta')->references('idDieta')->on('diets');
         });
     }
 
