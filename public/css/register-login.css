@@ -247,6 +247,7 @@
   flex-basis: 100%;
   margin: -19px;
 }
+
 .login-form ul li{
   font-size: 18px;
   color: red;
@@ -287,8 +288,8 @@
 .torna-indietro:hover {
   scale: 1.05;
   box-shadow: 0px 0px 45px 0px #415a779f;
-  
 }
+
 .login-btn:active,
 .torna-indietro:active {
   scale: 0.95;
