@@ -17,7 +17,7 @@ Route::get('/Aiuko', function () {
     return view('home');
 });
 
-Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
+Route::middleware(['auth, guest'])->prefix('Aiuko')->group(function () {
     Route::get('/diets', function () {
         return view('diets');
     })->name('diets');
