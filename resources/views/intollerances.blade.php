@@ -6,8 +6,11 @@
   <span>HAI QUALCHE <br><strong>INTOLLERANZA ?</strong></span>
 
   <div class="select-div">
-    #TODO aggiungi selected dentro le virgolette ""
+    @if(in_array('glutine', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18.325 45.825C16.25 42.925 16.25 39.575 16.25 36.25C20.425 38.75 24.575 41.25 26.675 44.175L27.5 45.575V39.875C23.75 37.625 20.2 35.325 18.325 32.7C16.25 29.8 16.25 26.45 16.25 23.125C20.425 25.625 24.575 28.125 26.675 31.05L27.5 32.5V26.75C23.75 24.5 20.2 22.2 18.325 19.575C16.25 16.675 16.25 13.325 16.25 10C20.425 12.5 24.575 15 26.675 17.925C26.925 18.275 27.15 18.65 27.35 19.05C26.925 17.5 26.65 16.05 26.625 14.55C26.6 10.775 28.25 6.90002 29.9 3.02502C31.625 6.72502 33.35 10.45 33.375 14.225C33.4 15.8 33.125 17.4 32.675 18.975C32.875 18.625 33.075 18.275 33.325 17.925C35.425 15 39.575 12.5 43.75 10C43.75 13.325 43.75 16.675 41.675 19.575C39.8 22.2 36.25 24.5 32.5 26.75V32.5L33.325 31.05C35.425 28.125 39.575 25.625 43.75 23.125C43.75 26.45 43.75 29.8 41.675 32.7C39.8 35.325 36.25 37.625 32.5 39.875V45.575L33.325 44.175C35.425 41.25 39.575 38.75 43.75 36.25C43.75 39.575 43.75 42.925 41.675 45.825C39.8 48.45 36.25 50.75 32.5 53V57.5H27.5V53C23.75 50.75 20.2 48.45 18.325 45.825Z" fill="#F8F8F8"/>
@@ -15,7 +18,11 @@
       </div>
       Glutine
     </div>
+    @if(in_array('latticini', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 5H40M22.5 5V11.9725C22.4999 13.947 21.9154 15.8772 20.82 17.52L19.18 19.98C18.0841 21.6235 17.4996 23.5547 17.5 25.53V50C17.5 51.3261 18.0268 52.5979 18.9645 53.5355C19.9021 54.4732 21.1739 55 22.5 55H37.5C38.8261 55 40.0979 54.4732 41.0355 53.5355C41.9732 52.5979 42.5 51.3261 42.5 50V25.5275C42.4999 23.553 41.9154 21.6228 40.82 19.98L39.18 17.52C38.0841 15.8765 37.4996 13.9453 37.5 11.97V5" stroke="#F8F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -24,7 +31,11 @@
       </div>
       Latticini
     </div>
+    @if(in_array('soia', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M34.75 18.75C34.75 17 35.25 15.75 35.5 15H37L39.25 8.75H41.25V5H18.75V8.75H20.75L23 15H24.5C25 15.75 25.25 17 25.25 18.75C25.25 22 15 34.25 15 44V49C15 52.5 21.75 54.75 30 54.75C38.25 54.75 45 52.5 45 49V44C45 34.25 34.75 22 34.75 18.75ZM30 37.5C28.6739 37.5 27.4021 36.9732 26.4645 36.0355C25.5268 35.0979 25 33.8261 25 32.5C25 31.1739 25.5268 29.9021 26.4645 28.9645C27.4021 28.0268 28.6739 27.5 30 27.5C31.3261 27.5 32.5979 28.0268 33.5355 28.9645C34.4732 29.9021 35 31.1739 35 32.5C35 33.8261 34.4732 35.0979 33.5355 36.0355C32.5979 36.9732 31.3261 37.5 30 37.5Z" fill="#F8F8F8"/>
@@ -32,7 +43,11 @@
       </div>
       Soia
     </div>
+    @if(in_array('uova', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 52.5C25.125 52.5 20.9892 50.8017 17.5925 47.405C14.1958 44.0083 12.4983 39.8733 12.5 35C12.5 31.7917 13.0317 28.5625 14.095 25.3125C15.1583 22.0625 16.5333 19.1142 18.22 16.4675C19.9067 13.8225 21.7917 11.6667 23.875 10C25.9583 8.33333 28 7.5 30 7.5C32.0417 7.5 34.0942 8.33333 36.1575 10C38.2208 11.6667 40.0958 13.8233 41.7825 16.47C43.4692 19.115 44.8442 22.0625 45.9075 25.3125C46.9708 28.5625 47.5017 31.7917 47.5 35C47.5 39.875 45.8017 44.0108 42.405 47.4075C39.0083 50.8042 34.8733 52.5017 30 52.5ZM30 47.5C33.4583 47.5 36.4067 46.2808 38.845 43.8425C41.2833 41.4042 42.5017 38.4567 42.5 35C42.5 32.625 42.0933 30.125 41.28 27.5C40.4667 24.875 39.4458 22.4475 38.2175 20.2175C36.9892 17.9892 35.6458 16.1458 34.1875 14.6875C32.7292 13.2292 31.3333 12.5 30 12.5C28.7083 12.5 27.3225 13.2292 25.8425 14.6875C24.3625 16.1458 23.0092 17.9892 21.7825 20.2175C20.5525 22.4475 19.5317 24.875 18.72 27.5C17.9083 30.125 17.5017 32.625 17.5 35C17.5 38.4583 18.7192 41.4067 21.1575 43.845C23.5958 46.2833 26.5433 47.5017 30 47.5ZM32.5 45C33.2083 45 33.8025 44.76 34.2825 44.28C34.7625 43.8 35.0017 43.2067 35 42.5C35 41.7917 34.76 41.1975 34.28 40.7175C33.8 40.2375 33.2067 39.9983 32.5 40C30.4167 40 28.6458 39.2708 27.1875 37.8125C25.7292 36.3542 25 34.5833 25 32.5C25 31.7917 24.76 31.1975 24.28 30.7175C23.8 30.2375 23.2067 29.9983 22.5 30C21.7917 30 21.1975 30.24 20.7175 30.72C20.2375 31.2 19.9983 31.7933 20 32.5C20 35.9583 21.2192 38.9067 23.6575 41.345C26.0958 43.7833 29.0433 45.0017 32.5 45Z" fill="#F8F8F8"/>
@@ -40,7 +55,11 @@
       </div>
       Uova
     </div>
+    @if(in_array('arachidi', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M55.5394 8.23775C55.2281 5.219 54.735 4.19338 54.3844 3.6815C53.9006 2.97557 52.6078 1.9265 51.3759 1.9265C51.2841 1.9265 51.1969 1.93213 51.1097 1.94244C50.4544 2.02025 49.8225 2.3615 49.1063 3.04025C47.1953 2.26491 45.1516 1.8691 43.0894 1.87494C38.2931 1.87494 33.4762 3.93463 29.8734 7.52619C27.4031 9.98994 26.3109 12.4471 25.3462 14.6146C24.4594 16.6115 23.6906 18.3374 21.9684 19.8393C19.9209 21.6253 17.9222 22.0509 15.6037 22.5449C12.9741 23.1056 9.99469 23.7403 7.11563 26.6118C3.73688 29.9803 1.87594 34.4915 1.875 39.3131C1.875 44.3043 3.8475 49.0199 7.42875 52.5909C11.0091 56.1599 15.735 58.1249 20.7366 58.1249C25.5703 58.1249 30.0919 56.2696 33.4697 52.9012C36.3534 50.0268 37.0959 47.1628 37.7503 44.6353C38.3053 42.494 38.8284 40.4709 40.6359 38.3821C42.1791 36.5981 43.8553 35.7187 45.7931 34.7006C47.805 33.6449 50.0859 32.4487 52.4691 30.0712C58.6378 23.9212 59.9128 14.6287 55.5394 8.23775ZM51.2288 28.8262C46.7869 33.2568 42.7903 33.2062 39.3066 37.2328C34.9669 42.2493 37.1044 46.7962 32.2284 51.6571C29.0756 54.8015 24.9253 56.3671 20.7366 56.3671C16.4006 56.3671 12.0234 54.6881 8.67 51.3468C2.07844 44.7721 1.93781 34.2562 8.35781 27.8549C13.2009 23.0249 18.1603 25.4943 23.1253 21.1631C27.1612 17.6437 26.6475 13.2281 31.1147 8.77119C34.5272 5.36994 38.9072 3.63369 43.0884 3.63369C45.3544 3.63369 47.5622 4.14369 49.5262 5.17588C50.0981 4.48588 50.8172 3.74994 51.3159 3.689C51.3356 3.68709 51.3553 3.68615 51.375 3.68619C51.8578 3.68619 52.6772 4.304 52.9341 4.679C53.4459 5.42338 53.7094 7.50557 53.8331 8.87432C57.9975 14.5209 57.0122 23.0606 51.2288 28.8262Z" fill="#F8F8F8"/>
@@ -49,7 +68,11 @@
       </div>
       Arachidi
     </div>
+    @if(in_array('frutta secca', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 10V5M12.5 25V35C12.5004 38.8922 13.7976 42.6733 16.1867 45.746C18.5758 48.8187 21.9205 51.0078 25.6925 51.9675C26.7225 52.2275 27.6975 52.6975 28.4475 53.4475L30 55L31.5525 53.4475C32.3025 52.6975 33.2775 52.2275 34.3075 51.9675C38.0797 51.0082 41.4247 48.8192 43.8138 45.7464C46.203 42.6736 47.5 38.8923 47.5 35V25" stroke="#F8F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,7 +81,11 @@
       </div>
       Frutta secca
     </div>
+    @if(in_array('pesce', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_100_378)">
@@ -73,7 +100,11 @@
       </div>
       Pesce
     </div>
+    @if(in_array('crostacei', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.25 21.25C6.25 15 7.5 2.49996 21.25 7.49996C22.4325 12.2275 18.75 21.25 6.25 21.25ZM53.75 21.25C53.75 15 52.5 2.49996 38.75 7.49996C37.5675 12.2275 41.25 21.25 53.75 21.25Z" stroke="#F8F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +114,11 @@
       </div>
       Crostacei
     </div>
+    @if(in_array('nessuna', $intolleranze))
+    <div class="select-item selected">
+    @else
     <div class="select-item">
+    @endif
       <div>
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_85_281)">
@@ -102,16 +137,59 @@
   <form action="{{route('intollerances.store')}}" method="post">
     @csrf
     <select name="intollerances[]" class="custom-select" multiple>
-      #TODO metti 700 if per controlla tutto e ricorda a tommaso de non cambia js
+      @if(in_array('glutine', $intolleranze))
       <option value="glutine" selected>glutine</option>
+      @else
+      <option value="glutine">glutine</option>
+      @endif
+
+      @if(in_array('latticini', $intolleranze))
+      <option value="latticini" selected>latticini</option>
+      @else
       <option value="latticini">latticini</option>
+      @endif
+
+      @if(in_array('soia', $intolleranze))
+      <option value="soia" selected>soia</option>
+      @else
       <option value="soia">soia</option>
+      @endif
+
+      @if(in_array('uova', $intolleranze))
+      <option value="uova" selected>uova</option>
+      @else
       <option value="uova">uova</option>
+      @endif
+
+      @if(in_array('arachidi', $intolleranze))
+      <option value="arachidi" selected>arachidi</option>
+      @else
       <option value="arachidi">arachidi</option>
+      @endif
+
+      @if(in_array('frutta secca', $intolleranze))
+      <option value="frutta secca" selected>frutta secca</option>
+      @else
       <option value="frutta secca">frutta secca</option>
+      @endif
+
+      @if(in_array('pesce', $intolleranze))
+      <option value="pesce" selected>pesce</option>
+      @else
       <option value="pesce">pesce</option>
+      @endif
+
+      @if(in_array('crostacei', $intolleranze))
+      <option value="crostacei" selected>crostacei</option>
+      @else
       <option value="crostacei">crostacei</option>
+      @endif
+
+      @if(in_array('nessuna', $intolleranze))
+      <option value="nessuna" selected>nessuna</option>
+      @else
       <option value="nessuna">nessuna</option>
+      @endif
     </select>
     <a href="{{route('diets.create')}}">INDIETRO</a>
     <input type="submit" class="confirm-button" value="AVANTI">

@@ -19,7 +19,11 @@ class DietController extends Controller
 
     public function create()
     {
-        return view('diets');
+        $idUser = auth()->user()->idUtente;
+        $dieteUtente = userDiets::where('idUtente', $idUser)->pluck('dieta')->toArray();
+
+        return view('diets')
+            ->with('diete', $dieteUtente);
     }
 
     public function store(Request $request)

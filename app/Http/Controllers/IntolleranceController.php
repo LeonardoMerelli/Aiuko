@@ -18,7 +18,11 @@ class IntolleranceController extends Controller
 
     public function create()
     {
-        return view('intollerances');
+        $idUser = auth()->user()->idUtente;
+        $intolleranzeUtente = userIntollerances::where('idUtente', $idUser)->pluck('intolleranza')->toArray();
+
+        return view('intollerances')
+            ->with('intolleranze', $intolleranzeUtente);
     }
 
     public function store(Request $request)
