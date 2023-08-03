@@ -139,7 +139,7 @@
       Nessuna
     </div>
   </div>
-  <form action="{{route('intollerances.store')}}" method="post">
+  <form action="{{route('intollerances.store')}}" method="post" id = "myForm">
     @csrf
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('glutine', $intolleranze))
@@ -196,10 +196,29 @@
       <option value="nessuna">nessuna</option>
       @endif
     </select>
-    <input type="submit" class="back-to-diets" value="INDIETRO" id= "indietro">
-    <label for="indietro" style="display: none"></label>
-    <input type="submit" class="confirm-button" value="AVANTI" id= "avanti">
-    <label for="indietro" style="display: none"></label>
+    <button class="back-to-diets" type="submit"  data-value="indietro">INDIETRO</button>
+    <button class="confirm-button" type="submit"  data-value="avanti">AVANTI</button>
+    <input type="hidden" name="campo_variabile" id="campo_variabile" value="" readonly>
   </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        // Al click di un bottone submit
+        $(".submit-button").click(function(e) {
+            e.preventDefault(); // Previeni l'invio del form
+
+            // Ottieni il valore personalizzato associato al bottone cliccato
+            var valoreCampoVariabile = $(this).data("value");
+            console.log(valoreCampoVariabile);
+
+            // Imposta il valore del campo di input con il valore ottenuto
+            $("#campo_variabile").val(valoreCampoVariabile);
+
+            // Invia il form manualmente
+            $("#myForm").submit();
+        });
+    });
+</script>
 </div>
 @endsection
