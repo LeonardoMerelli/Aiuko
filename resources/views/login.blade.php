@@ -32,7 +32,7 @@
             @endif
             </div>
             <div class="login-container-btn">
-                <a href="" class="torna-indietro">Indietro</a>
+                <a href="{{route('home')}}" class="torna-indietro">Indietro</a>
                 {{ Form::submit('Avanti',['class'=>'login-btn'])}}
             </div>
               {{ Form::close() }}  
