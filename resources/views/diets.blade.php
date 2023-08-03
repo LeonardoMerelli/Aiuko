@@ -1,5 +1,9 @@
 @extends('body')
 
+@section('scripts')
+<script src="{{ asset('js/multi-selection.js') }}" defer></script>
+@endsection
+
 @section('content')
 <div class="diet-div">
   <div class="logo"></div>
@@ -90,5 +94,4 @@
   </form>
 </div>
 
-<script src="/js/multi-selection.js"></script>
 @endsection

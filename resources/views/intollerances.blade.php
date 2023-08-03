@@ -1,4 +1,9 @@
+@section('scripts')
+<script src="{{ asset('js/multi-selection.js') }}" defer></script>
+@endsection
+
 @extends('body')
+
 
 @section('content')
 <div class="diet-div">
@@ -195,6 +200,4 @@
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>
-
-<script src="/js/multi-selection.js"></script>
 @endsection

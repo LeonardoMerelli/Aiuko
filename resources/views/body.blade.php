@@ -12,7 +12,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/register-login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/diet-intollerances.css')}}"> 
 
-    <script src="{{ asset('js/register.js') }}" defer></script>
+    <!--<script src="{{ asset('js/register.js') }}" defer></script>-->
+    @show 
+        @section('scripts')
+    @show 
+
 </head>
 <body>
     <main>

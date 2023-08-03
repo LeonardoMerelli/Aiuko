@@ -1,5 +1,6 @@
 
 let i=0;
+let count = 0;
 const itemArray = [];
 const optionArray = [];
 const selectElement = document.querySelector(".custom-select");
@@ -49,6 +50,24 @@ function deselect(itemElement) {
   itemElement.classList.remove("selected");
 }
 
+function preselectDiv(){
+  count = 0;
+  optionArray.forEach(item => {
+    if (item.selected){
+      count++;
+    }
+  })
+  
+  if (count === 0){
+    submitButton.classList.add("disabled");
+  }
+  else {
+    submitButton.classList.remove("disabled");
+  }
+}
+
+
+
 document.querySelectorAll(".select-div").forEach(selectElementDiv => {
   i=0;
   selectElementDiv.querySelectorAll(".select-item").forEach(selectElementItem => {
@@ -62,20 +81,7 @@ document.querySelectorAll(".select-div").forEach(selectElementDiv => {
       else {
         select(selectElementItem);
       }
-      
-      let count = 0;
-      optionArray.forEach(item => {
-        if (item.selected){
-          count++;
-        }
-      })
-      
-      if (count === 0){
-        submitButton.classList.add("disabled");
-      }
-      else {
-        submitButton.classList.remove("disabled");
-      }
+      preselectDiv();
     })
   })
 })
@@ -88,3 +94,4 @@ document.querySelectorAll(".custom-select").forEach(selectElement => {
   })
 });
 
+preselectDiv();
