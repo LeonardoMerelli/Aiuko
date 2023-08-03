@@ -29,7 +29,7 @@
                 </svg>
                 &nbsp; Continue with Apple
             </a>
-            <p>Already have account? <a href="#">Log in</a></p>
+            <p>Already have account? <a href="{{route('login.create')}}">Log in</a></p>
         </div>
     </div>
 
