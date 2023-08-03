@@ -196,8 +196,10 @@
       <option value="nessuna">nessuna</option>
       @endif
     </select>
-    <input type="submit" class="back-to-diets" value="INDIETRO">
-    <input type="submit" class="confirm-button" value="AVANTI">
+    <input type="submit" class="back-to-diets" value="INDIETRO" id= "indietro">
+    <label for="indietro" style="display: none"></label>
+    <input type="submit" class="confirm-button" value="AVANTI" id= "avanti">
+    <label for="indietro" style="display: none"></label>
   </form>
 </div>
 @endsection
