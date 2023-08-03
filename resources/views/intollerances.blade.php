@@ -196,6 +196,7 @@
       <option value="nessuna">nessuna</option>
       @endif
     </select>
+    
     <input type="submit" class="back-to-diets" value="INDIETRO">
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>

@@ -23,11 +23,13 @@ class userIntollerances extends Model
         if(count($intolleranzeUtente->get()) != 0) {
             $intolleranzeUtente->delete();
         }
-        foreach($intolleranze as $intolleranza) {
-            userIntollerances::create([
-                'idUtente' => $idUser,
-                'intolleranza' => $intolleranza,
-            ]);
+        if(!is_null($intolleranze)) {
+            foreach($intolleranze as $intolleranza) {
+                userIntollerances::create([
+                    'idUtente' => $idUser,
+                    'intolleranza' => $intolleranza,
+                ]);
+            }
         }
     }
 }
