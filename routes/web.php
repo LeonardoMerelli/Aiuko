@@ -20,7 +20,11 @@ Route::get('/Aiuko', function () {
     return view('home');
 })->name('home');
 
-Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
+Route::get('/prova', function () {
+    return view('prova');
+})->name('prova');
+
+Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     Route::get('/diete', [DietController::class, 'create'])
         ->name('diets.create');
     
@@ -32,10 +36,6 @@ Route::middleware(['auth'])->prefix('Aiuko')->group(function () {
     
     Route::post('/intolleranze', [IntolleranceController::class, 'store'])
         ->name('intollerances.store');
-
-    Route::get('/intollerances', function () {
-        return view('intollerances');
-    })->name('intollerances');
 });
 
 require __DIR__.'/auth.php';

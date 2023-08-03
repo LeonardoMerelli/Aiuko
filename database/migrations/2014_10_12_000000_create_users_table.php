@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('telefono', 10)->unique();
             $table->string('citta');
             $table->string('email')->unique();
+            $table->boolean('setup')->default(false);
+            ;
         });
     }
 

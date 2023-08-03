@@ -29,7 +29,12 @@ class IntolleranceController extends Controller
     {
         $this->userIntollerances->salvaIntolleranzeUtente($request->intollerances);
 
-        return redirect()->route('home');
+        if($request->redirect == 'prova') {
+            $user = auth()->user();
+            $user->setup = true;
+            $user->save();
+        }
+        return redirect()->route($request->redirect);
     }
 
     /**

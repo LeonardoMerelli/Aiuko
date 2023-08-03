@@ -20,16 +20,16 @@ class AuthenticatedSessionController extends Controller
         return view('login');
     }
 
-    /**
-     * Handle an incoming authentication request.
-     */
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if(auth()->user()->setup == 0){
+            return redirect()->route('diets.create');
+        }
+        return redirect()->route('prova');
     }
 
     /**
