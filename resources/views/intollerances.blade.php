@@ -196,7 +196,7 @@
       <option value="nessuna">nessuna</option>
       @endif
     </select>
-    <a href="{{route('diets.create')}}">INDIETRO</a>
+    <input type="submit" class="back-to-diets" value="INDIETRO">
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>

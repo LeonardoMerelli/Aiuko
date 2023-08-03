@@ -63,7 +63,8 @@
   text-decoration: none;
   color: #000000;
 }
-.diet-div form .confirm-button {
+.diet-div form .confirm-button, 
+.diet-div form .back-to-diets{
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -76,6 +77,10 @@
   line-height: 30px;
   font-weight: 700;
   cursor: pointer;
+}
+.diet-div form .back-to-diets {
+  background-color: #FFFFFFA1;
+  color: #000000;
 }
 .diet-div form .confirm-button.disabled {
   background-color: #303331e5;
