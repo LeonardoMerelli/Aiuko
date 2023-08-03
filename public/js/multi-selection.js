@@ -3,7 +3,7 @@ let i=0;
 const itemArray = [];
 const optionArray = [];
 const selectElement = document.querySelector(".custom-select");
-//selectElement.style.display = "none";
+selectElement.style.display = "none";
 const submitButton = document.querySelector(".confirm-button");
 submitButton.classList.add("disabled");
 
