@@ -6,14 +6,16 @@
               {{Form::open(array('route'=>'login.store', 'class'=>'login-form'))}}
               {{Form::token()}}
             <div>
-                {{ Form::label('username','Username',['class'=>'label-form'])}}
-                {{ Form::text('username')}}
-                
-                @if ($errors->first('username'))
+                {{ Form::label('email','Email',['class'=>'label-form'])}}
+                {{ Form::text('email')}}
+
+                @if ($errors->first('email'))
             <ul>
+                @foreach($errors->get('email') as $message)
                     <li>
-                        Errore
-                    </li>  
+                        {{$message}}
+                    </li>   
+                @endforeach
             </ul>
             @endif
             </div>
