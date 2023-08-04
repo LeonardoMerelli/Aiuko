@@ -13,7 +13,7 @@ class FacebookAuthController extends Controller
 
     public function callbackFacebook() {
         try{
-            $facebook_user = Socialite::driver('facebook')->user();
+            $facebook_user = Socialite::driver('facebook')->stateless()->user();
 
             $user = User::where('facebook_id', $facebook_user->getId())
                         ->orWhere('email', $facebook_user->getEmail())
