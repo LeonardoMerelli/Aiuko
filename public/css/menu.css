@@ -1,17 +1,12 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-	background-color: transparent;
-	background: linear-gradient(180deg, rgba(31, 104, 69, 0.9) 5.21%, #6AD559 80.73%);
-  height: 100vh;
-}
+
 
 .menu-view {
+  background: linear-gradient(180deg, rgba(31, 104, 69, 0.9) 5.21%, #6AD559 80.73%);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
+  padding-top: 25px;
 }
 .menu-view >div {
   max-width: 800px;
