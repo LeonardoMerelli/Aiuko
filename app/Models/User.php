@@ -25,6 +25,8 @@ class User extends Authenticatable
         'citta',
         'email',
         'password',
+        'google_id',
+        'facebook_id',
     ];
 
     protected $hidden = [
