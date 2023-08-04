@@ -40,6 +40,10 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
         ->name('intollerances.store');
 });
 
+Route::get('/Aiuko/impostazioniPasto', function () {
+    return view('mealPreSelect');
+})->name('impostazioniPasto');
+
 Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
         ->name('google.auth');
 

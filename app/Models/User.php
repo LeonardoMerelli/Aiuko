@@ -34,8 +34,4 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function prova() {
-        dd($this->setup);
-    }
-
 }

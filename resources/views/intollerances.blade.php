@@ -197,7 +197,7 @@
       @endif
     </select>
     <button class="back-to-diets" type="submit"  data-value="diets.create">INDIETRO</button>
-    <button class="confirm-button" type="submit"  data-value="prova">AVANTI</button>
+    <button class="confirm-button" type="submit"  data-value="impostazioniPasto">AVANTI</button>
     <input type="hidden" name="redirect" id="redirect" value="" readonly>
   </form>
 

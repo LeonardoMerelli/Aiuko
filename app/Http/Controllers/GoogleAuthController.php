@@ -30,6 +30,6 @@ class GoogleAuthController extends Controller
         if(auth()->user()->setup == 0){
             return redirect()->route('diets.create');
         }
-        return redirect()->route('prova');
+        return redirect()->route('impostazioniPasto');
     }
 }
