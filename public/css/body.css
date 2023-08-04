@@ -6,6 +6,11 @@ body {
 	background-image: linear-gradient(to bottom, #1f6845e6 0%,rgba(255, 255, 255, 0) 180%);
 	background-attachment: fixed;
 }
+main {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
 
 
 
