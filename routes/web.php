@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DietController;
+use App\Http\Controllers\FacebookAuthController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -37,5 +39,15 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     Route::post('/intolleranze', [IntolleranceController::class, 'store'])
         ->name('intollerances.store');
 });
+
+Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
+        ->name('google.auth');
+
+Route::get('/Aiuko/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
+
+Route::get('/Aiuko/auth/facebook', [FacebookAuthController::class, 'redirect'])
+        ->name('facebook.auth');
+
+Route::get('/Aiuko/auth/google/call-back', [FacebookAuthController::class, 'callbackGoogle']);
 
 require __DIR__.'/auth.php';

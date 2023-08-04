@@ -16,13 +16,15 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('idUtente');
             $table->string('nome');
-            $table->string('cognome');
-            $table->string('password');
-            $table->string('genere');
-            $table->string('eta');
-            $table->string('telefono', 10)->unique();
-            $table->string('citta');
+            $table->string('cognome')->nullable();
+            $table->string('password')->nullable();
+            $table->string('genere')->nullable();
+            $table->string('eta')->nullable();
+            $table->string('telefono', 10)->unique()->nullable();
+            $table->string('citta')->nullable();
             $table->string('email')->unique();
+            $table->string('google_id')->nullable();
+            $table->string('facebook_id')->nullable();
             $table->boolean('setup')->default(false);
             ;
         });

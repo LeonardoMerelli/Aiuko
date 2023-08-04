@@ -17,7 +17,7 @@ class EmailRule implements Rule
         } else {
             $this->emailInUso = User::where('email', $value)->exists();
         }
-        return preg_match('/^.*@.*\..*$/', $value) && !$this->emailInUso;
+        return preg_match('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?<!@)$/', $value) && !$this->emailInUso;
 
     }
 
