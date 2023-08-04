@@ -212,7 +212,7 @@
   flex: 1;
 }
 
-#username, 
+#email, 
 .login-form div #password {
   width: 70%;
   height: 25px;
