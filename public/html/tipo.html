@@ -59,7 +59,7 @@
         .lista_giorni {
             display: flex;
             flex-direction: row;
-            width: 60%;
+            width: 70%;
             background-color:rgba(0, 0, 0, 0.5899999737739563);
             border-top-left-radius:10px;
             border-top-right-radius:10px;
@@ -75,7 +75,7 @@
             justify-content: center;
             position: relative;
             font-size: 25px;
-            width: 16%;
+            width: 14%;
             padding: 10px 0 10px 0;
         }
 
@@ -97,11 +97,11 @@
             display: flex;
             flex-direction: column;
             color: #ffffff;
-            font-size: 30px;
-            margin-left: 1%;
+            font-size: 20px;
+            margin-top: 1%;
             font-family: 'Poppins', sans-serif;
             font-family: 'Prompt', sans-serif; 
-            margin-left: 5%;
+            margin-left: 8%;
         }
 
         .scelta-container {
@@ -119,6 +119,36 @@
 
         }
 
+        .sotto-scritta-pasto {
+            color: #fff;
+            margin-left: 8%;
+            font-size: 15px;
+        }
+
+        .container-piatti {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .piatto {
+            background-color:rgba(0, 0, 0, 0.4000000059604645);
+            width:80%;
+            height:200px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 700px) {
+            .piatto {
+                max-width: 600px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,13 +171,10 @@
         </div>
     </div>
     <span class="scritta-pasto">PRANZO</span>
-    <div class="scelta-container">
-        <div class="scelta-tipo">
-            <div class="veloce">VELOCE</div>
-            <div class="pre-workout">PRE WORKOUT</div>
-            <div class="ricco">RICCO</div>
-            <div class="originale">ORIGINALE</div>
-        </div>
+    <span class="sotto-scritta-pasto">Cosa ti piacerebbe mangiare?</span>
+    <div class="container-piatti">
+        <div class="piatto"></div>
+        <div class="piatto"></div>  
     </div>
 </body>
 </html>
