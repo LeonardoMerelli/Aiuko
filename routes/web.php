@@ -48,6 +48,6 @@ Route::get('/Aiuko/auth/google/call-back', [GoogleAuthController::class, 'callba
 Route::get('/Aiuko/auth/facebook', [FacebookAuthController::class, 'redirect'])
         ->name('facebook.auth');
 
-Route::get('/Aiuko/auth/google/call-back', [FacebookAuthController::class, 'callbackGoogle']);
+Route::get('/Aiuko/auth/facebook/call-back', [FacebookAuthController::class, 'callbackFacebook']);
 
 require __DIR__.'/auth.php';

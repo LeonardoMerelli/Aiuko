@@ -10,7 +10,6 @@
     <div class="home-bottom-div">
         <div>
             <a href=" {{route('register.create')}} " class="go-to-registration">Sign up with email</a>
-<<<<<<< HEAD
             <span> or use social sign up</span>
             <a href="{{route('google.auth')}}" class="social-registration">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
@@ -30,8 +29,7 @@
                 </svg>
                 &nbsp; Continue with Apple
             </a>
-=======
->>>>>>> dc9c076887aa2a7b518674bf2e0454b5ac022796
+
             <p>Already have account? <a href="{{route('login.create')}}">Log in</a></p>
         </div>
     </div>

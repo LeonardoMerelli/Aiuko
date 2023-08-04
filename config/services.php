@@ -43,4 +43,9 @@ return [
         'redirect' => 'https://localhost:8000/Aiuko/auth/facebook/call-back',
     ],
 
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => 'https://localhost:8000/Aiuko/auth/twetter/call-back',
+    ],
 ];
