@@ -52,7 +52,7 @@
     width: 0;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: #c40000;;
   }
   
   .input-container-form .input-div  input{
@@ -228,14 +228,14 @@
 }
 
 @media (max-width: 500px) {
-  #username, 
+  #email, 
   .login-form div #password {
       max-width: 200px;
   }
 }
 
 @media (min-width: 500px) and (max-width: 900px) {
-  #username, 
+  #email, 
   .login-form div #password {
       max-width: 400px;
   }
@@ -245,13 +245,14 @@
   list-style: none;
   white-space: nowrap;
   flex-basis: 100%;
-  margin: -19px;
+  margin: -20px;
 }
 
 .login-form ul li{
-  font-size: 18px;
-  color: red;
+  font-size: 16px;
+  color: #c40000;;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
 .login-form .login-container-btn {
