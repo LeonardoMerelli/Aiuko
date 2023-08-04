@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="menu.css">
-  <script src="multi-selection-menu.js" defer></script>
-  <script src="div-swap.js" defer></script>
-</head>
-<body>
-  <div class="menu-view">
+
+@section('scripts')
+<script src="{{ asset('js/multi-selection-menu.js') }}" defer></script>
+<script src="{{ asset('js/div-swap.js') }}" defer></script>
+@endsection
+
+@extends('body')
+
+
+@section('content')
+<div class="menu-view">
     <div class="profile-div">
       <div class="profile-img">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,5 +105,5 @@
       </div>
     </form>
   </div>
-</body>
-</html>
+</div>
+@endsection

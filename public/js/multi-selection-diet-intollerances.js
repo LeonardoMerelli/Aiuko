@@ -50,7 +50,7 @@ function deselect(itemElement) {
   itemElement.classList.remove("selected");
 }
 
-function preselectDiv(){
+function toggleConfirmButton(){
   count = 0;
   optionArray.forEach(item => {
     if (item.selected){
@@ -81,7 +81,7 @@ document.querySelectorAll(".select-div").forEach(selectElementDiv => {
       else {
         select(selectElementItem);
       }
-      preselectDiv();
+      toggleConfirmButton();
     })
   })
 })
@@ -94,4 +94,4 @@ document.querySelectorAll(".custom-select").forEach(selectElement => {
   })
 });
 
-preselectDiv();
+toggleConfirmButton();

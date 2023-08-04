@@ -1,5 +1,5 @@
 @section('scripts')
-<script src="{{ asset('js/multi-selection.js') }}" defer></script>
+<script src="{{ asset('js/multi-selection-diet-intollerances.js') }}" defer></script>
 @endsection
 
 @extends('body')
