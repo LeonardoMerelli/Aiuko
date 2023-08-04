@@ -6,13 +6,13 @@ const confirmButton = document.querySelector(".confirm-button")
 
 var flag = 0;
 function reloadScript(){
-  var oldScript = document.querySelector("script[src='multi-selection-menu.js']");
+  var oldScript = document.querySelector("script[src='/js/multi-selection-menu.js']");
     if (oldScript) {
         oldScript.remove();
     }
 
     var newScript = document.createElement("script");
-    newScript.src = "multi-selection-menu.js";
+    newScript.src = "/js/multi-selection-menu.js";
     document.head.appendChild(newScript);
 }
 

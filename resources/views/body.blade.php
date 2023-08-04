@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}"> 
     <link rel="stylesheet" type="text/css" href="{{asset('css/register-login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/diet-intollerances.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{asset('css/menu.css')}}"> 
 
     <!--<script src="{{ asset('js/register.js') }}" defer></script>-->
     @show 
