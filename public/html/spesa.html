@@ -96,6 +96,33 @@
         .categoria ul li:after {
             opacity:0.800000011920929;
         }
+
+        .bottoni {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conferma-spesa,
+        .annulla-spesa {
+            background-color: #0d1b2a8b;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.05;
+            margin-left: 10px;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            padding: 5px;
+            margin-bottom: 40px;
+        }
+
     </style>
 
 </head>
@@ -203,6 +230,10 @@
                 <li><img src="pera.jpg" alt="e"> <span>Insalata</span></li>
                 <li><img src="pera.jpg" alt="e"> <span>Peperone</span></li>
             </ul>
+        </div>
+        <div class="bottoni">
+            <button class="annulla-spesa">Annulla</button>
+            <button class="conferma-spesa">Conferma</button>
         </div>
     </div>
 </body>
