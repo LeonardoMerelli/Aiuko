@@ -29,19 +29,22 @@
         <span>Come ti senti oggi?</span>
       </div>
     </div>
-    <div class="week-div">
-      <a class="lun activated">L</a>
-      <a class="mar">M</a>
-      <a class="mer">M</a>
-      <a class="gio">G</a>
-      <a class="ven">V</a>
-      <a class="sab">S</a>
-      <a class="dom">D</a>
+    <div class="week">
+      <span>Scegli il giorno della settimana</span>
+      <div class="week-div">
+        <a class="lun activated">L</a>
+        <a class="mar">M</a>
+        <a class="mer">M</a>
+        <a class="gio">G</a>
+        <a class="ven">V</a>
+        <a class="sab">S</a>
+        <a class="dom">D</a>
+      </div>
     </div>
     <form action="" method="post">
       <div class="meal-div lunch">
         <div class="main-div">
-          <span>PRANZO</span>
+          <span>Vuoi un pranzo...</span>
 
           <div class="select-div">
             <div class="select-item">VELOCE</div>
@@ -57,16 +60,17 @@
             <option value="originale">originale</option>
           </select>
         </div>
-        <div class="difficulty-div">
-            <div class="difficulty-button">FACILE</div>
-            <div class="difficulty-button">INTERMEDIO</div>
-            <div class="difficulty-button">DIFFICILE</div>
-            <select name="difficulty-lunch" id="" class="diff-select">
-              <option value="facile">facile</option>
-              <option value="intermedio">intermedio</option>
-              <option value="difficile">difficile</option>
-            </select>
-        </div>
+        <span>Scegli il livello di difficoltà</span>
+          <div class="difficulty-div">
+              <div class="difficulty-button">FACILE</div>
+              <div class="difficulty-button">INTERMEDIO</div>
+              <div class="difficulty-button">DIFFICILE</div>
+              <select name="difficulty-lunch" id="" class="diff-select">
+                <option value="facile">facile</option>
+                <option value="intermedio">intermedio</option>
+                <option value="difficile">difficile</option>
+              </select>
+          </div>
       </div>
       <div class="meal-div dinner" style="display: none;">
         <div class="main-div">
@@ -85,6 +89,7 @@
             <option value="originale">originale</option>
           </select>
         </div>
+        <span>Scegli il livello di difficoltà</span>
         <div class="difficulty-div">
             <div class="difficulty-button">FACILE</div>
             <div class="difficulty-button">INTERMEDIO</div>
