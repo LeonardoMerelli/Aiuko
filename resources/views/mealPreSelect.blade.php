@@ -26,11 +26,10 @@
         <span class="profile-name">
           Ciao <span>Tommaso</span>!
         </span>
-        <span>Come ti senti oggi?</span>
       </div>
     </div>
     <div class="week">
-      <span>Scegli il giorno della settimana</span>
+      <span>Giorni della settimana</span>
       <div class="week-div">
         <a class="lun activated">L</a>
         <a class="mar">M</a>
@@ -41,74 +40,63 @@
         <a class="dom">D</a>
       </div>
     </div>
-    <form action="" method="post">
-      <div class="meal-div lunch">
-        <div class="main-div">
-          <span>Vuoi un pranzo...</span>
-
-          <div class="select-div">
-            <div class="select-item">VELOCE</div>
-            <div class="select-item">PRE WORK OUT</div>
-            <div class="select-item">RICCO</div>
-            <div class="select-item">ORIGINALE</div>
+    <div class="pranzo">
+      <span id="nomepasto">Pranzo</span>
+      <div id="carouselpranzo" class="carousel slide" data-bs-touch="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot(11).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
           </div>
-
-          <select name="type-lunch" class="custom-select" multiple>
-            <option value="veloce" selected>veloce</option>
-            <option value="preworkuot">preworkuot</option>
-            <option value="ricco">ricco</option>
-            <option value="originale">originale</option>
-          </select>
-        </div>
-        <span>Scegli il livello di difficoltà</span>
-          <div class="difficulty-div">
-              <div class="difficulty-button">FACILE</div>
-              <div class="difficulty-button">INTERMEDIO</div>
-              <div class="difficulty-button">DIFFICILE</div>
-              <select name="difficulty-lunch" id="" class="diff-select">
-                <option value="facile">facile</option>
-                <option value="intermedio">intermedio</option>
-                <option value="difficile">difficile</option>
-              </select>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot (13).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
           </div>
-      </div>
-      <div class="meal-div dinner" style="display: none;">
-        <div class="main-div">
-          <span>CENA</span>
-          <div class="select-div">
-            <div class="select-item">VELOCE</div>
-            <div class="select-item">PRE WORK OUT</div>
-            <div class="select-item">RICCO</div>
-            <div class="select-item">ORIGINALE</div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
           </div>
-
-          <select name="type-dinner" id="" class="custom-select">
-            <option value="veloce" selected>veloce</option>
-            <option value="preworkuot">preworkuot</option>
-            <option value="ricco">ricco</option>
-            <option value="originale">originale</option>
-          </select>
         </div>
-        <span>Scegli il livello di difficoltà</span>
-        <div class="difficulty-div">
-            <div class="difficulty-button">FACILE</div>
-            <div class="difficulty-button">INTERMEDIO</div>
-            <div class="difficulty-button">DIFFICILE</div>
-
-            <select name="difficulty-dinner" id=""class="diff-select">
-              <option value="facile">facile</option>
-              <option value="intermedio">intermedio</option>
-              <option value="difficile">difficile</option>
-            </select>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselpranzo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselpranzo" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="cena">
+      <span id="nomepasto">Cena</span>
+      <div id="carousel" class="carousel slide" data-bs-touch="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/Screenshot(11).png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/Screenshot (13).png" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/Screenshot (16).png" class="d-block w-100" alt="...">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="button-section">
-        <div class="go-to-lunch hide">PRANZO</div>
-        <div class="go-to-dinner-hide" style="background-color: transparent;"></div>
-        <div class="go-to-dinner">CENA</div>
-        <input type="submit" class="confirm-button hide" value="CONFERMA">
-      </div>
-    </form>
+    </div>    
   </div>
 </div>
 @endsection

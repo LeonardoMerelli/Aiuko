@@ -1,5 +1,4 @@
 .menu-view {
-  background: linear-gradient(180deg, rgba(31, 104, 69, 0.9) 5.21%, #6AD559 80.73%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +11,7 @@
   display: flex;
   flex-direction: row;
   width: 75%;
-  align-items: end;
+  align-items: center;
   justify-content: left;
 }
 .menu-view .profile-div .profile-img {
@@ -23,11 +22,13 @@
   width: 80px;
   object-fit: contain;
 }
+
 .menu-view .profile-div .info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
+  padding-top: 10px;
 }
+
 .menu-view .profile-div .info>span {
   color: #FFFF;
   font-size: 12px;
@@ -54,10 +55,11 @@
 
 .menu-view .week span {
   color: #FFFF;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 13px;
   letter-spacing: 0.5;
-  padding: 0 0 5px 0;
+  padding: 0 0 10px 0;
 }
 
 .menu-view .week-div {
@@ -72,6 +74,7 @@
   border-radius: 10px;
   padding: 0 13px;
 }
+
 .menu-view .week-div a {
   display: flex;
   align-items: center;
@@ -82,153 +85,43 @@
   font-size: 24px;
   border-radius: 17px;
   cursor: pointer;
+  text-decoration: none;
+  color: #000000;
 }
 .menu-view .week-div a.activated {
   background-color: #1F6845;
   color: #FFFFFF;
 }
-.menu-view form {
+
+.pranzo {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 85%;
-  max-width: 800px;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+.pranzo #nomepasto,
+.cena #nomepasto {
+  font-size: 22px;
+  font-weight: 700;
   color: #FFFFFF;
-}
-.menu-view form .meal-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  position: relative;
+  left: 0;
 }
 
-.menu-view form .meal-div span{
-  font-size: 20px;
-  font-weight: 700;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.menu-view form .meal-div .main-div{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.menu-view form .meal-div .main-div span {
-  font-size: 23px;
-  font-weight: 700;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.menu-view form .meal-div .main-div .select-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5px;
-  width: 100%;
-  border: 1px black solid;
-  border-radius: 10px;
-  background-color:#0000005a;
-}
-.menu-view form .meal-div .main-div .select-div div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 700;
-  width: 100%;
-  height: 115px;
-  cursor: pointer;
-}
-.menu-view form .meal-div .main-div .select-div div[class*= "selected"] {
-  background-color:#F4AA41E5;
-}
-.menu-view form .meal-div .main-div .select-div div:first-child {
-border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.menu-view form .meal-div .main-div .select-div div:last-child {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.menu-view form .meal-div .main-div .select-div div:nth-child(2) {
-  border-top: 1px #ffffffb4 solid;
-  border-bottom: 1px #ffffffb4 solid;
-}
-.menu-view form .meal-div .main-div .select-div div:nth-child(3) {
-  border-bottom: 1px #ffffffb4 solid;
-}
-
-.menu-view form .meal-div .difficulty-div {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.menu-view form .meal-div .difficulty-div div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  background-color:#0000005a;
-  cursor: pointer;
-}
-
-.menu-view form .meal-div .difficulty-div div:first-child {
-  text-align: left;
-  background-color:#0000005a;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-right: 1px #ffffffb4 solid;
-}
-.menu-view form .meal-div .difficulty-div div:nth-child(3){
-  text-align: right;
-  background-color:#0000005a;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-left   : 1px #ffffffb4 solid;
-}
-.menu-view form .meal-div .difficulty-div div[class*= "selected"] {
-  background-color:#F4AA41E5;
-}
-
-.menu-view form .button-section {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; 
-  width: 100%;
-}
-
-.menu-view form .button-section .go-to-lunch,
-.menu-view form .button-section .go-to-dinner,
-.menu-view form .button-section .confirm-button {
+#carouselpranzo {
+  width: 60%;
+  min-width: 300px;
+  height: 45%;
+  min-height: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 110px;
-  height: 35px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 700;
-  border: none;
-  background-color:#0d1b2a8b;
-  color: #FFFFFF;
-  cursor: pointer;
 }
 
-.menu-view form .button-section .go-to-lunch,
-.menu-view form .button-section .go-to-dinner {
-  background-color: #ffffffaf;
-  color: #000000;
-}
-
-.menu-view form .button-section .go-to-lunch.hide,
-.menu-view form .button-section .go-to-dinner.hide,
-.menu-view form .button-section .confirm-button.hide {
-  display: none;
+.primascelta {
+  background-color: rgba(31, 104, 69, 0.6);
+  padding: 5px;
+  width: 100%;
+  height: 100%;
 }
