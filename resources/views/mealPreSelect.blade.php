@@ -40,26 +40,26 @@
         <a class="dom">D</a>
       </div>
     </div>
-    <div class="pranzo">
+    <div class="pranzo_lun">
       <span id="nomepasto">Pranzo</span>
       <div id="carouselpranzo" class="carousel slide" data-bs-touch="true">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="primascelta">
               <span>Titolo</span>
-              <img src="/images/Screenshot(11).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="primascelta">
-              <span>Titolo</span>
-              <img src="/images/Screenshot (13).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="primascelta">
-              <span>Titolo</span>
+              <span>Ingredienti</span>
               <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot(11).png" class="d-block w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
             </div>
           </div>
         </div>
@@ -73,30 +73,105 @@
         </button>
       </div>
     </div>
-    <div class="cena">
+    <div class="cena_lun">
       <span id="nomepasto">Cena</span>
-      <div id="carousel" class="carousel slide" data-bs-touch="true">
+      <div id="carouselcena" class="carousel slide" data-bs-touch="true">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/images/Screenshot(11).png" class="d-block w-100" alt="...">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <span>Ingredienti</span>
+              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="/images/Screenshot (13).png" class="d-block w-100" alt="">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot(11).png" class="d-block w-80 h-50" width="50%" alt="...">
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="/images/Screenshot (16).png" class="d-block w-100" alt="...">
+            <div class="primascelta">
+              <span>Titolo</span>
+            </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselcena" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselcena" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>    
+    </div>
+    <div class="pranzo_lun">
+      <span id="nomepasto">Pranzo</span>
+      <div id="carouselpranzo" class="carousel slide" data-bs-touch="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <span>Ingredienti</span>
+              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot(11).png" class="d-block w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselpranzo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselpranzo" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="cena_mar">
+      <span id="nomepasto">Cena</span>
+      <div id="carouselcena" class="carousel slide" data-bs-touch="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <span>Ingredienti</span>
+              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+              <img src="/images/Screenshot(11).png" class="d-block w-80 h-50" width="50%" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="primascelta">
+              <span>Titolo</span>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselcena" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselcena" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> 
   </div>
 </div>
 @endsection

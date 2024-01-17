@@ -93,12 +93,14 @@
   color: #FFFFFF;
 }
 
-.pranzo {
+.pranzo,
+.cena {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 10px;
+  width: 80%;
 }
 
 .pranzo #nomepasto,
@@ -110,18 +112,31 @@
   left: 0;
 }
 
-#carouselpranzo {
-  width: 60%;
-  min-width: 300px;
-  height: 45%;
-  min-height: 150px;
+#carouselpranzo,
+#carouselcena {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .primascelta {
   background-color: rgba(31, 104, 69, 0.6);
-  padding: 5px;
-  width: 100%;
-  height: 100%;
+  padding: 10px 30px 10px 30px;
+  width: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+button.carousel-control-next {
+  width: auto;
+}
+
+button.carousel-control-prev {
+  width: auto;
+}
+
+.pranzo_lun,
+.pranzo_mar {
+  visibility: hidden;
 }
