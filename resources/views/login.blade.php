@@ -7,7 +7,7 @@
               {{Form::token()}}
             <div>
                 {{ Form::label('email','Email',['class'=>'label-form'])}}
-                {{ Form::text('email')}}
+                {{ Form::text('email', null, ['placeholder' => 'Email'])}}
 
                 @if ($errors->first('email'))
             <ul>
@@ -21,7 +21,7 @@
             </div>
             <div>
                 {{ Form::label('password','Password',['class'=>'label-form'])}}
-                {{ Form::password('password')}}
+                {{ Form::password('password', ['placeholder' => 'Password'])}}
 
                 @if ($errors->first('password'))
             <ul>

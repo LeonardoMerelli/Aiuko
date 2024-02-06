@@ -122,7 +122,7 @@
 .primascelta {
   background-color: rgba(31, 104, 69, 0.6);
   padding: 10px 30px 10px 30px;
-  width: auto;
+  width: 300px;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -136,7 +136,7 @@ button.carousel-control-prev {
   width: auto;
 }
 
-.pranzo_lun,
-.pranzo_mar {
-  visibility: hidden;
+.pranzo_lun span,
+.cena_lun span {
+  color: #FFFF;
 }

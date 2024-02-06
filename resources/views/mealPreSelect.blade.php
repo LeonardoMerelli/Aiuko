@@ -42,13 +42,13 @@
     </div>
     <div class="pranzo_lun">
       <span id="nomepasto">Pranzo</span>
-      <div id="carouselpranzo" class="carousel slide" data-bs-touch="true">
+      <div id="carouselpranzo" class="carousel slide carousel-fade" data-bs-touch="true">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="primascelta">
               <span>Titolo</span>
               <span>Ingredienti</span>
-              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-80 h-50" width="50%" alt="...">
+              <img src="/images/Screenshot (16).png" class="d-block mx-auto w-100 h-50" width="50%" alt="...">
             </div>
           </div>
           <div class="carousel-item">
