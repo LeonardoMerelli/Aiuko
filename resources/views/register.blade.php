@@ -11,7 +11,7 @@
 
             <div class= "input-div">
                 {{ Form::label('nome','Nome')}}
-                {{ Form::text('nome')}}
+                {{ Form::text('nome', null, ['placeholder' => 'Nome'])}}
                     @if ($errors->first('nome'))
                     <ul>
                         <li>
@@ -22,7 +22,7 @@
             </div>
             <div class= "input-div">
                 {{ Form::label('cognome','Cognome')}}
-                {{ Form::text('cognome')}}
+                {{ Form::text('cognome', null, ['placeholder' => 'Cognome'])}}
                     @if ($errors->first('cognome'))
                     <ul>
                         <li>
@@ -33,7 +33,7 @@
             </div>
             <div class= "input-div">
                 {{Form::label('eta','Età')}}
-                {{Form::number('eta')}}
+                {{Form::number('eta', null, ['placeholder' => 'Età'])}}
                 @if ($errors->first('eta'))
                 <ul>
                     <li>
@@ -43,19 +43,8 @@
                 @endif
             </div>
             <div class= "input-div">
-                {{ Form::label('telefono','Telefono')}}
-                {{ Form::text('telefono')}}
-                @if ($errors->first('telefono'))
-                <ul>
-                    <li>
-                        Telefono non valido
-                    </li>   
-                </ul>
-                @endif
-            </div>
-            <div class= "input-div">
                 {{Form::label('citta','Città')}}
-                {{Form::text('citta')}}
+                {{Form::text('citta', null, ['placeholder' => 'Città'])}}
                 @if ($errors->first('citta'))
                 <ul>
                     <li>
@@ -66,7 +55,7 @@
             </div>
             <div class= "input-div">
                 {{ Form::label('email','E-mail')}}
-                {{ Form::text('email')}}
+                {{ Form::text('email', null, ['placeholder' => 'E-mail'])}}
                 @if ($errors->first('email'))
                     <ul>
                         <li>
@@ -77,7 +66,7 @@
             </div>
             <div class= "input-div">
                 {{ Form::label('password','Password')}}
-                {{ Form::password('password')}}
+                {{ Form::password('password', ['placeholder' => 'Password'])}}
                 @if ($errors->first('password'))
                 <ul>
                     @foreach($errors->get('password') as $message)
@@ -90,7 +79,7 @@
             </div> 
             <div class= "input-div">
                 {{ Form::label('conferma-password','Conferma password')}}
-                {{ Form::password('password_confirmation')}}  
+                {{ Form::password('password_confirmation', ['id' => 'ConfermaPassword', 'placeholder' => 'Conferma password'])}}  
             </div> 
             <div class= "radio-div">
                 <div class="radio-label">

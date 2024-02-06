@@ -3,10 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     color: #fff;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     outline: none;
     background-image: linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%);
     background-size: cover;
@@ -17,7 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:25px;
+    gap:20px;
     max-width: 900px;
     width: 100%;
     margin-top: 20px;
@@ -32,32 +31,43 @@
     font-size: 19px;
     flex-wrap: wrap;
   }
+
+  .register-section #nome::placeholder,
+  .register-section #cognome::placeholder,
+  .register-section #eta::placeholder,
+  .register-section #citta::placeholder,
+  .register-section #email::placeholder,
+  .register-section #password::placeholder,
+  .register-section #ConfermaPassword::placeholder{
+    color: rgba(256, 256, 256, 0.7);
+  }
   
   /*titolo*/
   .register-section h2{
     font-size: 35px;
-    margin: 40px 0;
+    margin: 60px 0 40px 0;
   }
   
   /*form*/
   .input-container-form ul{
     list-style: none;
-    margin: -20px;
+    margin: -60px;
     padding: 0;
     white-space: nowrap;
     flex-basis: 100%;
   }
 
   .input-container-form ul li{
-    width: 0;
-    font-size: 18px;
+
+    font-size: 15px;
+    color: #ffffff;;
     font-weight: bold;
-    color: #c40000;;
+    word-wrap: break-word;
   }
   
   .input-container-form .input-div  input{
     width: 70%;
-    height: 25px;
+    height: 40px;
     font-size: 18px;
     color: #fff;
     border: none;
@@ -70,13 +80,12 @@
   }
   
   .input-container-form .input-div label {
-    width: 30%;
-    flex: 1;
+    display: none;
   }
 
   @media (max-width: 768px) {
       .input-container-form .input-div  input {
-          max-width: 200px;
+          max-width: 250px;
       }
   }
 
@@ -132,7 +141,7 @@
     transition: 0.05;
     margin-left: 10px;
     text-decoration: none;
-    height: 30px;
+    height: 40px;
     width: 100px;
     text-align: center; 
     display: flex;
@@ -183,7 +192,7 @@
 /*Titolo*/
 .login-section h2 {
   font-size: 35px;
-  margin: 40px 0;
+  margin: 80px 0;
 }
 /*Form*/
 .login-form{
@@ -191,7 +200,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:30px;
   max-width: 900px;
   width: 100%;
   margin-top: 20px;
@@ -205,18 +213,20 @@
   gap: 10px;
   font-size: 19px;
   flex-wrap: wrap;
+  margin: 10px; 
 }
 
 .label-form {
   width: 30%;
   flex: 1;
+  display: none;
 }
 
-#email, 
-.login-form div #password {
-  width: 70%;
-  height: 25px;
-  font-size: 18px;
+.login-section #email, 
+.login-section #password {
+  width: 80%;
+  height: 44px;
+  font-size: 16px;
   color: #fff;
   border: none;
   border-bottom: 1px solid #fff;
@@ -227,10 +237,15 @@
   margin-left: 5px;
 }
 
-@media (max-width: 500px) {
+.login-section #email::placeholder,
+.login-section #password::placeholder {
+  color: rgba(256, 256, 256, 0.7);
+}
+
+@media (min-width: 500px) {
   #email, 
-  .login-form div #password {
-      max-width: 200px;
+  #password {
+      max-width: 70%;
   }
 }
 
@@ -245,12 +260,12 @@
   list-style: none;
   white-space: nowrap;
   flex-basis: 100%;
-  margin: -20px;
+  margin: -60px;
 }
 
 .login-form ul li{
-  font-size: 16px;
-  color: #c40000;;
+  font-size: 15px;
+  color: #ffffff;;
   font-weight: bold;
   word-wrap: break-word;
 }
