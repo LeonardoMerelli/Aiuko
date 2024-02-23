@@ -22,10 +22,6 @@ Route::get('/Aiuko', function () {
     return view('home');
 })->name('home');
 
-Route::get('/prova', function () {
-    return view('prova');
-})->name('prova');
-
 Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     Route::get('/diete', [DietController::class, 'create'])
         ->name('diets.create');
@@ -43,6 +39,10 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
 Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');
 })->name('impostazioniPasto');
+
+Route::get('/Aiuko/mero', function () {
+    return view('caratteristicheuser');
+})->name('caratteristicheuser');
 
 Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
         ->name('google.auth');

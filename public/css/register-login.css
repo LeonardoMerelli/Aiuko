@@ -1,199 +1,176 @@
-  /*REGISTER*/
-  .register-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    width: 100%;
-    min-height: 100%;
-    outline: none;
-    background-image: linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%);
-    background-size: cover;
-  }
-  
-  .input-container-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:20px;
-    max-width: 900px;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .input-container-form .input-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 85%;
-    gap: 10px;
-    font-size: 19px;
-    flex-wrap: wrap;
-  }
-
-  .register-section #nome::placeholder,
-  .register-section #cognome::placeholder,
-  .register-section #eta::placeholder,
-  .register-section #citta::placeholder,
-  .register-section #email::placeholder,
-  .register-section #password::placeholder,
-  .register-section #ConfermaPassword::placeholder{
-    color: rgba(256, 256, 256, 0.7);
-  }
-  
-  /*titolo*/
-  .register-section h2{
-    font-size: 35px;
-    margin: 60px 0 40px 0;
-  }
-  
-  /*form*/
-  .input-container-form ul{
-    list-style: none;
-    margin: -60px;
-    padding: 0;
-    white-space: nowrap;
-    flex-basis: 100%;
-  }
-
-  .input-container-form ul li{
-
-    font-size: 15px;
-    color: #ffffff;;
-    font-weight: bold;
-    word-wrap: break-word;
-  }
-  
-  .input-container-form .input-div  input{
-    width: 70%;
-    height: 40px;
-    font-size: 18px;
-    color: #fff;
-    border: none;
-    border-bottom: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 0 5px 0 5px;
-    outline: none;
-    margin-left: 5px;
-  }
-  
-  .input-container-form .input-div label {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-      .input-container-form .input-div  input {
-          max-width: 250px;
-      }
-  }
-
-  .input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
-  .input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-  } 
-  
-  .input-container-form .input-div  #date{
-    color: var(--text-color-rich-black);
-    padding: 0 5px;
-    cursor: pointer;
-  }
-
-  .input-div  #date::-webkit-calendar-picker-indicator{
-    cursor: pointer;
-  }
-
-  .input-container-form .radio-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 19px;
-    gap: 10px;
-    width: 80%;
-  }
-
-  .input-container-form .radio-div .radio-label {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .input-container-form .input-container-btn-div {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  .input-container-form .input-container-btn-div .input-container-btn,
-  .input-container-form .input-container-btn-div .torna-indietro {
-    background-color:  #0d1b2a8b;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    font-size: 19px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.05;
-    margin-left: 10px;
-    text-decoration: none;
-    height: 40px;
-    width: 100px;
-    text-align: center; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .input-container-form .input-container-btn-div .input-container-btn:hover,
-  .input-container-form .input-container-btn-div .torna-indietro:hover {
-    scale: 1.05;
-    box-shadow: 0px 0px 45px 0px #415a779f;
-  }
-
-  .input-container-form .input-container-btn-div .input-container-btn:active,
-  .input-container-form .input-container-btn-div .torna-indietro:active {
-    scale: 0.95;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*LOGIN*/
-.login-section {
+/*REGISTER*/
+.register-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #000;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   outline: none;
-  background-image: linear-gradient(180deg, rgba(30.999998152256012, 104.00000140070915, 68.99999588727951, 0.8999999761581421) 70.49060034751892%,rgba(255, 255, 255, 1) 110%);
-  background-size: cover;
+  background-color: #2CF5B2;
+  justify-content: center;
 }
-/*Titolo*/
-.login-section h2 {
+
+/*titolo*/
+.register-section h2{
   font-size: 35px;
-  margin: 80px 0;
+  margin-bottom: 50px;
 }
+
+/*form*/
+.input-container-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:20px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-container-form .input-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  gap: 10px;
+  font-size: 19px;
+  flex-wrap: wrap;
+}
+
+.register-section #nome::placeholder,
+.register-section #cognome::placeholder,
+.register-section #eta::placeholder,
+.register-section #citta::placeholder,
+.register-section #email::placeholder,
+.register-section #password::placeholder,
+.register-section #ConfermaPassword::placeholder{
+  color: rgba(12, 68, 49, 0.6);
+  font-weight: bold;
+}
+
+.input-container-form ul{
+  list-style: none;
+  margin: -60px;
+  padding: 0;
+  white-space: nowrap;
+  flex-basis: 100%;
+}
+
+.input-container-form ul li{
+
+  font-size: 15px;
+  color: #0C4431;;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.input-container-form .input-div  input{
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  color: #0C4431;
+  background-color: rgba(174, 247, 223, 0.9);
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  margin-left: 5px;
+  border: 0.1px solid black;
+}
+
+.input-container-form .input-div label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .input-container-form .input-div  input {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+  .input-container-form .input-div  input {
+      max-width: 400px;
+  }
+}
+
+.input-container-form .input-div input[type="number"]::-webkit-outer-spin-button,
+.input-container-form .input-div input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+} 
+
+.input-container-form .input-div  #date{
+  color: var(--text-color-rich-black);
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.input-div  #date::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+}
+
+.input-container-form .input-container-btn-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;  
+  margin-bottom: 10px;
+}
+
+.input-container-form .input-container-btn-div .input-container-btn,
+.input-container-form .input-container-btn-div .torna-indietro {
+  background-color:  #0d1b2a8b;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.05;
+  margin-left: 10px;
+  text-decoration: none;
+  height: 40px;
+  width: 100px;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container-form .input-container-btn-div .torna-indietro {
+  margin-left: -5px;
+}
+
+.input-container-form .input-container-btn-div .input-container-btn:hover,
+.input-container-form .input-container-btn-div .torna-indietro:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 45px 0px #415a779f;
+}
+
+.input-container-form .input-container-btn-div .input-container-btn:active,
+.input-container-form .input-container-btn-div .torna-indietro:active {
+  scale: 0.95;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Form*/
 .login-form{
   display: flex;
@@ -203,13 +180,14 @@
   max-width: 900px;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 1px;
 }
 
 .login-form div{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 85%;
+  width: 100%;
   gap: 10px;
   font-size: 19px;
   flex-wrap: wrap;
@@ -224,50 +202,29 @@
 
 .login-section #email, 
 .login-section #password {
-  width: 80%;
+  width: 100%;
   height: 44px;
   font-size: 16px;
-  color: #fff;
-  border: none;
-  border-bottom: 1px solid #fff;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: #0C4431;
+  background-color: rgba(174, 247, 223, 0.9);
   border-radius: 5px;
   padding: 0 5px 0 5px;
-  outline: none;
   margin-left: 5px;
+  border: 0.1px solid black;
 }
 
 .login-section #email::placeholder,
 .login-section #password::placeholder {
-  color: rgba(256, 256, 256, 0.7);
-}
-
-@media (min-width: 500px) {
-  #email, 
-  #password {
-      max-width: 70%;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 900px) {
-  #email, 
-  .login-form div #password {
-      max-width: 400px;
-  }
+  color: rgba(12, 68, 49, 0.6);
+  font-weight: bold;
 }
 
 .login-form ul{
   list-style: none;
-  white-space: nowrap;
-  flex-basis: 100%;
-  margin: -60px;
-}
-
-.login-form ul li{
-  font-size: 15px;
-  color: #ffffff;;
-  font-weight: bold;
-  word-wrap: break-word;
+  margin: -7px 1px;
+  padding: 0px;
+  font-size: 16px;
+  align-self: flex-start;
 }
 
 .login-form .login-container-btn {
@@ -281,7 +238,7 @@
 
 .login-btn,
 .torna-indietro {
-  background-color:  #0d1b2a8b;
+  background-color:  #0C4431;
   color: #fff;
   border: none;
   outline: none;
@@ -290,7 +247,6 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.05;
-  margin-left: 10px;
   text-decoration: none;
   height: 30px;
   width: 100px;

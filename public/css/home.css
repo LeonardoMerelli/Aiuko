@@ -3,17 +3,20 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1F6845E5;
+    background-color: #2CF5B2;
 }
 .home-top-div {
     width: 100%;
-    height: 100%;
-    background-image: url(/images/img_iniziale.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding-top: 5%;
+}
+
+.frase-motivazionale {
+    margin-top: 20px;
 }
 
 .home-bottom-div{
@@ -21,23 +24,6 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
-
-.shade {
-    background-image: linear-gradient(to top, #1f6845e6 0%,rgba(255, 255, 255, 0) 50%);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    background-image: url(/images/senza_cerchi_1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 294.7133483886719px;
-    height: 277px;
 }
 
 .background {
@@ -75,8 +61,8 @@
 .home-bottom-div div span {
     align-self: center;
     margin-bottom: 8px;
-    color: #FFFFFF;
-    font-size: 14px;
+    color: #0C4431;
+    font-size: 16px;
 }
 .home-bottom-div div .social-registration {
     color:  #060606;
@@ -87,9 +73,9 @@
     margin: 10px 0;
     font-weight: 400;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #0C4431;
     align-self: center;
 }
 .home-bottom-div div p a {
-    color: #FFFFFF;
+    color: #0C4431;
 }

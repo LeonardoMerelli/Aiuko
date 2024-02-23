@@ -3,13 +3,51 @@
 @section('content')
 <div class="home-div">
     <div class="home-top-div">
-        <div class="shade">
-            <div class="logo"></div>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="frase-motivazionale">
+            <span>Il tuo compagno di dieta intelligente</span>
         </div>
     </div>
     <div class="home-bottom-div">
         <div>
-            <a href=" {{route('register.create')}} " class="go-to-registration">Sign up with email</a>
+            <section class="login-section">
+                {{Form::open(array('route'=>'login.store', 'class'=>'login-form'))}}
+                {{Form::token()}}
+                <div> 
+                    {{ Form::label('email','Email',['class'=>'label-form'])}}
+                    {{ Form::text('email', null, ['placeholder' => 'Email'])}}
+
+                    @if ($errors->first('email'))
+                        <ul>
+                            @foreach($errors->get('email') as $message)
+                                <li>
+                                    {{$message}}
+                                </li>   
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
+                <div>
+                    {{ Form::label('password','Password',['class'=>'label-form'])}}
+                    {{ Form::password('password', ['placeholder' => 'Password'])}}
+
+                    @if ($errors->first('password'))
+                        <ul>
+                        @foreach($errors->get('password') as $message)
+                            <li>
+                                {{$message}}
+                            </li>   
+                    @endforeach
+                        </ul>
+                    @endif
+                </div>
+                <div class="login-container-btn">
+                    {{ Form::submit('Avanti',['class'=>'login-btn'])}}
+                </div>
+                    {{ Form::close() }}  <div class="login-container-btn">
+            </scetion>
             <span> or use social sign up</span>
             <a href="{{route('google.auth')}}" class="social-registration">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
@@ -17,20 +55,7 @@
                 </svg>
                 &nbsp; Continue with Google
             </a>
-            <a href="{{route('facebook.auth')}}" class="social-registration">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48">
-                <linearGradient id="awSgIinfw5_FS5MLHI~A9a_yGcWL8copNNQ_gr1" x1="6.228" x2="42.077" y1="4.896" y2="43.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d61a9"></stop><stop offset="1" stop-color="#16528c"></stop></linearGradient><path fill="url(#awSgIinfw5_FS5MLHI~A9a_yGcWL8copNNQ_gr1)" d="M42,40c0,1.105-0.895,2-2,2H8c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h32	c1.105,0,2,0.895,2,2V40z"></path><path d="M25,38V27h-4v-6h4v-2.138c0-5.042,2.666-7.818,7.505-7.818c1.995,0,3.077,0.14,3.598,0.208	l0.858,0.111L37,12.224L37,17h-3.635C32.237,17,32,18.378,32,19.535V21h4.723l-0.928,6H32v11H25z" opacity=".05"></path><path d="M25.5,37.5v-11h-4v-5h4v-2.638c0-4.788,2.422-7.318,7.005-7.318c1.971,0,3.03,0.138,3.54,0.204	l0.436,0.057l0.02,0.442V16.5h-3.135c-1.623,0-1.865,1.901-1.865,3.035V21.5h4.64l-0.773,5H31.5v11H25.5z" opacity=".07"></path><path fill="#fff" d="M33.365,16H36v-3.754c-0.492-0.064-1.531-0.203-3.495-0.203c-4.101,0-6.505,2.08-6.505,6.819V22h-4v4	h4v11h5V26h3.938l0.618-4H31v-2.465C31,17.661,31.612,16,33.365,16z"></path>
-                </svg>
-                &nbsp; Continue with Facebook
-            </a>
-            <a href="#" class="social-registration">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                <path d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"></path>
-                </svg>
-                &nbsp; Continue with Apple
-            </a>
-
-            <p>Already have account? <a href="{{route('login.create')}}">Log in</a></p>
+            <p>Don't have account? <a href="{{route('register.create')}}">Register</a></p>
         </div>
     </div>
 

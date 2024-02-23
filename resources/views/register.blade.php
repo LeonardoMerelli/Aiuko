@@ -32,17 +32,6 @@
                     @endif
             </div>
             <div class= "input-div">
-                {{Form::label('eta','Età')}}
-                {{Form::number('eta', null, ['placeholder' => 'Età'])}}
-                @if ($errors->first('eta'))
-                <ul>
-                    <li>
-                        Età è obbligatoria
-                    </li>   
-                </ul>
-                @endif
-            </div>
-            <div class= "input-div">
                 {{Form::label('citta','Città')}}
                 {{Form::text('citta', null, ['placeholder' => 'Città'])}}
                 @if ($errors->first('citta'))
@@ -79,21 +68,7 @@
             </div> 
             <div class= "input-div">
                 {{ Form::label('conferma-password','Conferma password')}}
-                {{ Form::password('password_confirmation', ['id' => 'ConfermaPassword', 'placeholder' => 'Conferma password'])}}  
-            </div> 
-            <div class= "radio-div">
-                <div class="radio-label">
-                    {{Form::radio('genere','uomo',true)}}
-                    {{Form::label('inLineRadio1','Uomo')}}
-                </div>
-                <div class="radio-label">
-                    {{Form::radio('genere','donna')}}
-                    {{Form::label('inLineRadio1','Donna')}}
-                </div>
-                <div class="radio-label">
-                    {{Form::radio('genere','altro')}}
-                    {{Form::label('inLineRadio1','Altro')}}
-                </div>
+                {{ Form::password('password_confirmation', ['id' => 'ConfermaPassword', 'placeholder' => 'Conferma password'])}} 
             </div>
             <div class="input-container-btn-div">
                 <a href="{{route('home')}}" class="torna-indietro">Indietro</a>
