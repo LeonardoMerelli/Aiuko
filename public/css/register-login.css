@@ -32,11 +32,10 @@
 .input-container-form .input-div {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 65%;
   gap: 10px;
   font-size: 19px;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .register-section #nome::placeholder,
@@ -52,14 +51,13 @@
 
 .input-container-form ul{
   list-style: none;
-  margin: -60px;
-  padding: 0;
-  white-space: nowrap;
-  flex-basis: 100%;
+  margin: -10px 1px;
+  padding: 0px;
+  align-self: flex-start;
 }
 
 .input-container-form ul li{
-
+  align-self: flex-start;
   font-size: 15px;
   color: #0C4431;;
   font-weight: bold;

@@ -18,7 +18,7 @@
                             Nome è obbligatorio
                         </li>   
                     </ul>
-                            @endif
+                    @endif
             </div>
             <div class= "input-div">
                 {{ Form::label('cognome','Cognome')}}
