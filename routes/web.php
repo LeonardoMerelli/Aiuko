@@ -34,18 +34,15 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/intolleranze', [IntolleranceController::class, 'store'])
         ->name('intollerances.store');
+    
+    Route::post('/caratteristiche', [CaratteristicheController::class, 'create']
+        )->name('caratteristicheuser');
+        
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');
 })->name('impostazioniPasto');
-
-
-
-// DE PROVAAAAAAA
-Route::get('/Aiuko/mero', function () {
-    return view('caratteristicheuser');
-})->name('caratteristicheuser');
 
 
 
