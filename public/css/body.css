@@ -2,9 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-	background-color: transparent;
-	background-image: linear-gradient(to bottom, #1f6845e6 0%,rgba(255, 255, 255, 0) 180%);
-	background-attachment: fixed;
 }
 main {
 	padding: 0;

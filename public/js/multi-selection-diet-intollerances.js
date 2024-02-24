@@ -1,6 +1,6 @@
 
 let i=0;
-let count = 0;
+//let count = 0;
 const itemArray = [];
 const optionArray = [];
 const selectElement = document.querySelector(".custom-select");
@@ -11,10 +11,11 @@ submitButton.classList.add("disabled");
 function select(itemElement) {
   const index = itemArray.indexOf(itemElement);
   const selectedText = itemElement.textContent.trim().toLowerCase();
-
+  
     if (selectedText === "nessuna") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {
+        console.log(item)
         if (item !== itemElement) {
           item.classList.remove("selected");
         }
@@ -22,7 +23,8 @@ function select(itemElement) {
       optionArray.forEach(option => {
         option.selected = false;
       });
-    } else {
+    } 
+    else {
       // Seleziona l'opzione corrente
       itemElement.classList.add("selected");
       optionArray[index].selected = true;
@@ -39,6 +41,7 @@ function select(itemElement) {
       }
     });
     }
+  
   optionArray[index].selected = true;
   itemElement.classList.add("selected");
 }
@@ -68,6 +71,15 @@ function toggleConfirmButton(){
 
 
 
+document.querySelectorAll(".custom-select").forEach(selectElement => {
+  i=0;
+  selectElement.querySelectorAll("option").forEach(optionElement => {
+    optionArray[i] = optionElement;
+    i++;
+  })
+});
+
+
 document.querySelectorAll(".select-div").forEach(selectElementDiv => {
   i=0;
   selectElementDiv.querySelectorAll(".select-item").forEach(selectElementItem => {
@@ -85,13 +97,5 @@ document.querySelectorAll(".select-div").forEach(selectElementDiv => {
     })
   })
 })
-
-document.querySelectorAll(".custom-select").forEach(selectElement => {
-  i=0;
-  selectElement.querySelectorAll("option").forEach(optionElement => {
-    optionArray[i] = optionElement;
-    i++;
-  })
-});
 
 toggleConfirmButton();

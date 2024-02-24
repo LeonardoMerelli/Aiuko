@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="diet-div">
-  <div class="logo"></div>
   <span>STO <strong>SEGUENDO</strong> <br> UNA <strong>DIETA</strong> </span>
 
   <div class="select-div">
@@ -32,19 +31,16 @@
         </svg>
       </div>
       Vegana</div>
-    @if(in_array('low-carbo', $diete))
+    @if(in_array('onnivora', $diete))
     <div class="select-item selected">
     @else
     <div class="select-item">
     @endif
       <div>
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.94172 38.2749C6.68839 41.5283 6.68672 46.8049 9.94172 50.0591C13.1959 53.3141 18.4742 53.3141 21.7276 50.0599L50.0609 21.7266C53.3142 18.4708 53.3142 13.1949 50.0609 9.94161C46.8051 6.68578 41.5292 6.68578 38.2751 9.94078L9.94172 38.2749Z" fill="#F4AA41"/>
-        <path d="M9.94172 38.2749C6.68839 41.5283 6.68672 46.8049 9.94172 50.0591C13.1959 53.3141 18.4742 53.3141 21.7276 50.0599L50.0609 21.7266C53.3142 18.4708 53.3142 13.1949 50.0609 9.94161C46.8051 6.68578 41.5292 6.68578 38.2751 9.94078L9.94172 38.2749Z" stroke="black" stroke-width="1.11111" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M38.2751 9.9408C35.0209 13.195 35.0209 18.4716 38.2751 21.7258M31.1918 17.0241C27.9376 20.2783 27.9376 25.555 31.1918 28.8091M24.1084 24.1075C20.8551 27.3625 20.8551 32.6391 24.1084 35.8925M17.0251 31.1916C13.7717 34.4458 13.7717 39.7225 17.0251 42.9766" stroke="black" stroke-width="1.11111" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img width="50" height="50" src="https://img.icons8.com/officel/40/paleo-diet.png" alt="paleo-diet"/>
       </div>
-      Bassi <br>carboidrati</div>
+      Onnivora
+      </div>
     @if(in_array('nessuna', $diete))
     <div class="select-item selected">
     @else
@@ -62,7 +58,8 @@
         </defs>
         </svg>
       </div>
-      Nessuna</div>
+      Nessuna
+    </div>
   </div>
   <form action="{{route('diets.store')}}" method="post">
     @csrf

@@ -1,21 +1,19 @@
 .diet-div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height:max-content;
   width: 100%;
-  background-color: transparent;
+  height: 100%;
+  background-color: #2CF5B2;
 }
-.diet-div .logo {
-  margin-top: 20px;
-  width: 180px;
-  height: 180px;
-}
+
 .diet-div span {
-  font-size: 23px;
+  font-size: 28px;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #0C4431;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .diet-div .select-div {
@@ -24,10 +22,12 @@
   gap: 30px;
   margin-top: 20px;
 }
-.diet-div .select-div .select-item,.diet-div .select-div .select-item--selected  {
+
+.diet-div .select-div .select-item,
+.diet-div .select-div .select-item--selected  {
   width: 120px;
   height: 120px;
-  background-color:#00000080;
+  background-color:rgba(12, 68, 49, 0.9);
   border-radius: 10px;
   color: #FFFFFF;
   font-size: 16px;
@@ -37,11 +37,13 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-.diet-div .select-div .selected {
-  background-color:#F4AA41E5;
+  border: 2px solid #0C4431;
 }
 
+.diet-div .select-div .selected {
+  background-color:#AEF7DF;
+  color: #000;
+}
 
 .diet-div form {
   display: flex;
@@ -63,6 +65,7 @@
   text-decoration: none;
   color: #000000;
 }
+
 .diet-div form .confirm-button, 
 .diet-div form .back-to-diets{
   width: 100px;
@@ -78,11 +81,127 @@
   font-weight: 700;
   cursor: pointer;
 }
+
 .diet-div form .back-to-diets {
   background-color: #FFFFFFA1;
   color: #000000;
 }
+
 .diet-div form .confirm-button.disabled {
+  background-color: #303331e5;
+  color: #FFFFFFD1;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Intollerances */
+.intollerances-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #2CF5B2;
+}
+
+.intollerances-div span {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: #0C4431;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.intollerances-div .select-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.intollerances-div .select-div .select-item,
+.intollerances-div .select-div .select-item--selected  {
+  width: 100%;
+  height: 90px;
+  background-color:rgba(12, 68, 49, 0.9);
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #0C4431;
+}
+
+@media (min-width: 470px) {
+  .intollerances-div .select-div .select-item,
+  .intollerances-div .select-div .select-item--selected{
+    width: 90px;
+  }
+}
+
+
+.intollerances-div .select-div .selected {
+  background-color:#AEF7DF;
+  color: #000;
+}
+
+.intollerances-div form {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  margin: 60px 0;
+}
+
+.intollerances-div form a{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #FFFFFFA1;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+}
+
+.intollerances-div form .confirm-button, 
+.intollerances-div form .back-to-diets{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 0px;
+  background-color: #1F6845E5;
+  color: #FFFFFFD1;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.intollerances-div form .back-to-diets {
+  background-color: #FFFFFFA1;
+  color: #000000;
+}
+
+.intollerances-div form .confirm-button.disabled {
   background-color: #303331e5;
   color: #FFFFFFD1;
   pointer-events: none;

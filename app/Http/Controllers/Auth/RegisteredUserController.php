@@ -29,8 +29,6 @@ class RegisteredUserController extends Controller
         $request->validate([
             'nome' => ['required', 'string', 'max:255'],
             'cognome' => ['required', 'string', 'max:255'],
-            'genere' => ['required', 'string', 'max:255'],
-            'eta' => ['required', 'integer', 'between:6,120'],
             'citta' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', new EmailRule],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
@@ -39,8 +37,6 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'nome' => $request->nome,
             'cognome' => $request->cognome,
-            'genere' => $request->genere,
-            'eta' => $request->eta,
             'citta' => $request->citta,
             'email' => $request->email,
             'password' => Hash::make($request->password),
