@@ -1,9 +1,5 @@
 @extends('body')
 
-@section('scripts')
-<script src="{{ asset('js/multi-selection-diet-intollerances.js') }}" defer></script>
-@endsection
-
 @section('content')
 <div class="diet-div">
   <div class="logo"></div>
@@ -62,7 +58,8 @@
         </defs>
         </svg>
       </div>
-      Nessuna</div>
+      Nessuna
+    </div>
   </div>
   <form action="{{route('diets.store')}}" method="post">
     @csrf

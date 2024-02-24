@@ -40,9 +40,17 @@ Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');
 })->name('impostazioniPasto');
 
+
+
+// DE PROVAAAAAAA
 Route::get('/Aiuko/mero', function () {
     return view('caratteristicheuser');
 })->name('caratteristicheuser');
+
+
+
+
+
 
 Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
         ->name('google.auth');
