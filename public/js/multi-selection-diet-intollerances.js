@@ -12,10 +12,9 @@ function select(itemElement) {
   const index = itemArray.indexOf(itemElement);
   const selectedText = itemElement.textContent.trim().toLowerCase();
   
-    if (selectedText === "nessuna") {
+    if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {
-        console.log(item)
         if (item !== itemElement) {
           item.classList.remove("selected");
         }
@@ -31,12 +30,12 @@ function select(itemElement) {
 
       // Rimuove la selezione da "nessuna"
       itemArray.forEach(item => {
-        if (item.textContent.trim().toLowerCase() === "nessuna") {
+        if (item.textContent.trim().toLowerCase() === "nessuna" || item.textContent.trim().toLowerCase() === "onnivora" || item.textContent.trim().toLowerCase() === "vegana") {
           item.classList.remove("selected");
         }
       });
       optionArray.forEach(option => {
-      if(option.textContent.trim().toLowerCase() === "nessuna") {
+      if(option.textContent.trim().toLowerCase() === "nessuna" || option.textContent.trim().toLowerCase() === "onnivora" || option.textContent.trim().toLowerCase() === "vegana") {
         option.selected = false;
       }
     });
