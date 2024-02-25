@@ -15,9 +15,10 @@ class CaratteristicheController extends Controller
 
     public function create()
     {
-        $idUser = auth()->user()->idUtente;
+        $user = auth()->user();
 
-        return view('caratteristicheUser');
+        return view('caratteristicheUser')
+            ->with('user', $user);
             
     }
 
