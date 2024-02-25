@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\userCaratteristiche;
 use Illuminate\Http\Request;
 
-class IntolleranceController extends Controller
+class CaratteristicheController extends Controller
 {
     public function __construct() {
         $this->userCaratteristiche = new userCaratteristiche;
@@ -37,6 +37,7 @@ class IntolleranceController extends Controller
         return redirect()->route($request->redirect);
     }
 
+    
     /**
      * Display the specified resource.
      *

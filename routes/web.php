@@ -35,19 +35,16 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     Route::post('/intolleranze', [IntolleranceController::class, 'store'])
         ->name('intollerances.store');
     
-    Route::post('/caratteristiche', [CaratteristicheController::class, 'create']
-        )->name('caratteristicheuser');
-        
+    Route::get('/caratteristiche', [CaratteristicheController::class, 'create']
+        )->name('caratteristiche.create');
+    
+    Route::post('/caratteristiche', [CaratteristicheController::class, 'store'])
+        ->name('caratteristiche.store');
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');
 })->name('impostazioniPasto');
-
-
-
-
-
 
 Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
         ->name('google.auth');

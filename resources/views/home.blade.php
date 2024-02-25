@@ -4,7 +4,7 @@
 <div class="home-div">
     <div class="home-top-div">
         <div class="logo">
-            <img src="images/logo.png" alt="">
+            <img src="{{ asset('images/logo.png') }}" alt="">
         </div>
         <div class="frase-motivazionale">
             <span>Il tuo compagno di dieta intelligente</span>

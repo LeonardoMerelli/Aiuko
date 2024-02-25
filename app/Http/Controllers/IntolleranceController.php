@@ -34,7 +34,7 @@ class IntolleranceController extends Controller
             $user->setup = true;
             $user->save();
         }
-        return redirect()->route($request->redirect);
+        return redirect()->route('caratteristiche.create');
     }
 
     /**

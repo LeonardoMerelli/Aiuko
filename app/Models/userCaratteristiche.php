@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class userIntollerances extends Model
+class userCaratteristiche extends Model
 {
     use HasFactory;
     protected $table = 'user_caratteristiche';
