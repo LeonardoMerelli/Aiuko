@@ -11,7 +11,7 @@
 
           <div class= "input-div">
             {{ Form::label('eta','Eta')}}
-            {{ Form::number('eta', 54, ['placeholder' => 'Eta'])}}
+            {{ Form::number('eta', $user->eta, ['placeholder' => 'Eta'])}}
               @if ($errors->first('eta'))
               <ul>
                 <li>
@@ -22,7 +22,7 @@
           </div>
           <div class= "input-div">
               {{ Form::label('peso','Peso')}}
-              {{ Form::number('peso', null, ['placeholder' => 'Peso'])}}
+              {{ Form::number('peso', $user->peso, ['placeholder' => 'Peso'])}}
                   @if ($errors->first('peso'))
                   <ul>
                       <li>
@@ -33,7 +33,7 @@
           </div>
           <div class= "input-div">
               {{ Form::label('altezza','Altezza')}}
-              {{ Form::number('altezza', null, ['placeholder' => 'Altezza'])}}
+              {{ Form::number('altezza', $user->altezza, ['placeholder' => 'Altezza'])}}
                   @if ($errors->first('peso'))
                   <ul>
                       <li>
