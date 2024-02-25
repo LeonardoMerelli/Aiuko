@@ -285,30 +285,8 @@
       <option value="nessuna">nessuna</option>
       @endif
     </select>
-    <button class="back-to-diets" type="submit"  data-value="diets.create">INDIETRO</button>
-    <button class="confirm-button" type="submit">AVANTI</button>
-    <input type="hidden" name="redirect" id="redirect" value="" readonly>
+    <a href="{{route('diets.create')}}">INDIETRO</a>
+    <input type="submit" class="confirm-button" value="AVANTI">
   </form>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-        // Al click di un bottone submit
-        $(".back-to-diets, .confirm-button").click(function(e) {
-            e.preventDefault(); // Previeni l'invio del form
-
-            // Ottieni il valore personalizzato associato al bottone cliccato
-            var valoreCampoVariabile = $(this).data("value");
-            console.log(valoreCampoVariabile);
-
-            // Imposta il valore del campo di input con il valore ottenuto
-            $("#redirect").val(valoreCampoVariabile);
-
-            // Invia il form manualmente
-            $("#myForm").submit();
-        });
-    });
-    
-</script>
 </div>
 @endsection

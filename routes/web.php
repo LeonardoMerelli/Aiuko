@@ -4,7 +4,7 @@ use App\Http\Controllers\DietController;
 use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SnackController;
 use App\Http\Controllers\CaratteristicheController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +41,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/caratteristiche', [CaratteristicheController::class, 'store'])
         ->name('caratteristiche.store');
+    
+    Route::get('/snack', [SnackController::class, 'create']
+        )->name('snack.create');
+    
+    Route::post('/snack', [SnackController::class, 'store'])
+        ->name('snack.store');
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {

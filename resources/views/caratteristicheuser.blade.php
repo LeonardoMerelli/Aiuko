@@ -11,7 +11,7 @@
 
           <div class= "input-div">
             {{ Form::label('eta','Eta')}}
-            {{ Form::number('eta', null, ['placeholder' => 'Eta'])}}
+            {{ Form::number('eta', 54, ['placeholder' => 'Eta'])}}
               @if ($errors->first('eta'))
               <ul>
                 <li>
@@ -79,7 +79,7 @@
                 </div>
           </div>
           <div class="input-container-btn-div">
-              <a href="" class="torna-indietro">Indietro</a>
+              <a href="{{route('intollerances.create')}}" class="torna-indietro">Indietro</a>
               {{ Form::submit('Avanti',['class'=>'input-container-btn'])}} 
           </div>
         {{Form::close()}}

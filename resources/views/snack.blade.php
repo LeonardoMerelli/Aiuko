@@ -39,7 +39,7 @@
       <option value="no" selected>no</option>
       <option value="no">no</option>     
     </select>
-    <a href="">INDIETRO</a>
+    <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>

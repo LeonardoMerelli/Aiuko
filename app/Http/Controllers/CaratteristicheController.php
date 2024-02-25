@@ -16,7 +16,6 @@ class CaratteristicheController extends Controller
     public function create()
     {
         $idUser = auth()->user()->idUtente;
-        
 
         return view('caratteristicheUser');
             
@@ -40,7 +39,7 @@ class CaratteristicheController extends Controller
             'altezza' => $request->altezza,
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('snack.create');
     }
 
     
