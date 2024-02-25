@@ -106,21 +106,12 @@
 
 .popup {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
+        padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .popup p {
-    margin-bottom: 10px;
-}
-
-#snackTimeInput {
-    width: 100%;
     margin-bottom: 10px;
 }
