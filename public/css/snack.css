@@ -1,0 +1,126 @@
+.snack-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #2CF5B2;
+}
+  
+.snack-div span {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.snack-div h3 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
+}
+
+.snack-div .select-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-top: 20px;
+}
+
+@media(max-width: 450px) {
+    .snack-div .select-div {
+        gap: 50px;
+    }
+}
+
+.snack-div .select-div .select-item,
+.snack-div .select-div .select-item--selected  {
+    width: 120px;
+    height: 120px;
+    background-color:rgba(12, 68, 49, 0.9);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0C4431;
+    font-size: 22px;
+}
+
+.snack-div .select-div .selected {
+    background-color:#AEF7DF;
+    color: #000;
+}
+
+.snack-div form {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.snack-div form a{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #FFFFFFA1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+}
+
+.snack-div form .confirm-button, 
+.snack-div form .back-to-diets{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 0px;
+    background-color: #1F6845E5;
+    color: #FFFFFFD1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.snack-div form .back-to-diets {
+    background-color: #FFFFFFA1;
+    color: #000000;
+}
+
+.snack-div form .confirm-button.disabled {
+    background-color: #303331e5;
+    color: #FFFFFFD1;
+    pointer-events: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup p {
+    margin-bottom: 10px;
+}
+
+#snackTimeInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
