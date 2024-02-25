@@ -198,7 +198,7 @@
       Nessuna
     </div>
   </div>
-  <form action="{{route('intollerances.store')}}" method="post" id = "myForm">
+  <form action="{{route('intollerances.store')}}" method="post">
     @csrf
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('glutine', $intolleranze))
