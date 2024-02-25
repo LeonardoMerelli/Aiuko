@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\userCaratteristiche;
 use Illuminate\Http\Request;
 
 class CaratteristicheController extends Controller
 {
-    public function __construct() {
-        $this->userCaratteristiche = new userCaratteristiche;
-    }
-
     public function index()
     {
         //
@@ -19,22 +16,31 @@ class CaratteristicheController extends Controller
     public function create()
     {
         $idUser = auth()->user()->idUtente;
-        $caratteristicheUtente = userCaratteristiche::where('idUtente', $idUser)->pluck('caratteristica')->toArray();
+        
 
-        return view('caratteristiche')
-            ->with('caratteristiche', $caratteristicheUtente);
+        return view('caratteristicheUser');
+            
     }
 
     public function store(Request $request)
     {
-        $this->userCaratteristiche->salvaCaratteristicheUtente($request->caratteristiche);
+        $request->validate([
+            'eta' => ['required', 'integer', 'max:120', 'min:10'],
+            'altezza' => ['required', 'integer','max:230','min:110'],
+            'peso' => ['required', 'integer', 'max:250', 'min:0'],
+            'attivita' => ['required', 'string', 'max:255'],
+            'genere' => ['required', 'string', 'max:255'],
+        ]);
 
-        if($request->redirect == 'impostazioniPasto') {
-            $user = auth()->user();
-            $user->setup = true;
-            $user->save();
-        }
-        return redirect()->route($request->redirect);
+        auth()->user()->update([
+            'eta' => $request->eta,
+            'peso' => $request->peso,
+            'attivitaGiornaliera' => $request->attivita,
+            'genere' => $request->genere,
+            'altezza' => $request->altezza,
+        ]);
+
+        return redirect()->route('home');
     }
 
     
