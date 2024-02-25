@@ -5,6 +5,7 @@ use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CaratteristicheController;
 use Illuminate\Support\Facades\Route;
 
 /*
