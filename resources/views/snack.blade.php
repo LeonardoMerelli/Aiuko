@@ -37,7 +37,7 @@
       </div>
       <div class="select-item selected">
         <div class="select-item">
-        Colazione - Cena
+        Pranzo - Cena
         </div>
       </div>
       <div class="select-item selected">
