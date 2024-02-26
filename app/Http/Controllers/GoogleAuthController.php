@@ -27,8 +27,12 @@ class GoogleAuthController extends Controller
         }
         auth()->login($user);
 
-        if(auth()->user()->setup == 0){
+        if(auth()->user()->cognome != null and auth()->user()->citta != null and auth()->user()->password != null){
             return redirect()->route('diets.create');
+        };
+
+        if(auth()->user()->setup == 0){
+            return redirect()->route('register.create');
         }
         return redirect()->route('impostazioniPasto');
     }

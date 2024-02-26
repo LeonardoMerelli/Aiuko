@@ -11,7 +11,11 @@
 
             <div class= "input-div">
                 {{ Form::label('nome','Nome')}}
+                @if($user === null)
                 {{ Form::text('nome', null, ['placeholder' => 'Nome'])}}
+                @else
+                {{ Form::text('nome', $user->nome, ['placeholder' => 'Nome', 'readonly' => 'readonly']) }}
+                @endif
                     @if ($errors->first('nome'))
                     <ul>
                         <li>
@@ -44,7 +48,11 @@
             </div>
             <div class= "input-div">
                 {{ Form::label('email','E-mail')}}
+                @if($user === null)
                 {{ Form::text('email', null, ['placeholder' => 'E-mail'])}}
+                @else
+                {{ Form::text('email', $user->email, ['placeholder' => 'E-mail', 'readonly' => 'readonly']) }}
+                @endif
                 @if ($errors->first('email'))
                     <ul>
                         <li>
