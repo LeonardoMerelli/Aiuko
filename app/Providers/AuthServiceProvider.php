@@ -31,5 +31,13 @@ class AuthServiceProvider extends ServiceProvider
             }
             return false;
         });
+
+        Gate::define('isNotRegistered', function ($user) {
+            if($user->cognome === null and $user->citta === null and $user->password === null) {
+                return true;
+            }
+            return false;
+        });
+
     }
 }
