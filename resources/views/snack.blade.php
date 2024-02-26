@@ -53,6 +53,8 @@
     </div>
   </div>
   <form action="" method="post">
+    <h5>Scrivi i tuoi alimenti preferiti</h5>
+    <textarea name="preferenze" id="preferenze"></textarea>
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
       <option value="si" selected>si</option>
       <option value="si">si</option>
@@ -65,8 +67,10 @@
       <option value="dopo cena" selected>dopo cena</option>
       <option value="dopo cena">dopo cena</option>
     </select>
-    <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
-    <input type="submit" class="confirm-button" value="AVANTI">
+    <div class="bottoni">
+      <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
+      <input type="submit" class="confirm-button" value="AVANTI">
+    </div>
   </form>
 </div>
 

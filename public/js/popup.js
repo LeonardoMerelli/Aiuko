@@ -7,7 +7,6 @@ function showPopup() {
 
   document.getElementById('popup').style.display = 'block';
 
-  document.querySelector('.confirm-button').disabled = false;
   document.querySelector('.confirm-button').classList.remove("disabled");
 }
 
@@ -18,6 +17,5 @@ function closePopup() {
 
   document.getElementById('popup').style.display = 'none';
 
-  document.querySelector('.confirm-button').disabled = false;
   document.querySelector('.confirm-button').classList.remove("disabled");
 }
