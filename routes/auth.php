@@ -5,7 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::middleware(['can:isNotRegistered'])->prefix('Aiuko')->group(function () {
+Route::prefix('Aiuko')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register.create');
 
