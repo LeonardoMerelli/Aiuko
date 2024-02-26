@@ -55,7 +55,6 @@ function deselect(itemElement) {
 function toggleConfirmButton(){
   count = 0;
   optionArray.forEach(item => {
-    console.log(item.selected)
     if (item.selected){
       count++;
     }
