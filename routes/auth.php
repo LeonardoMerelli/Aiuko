@@ -11,7 +11,6 @@ Route::prefix('Aiuko')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store'])
         ->name('register.store');
-
 });
 
 Route::middleware('guest')->prefix('Aiuko')->group(function () {

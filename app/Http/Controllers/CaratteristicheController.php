@@ -40,7 +40,7 @@ class CaratteristicheController extends Controller
             'altezza' => $request->altezza,
         ]);
 
-        return redirect()->route('snack.create');
+        return redirect()->route('diets.create');
     }
 
     

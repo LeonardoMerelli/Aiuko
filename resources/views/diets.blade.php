@@ -62,7 +62,7 @@
       @endif
      
     </select>
-    <a href="{{route('home')}}">INDIETRO</a>
+    <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>

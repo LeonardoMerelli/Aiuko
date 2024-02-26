@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\userIntollerances;
+use App\Models\electiodomestic;
 use Illuminate\Http\Request;
 
-class IntolleranceController extends Controller
+class ElectrodomesticsController extends Controller
 {
     public function __construct() {
-        $this->userIntollerances = new userIntollerances;
+        $this->electrodomestic = new electiodomestic;
     }
 
     public function index()
@@ -16,18 +16,25 @@ class IntolleranceController extends Controller
         //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        $idUser = auth()->user()->idUtente;
-        $intolleranzeUtente = userIntollerances::where('idUtente', $idUser)->pluck('intolleranza')->toArray();
-
-        return view('intollerances')
-            ->with('intolleranze', $intolleranzeUtente);
+        return view("elettrodomestici");
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $this->userIntollerances->salvaIntolleranzeUtente($request->intollerances);
+        $this->electrodomestic->salvaElettrodomestici($request->elettrodomestici);
 
         return redirect()->route('elettrodomestici.create');
     }
