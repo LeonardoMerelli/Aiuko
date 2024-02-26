@@ -164,7 +164,7 @@
           @endif
 
           <div class="input-container-btn-div">
-              <a href="{{route('intollerances.create')}}" class="torna-indietro">Indietro</a>
+              <a href="{{route('home')}}" class="torna-indietro">Indietro</a>
               {{ Form::submit('Avanti',['class'=>'input-container-btn'])}} 
           </div>
         {{Form::close()}}
