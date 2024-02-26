@@ -10,7 +10,7 @@
   <span>HAI QUALCHE <br><strong>Elettrodomestico?</strong></span>
 
   <div class="select-div">
-    @if(in_array('glutine', []))
+    @if(in_array('forno', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -20,7 +20,7 @@
       </div>
       Forno
     </div>
-    @if(in_array('crostacei', []))
+    @if(in_array('friggitrice ad aria', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -30,7 +30,7 @@
       </div>
       <span>Friggitrice ad aria</span>
     </div>
-    @if(in_array('uova', []))
+    @if(in_array('sbattitore', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -40,7 +40,7 @@
       </div>
       Sbattitore
     </div>
-    @if(in_array('pesce', []))
+    @if(in_array('microonde', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -50,7 +50,7 @@
       </div>
       Microonde
     </div>
-    @if(in_array('arachidi', []))
+    @if(in_array('griglia elettrica', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -60,7 +60,7 @@
       </div>
       <span>Griglia elettrica</span>
     </div>
-    @if(in_array('soia', []))
+    @if(in_array('bollitore', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -70,7 +70,7 @@
       </div>
       Bollitore
     </div>
-    @if(in_array('lattosio', []))
+    @if(in_array('frullatore', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -80,7 +80,7 @@
       </div>
       Frullatore
     </div>
-    @if(in_array('frutta a guscio', []))
+    @if(in_array('spremiagrumi', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -90,7 +90,7 @@
       </div>
       <span>Spremi agrumi</span>
     </div>
-    @if(in_array('sedano', []))
+    @if(in_array('tostapane', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -100,7 +100,7 @@
       </div>
       Tostapane
     </div>
-    @if(in_array('senape', []))
+    @if(in_array('piastra ad induzione', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -112,91 +112,67 @@
     </div>
 
   </div>
-  <form action="{{route('intollerances.store')}}" method="post">
+  <form action="" method="post">
     @csrf
     <select name="intollerances[]" class="custom-select" multiple>
-      @if(in_array('glutine', []))
-      <option value="glutine" selected>glutine</option>
+      @if(in_array('forno', []))
+      <option value="forno" selected>forno</option>
       @else
-      <option value="glutine">glutine</option>
+      <option value="forno">forno</option>
       @endif
 
-      @if(in_array('crostacei', []))
-      <option value="crostacei" selected>crostacei</option>
+      @if(in_array('friggitriceadaria', []))
+      <option value="friggitrice ad aria" selected>friggitrice ad aria</option>
       @else
-      <option value="crostacei">crostacei</option>
+      <option value="friggitrice ad aria">friggitrice ad aria</option>
       @endif
 
-      @if(in_array('uova', []))
-      <option value="uova" selected>uova</option>
+      @if(in_array('sbattitore', []))
+      <option value="sbattitore" selected>sbattitore</option>
       @else
-      <option value="uova">uova</option>
+      <option value="sbattitore">sbattitore</option>
       @endif
 
-      @if(in_array('pesce', []))
-      <option value="pesce" selected>pesce</option>
+      @if(in_array('microonde', []))
+      <option value="microonde" selected>microonde</option>
       @else
-      <option value="pesce">pesce</option>
+      <option value="microonde">microonde</option>
       @endif
 
-      @if(in_array('arachidi', []))
-      <option value="arachidi" selected>arachidi</option>
+      @if(in_array('griglia elettrica', []))
+      <option value="griglia elettrica" selected>griglia elettrica</option>
       @else
-      <option value="arachidi">arachidi</option>
+      <option value="griglia elettrica">griglia elettrica</option>
       @endif
 
-      @if(in_array('soia', []))
-      <option value="soia" selected>soia</option>
+      @if(in_array('bollitore', []))
+      <option value="bollitore" selected>bollitore</option>
       @else
-      <option value="soia">soia</option>
+      <option value="bollitore">bollitore</option>
       @endif
 
-      @if(in_array('lattosio', []))
-      <option value="lattosio" selected>lattosio</option>
+      @if(in_array('frullatore', []))
+      <option value="frullatore" selected>frullatore</option>
       @else
-      <option value="lattosio">lattosio</option>
+      <option value="frullatore">frullatore</option>
       @endif
 
-      @if(in_array('frutta a guscio', []))
-      <option value="frutta a guscio" selected>frutta a guscio</option>
+      @if(in_array('spremiagrumi', []))
+      <option value="spremiagrumi" selected>spremiagrumi</option>
       @else
-      <option value="frutta a guscio">frutta a guscio</option>
+      <option value="spremiagrumi">spremiagrumi</option>
       @endif
 
-      @if(in_array('sedano', []))
-      <option value="sedano" selected>sedano</option>
+      @if(in_array('tostapane', []))
+      <option value="tostapane" selected>tostapane</option>
       @else
-      <option value="sedano">sedano</option>
+      <option value="tostapane">tostapane</option>
       @endif
 
-      @if(in_array('senape', []))
-      <option value="senape" selected>senape</option>
+      @if(in_array('piastra ad induzione', []))
+      <option value="piastra ad induzione" selected>piastra ad induzione</option>
       @else
-      <option value="senape">senape</option>
-      @endif
-
-      @if(in_array('lupini', []))
-      <option value="lupini" selected>lupini</option>
-      @else
-      <option value="lupini">lupini</option>
-      @endif
-
-      @if(in_array('molluschi', []))
-      <option value="molluschi" selected>molluschi</option>
-      @else
-      <option value="molluschi">molluschi</option>
-      @endif
-
-      @if(in_array('anidride solforosa', []))
-      <option value="anidride solforosa" selected>anidride solforosa</option>
-      @else
-      <option value="anidride solforosa">anidride solforosa</option>
-      @endif
-
-      @if(in_array('nessuna', []))
-      <option value="nessuna" selected>nessuna</option>
-      @else
-      <option value="nessuna">nessuna</option>
+      <option value="piastra ad induzione">piastra ad induzione</option>
       @endif
     </select>
     <a href="{{route('intollerances.create')}}">INDIETRO</a>
