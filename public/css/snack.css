@@ -51,7 +51,24 @@
     font-size: 22px;
 }
 
-.snack-div .select-div .selected {
+.snack-div .select-div .select-item-yes,
+.snack-div .select-div .select-item-no  {
+    width: 120px;
+    height: 120px;
+    background-color:rgba(12, 68, 49, 0.9);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0C4431;
+    font-size: 22px;
+}
+
+.snack-div .select-div .selected-yes,
+.snack-div .select-div .selected-no {
     background-color:#AEF7DF;
     color: #000;
 }
