@@ -55,7 +55,7 @@
       @else
       <option value="vegana">vegana</option>
       @endif
-      @if(in_array('nessuna', $diete))
+      @if(in_array('onnivora', $diete))
       <option value="onnivora" selected>onnivora</option>
       @else
       <option value="onnivora">onnivora</option>
