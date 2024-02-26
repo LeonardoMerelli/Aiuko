@@ -71,7 +71,7 @@
           @endif
           </div>    
 
-          <span>Genere</span>
+          <span>Generex</span>
           @if($user->genere == null)
           <div class= "radio-div">
                 <div class="radio-label">
