@@ -11,4 +11,21 @@ class electiodomestic extends Model
     protected $table = 'electrodomestic';
     protected $primaryKey = 'idElettrodomestico';
     public $timestamps = false;
+
+    public function salvaElettrodomestici($elettrodomestici) {
+        $idUser = auth()->user()->idUtente;
+        $elettrodomesticiUtente = electiodomestic::where('idUtente', $idUser);
+
+        if(count($elettrodomesticiUtente->get()) != 0) {
+            $elettrodomesticiUtente->delete();
+        }
+        if(!is_null($elettrodomestici)) {
+            foreach($elettrodomestici as $elettrodomestico) {
+                userIntollerances::create([
+                    'idUtente' => $idUser,
+                    'elettrodomestico' => $elettrodomestico,
+                ]);
+            }
+        }
+    }
 }

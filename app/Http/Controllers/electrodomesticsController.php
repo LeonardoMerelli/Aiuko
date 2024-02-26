@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\electiodomestic;
 use Illuminate\Http\Request;
 
-class electrodomesticsController extends Controller
+class ElectrodomesticsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct() {
+        $this->electrodomestic = new electiodomestic;
+    }
+
     public function index()
     {
         //
@@ -23,7 +23,7 @@ class electrodomesticsController extends Controller
      */
     public function create()
     {
-        //
+        return view("elettrodomestici");
     }
 
     /**
@@ -34,7 +34,9 @@ class electrodomesticsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->electrodomestic->salvaElettrodomestici($request->elettrodomestici);
+
+        return redirect()->route('elettrodomestici.create');
     }
 
     /**

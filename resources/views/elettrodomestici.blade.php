@@ -8,10 +8,10 @@
 @section('content')
 <div class="intollerances-div">
   <div class="logo"></div>
-  <span>HAI QUALCHE <br><strong>INTOLLERANZA ?</strong></span>
+  <span>HAI QUALCHE <br><strong>Elettrodomestico ?</strong></span>
 
   <div class="select-div">
-    @if(in_array('glutine', $intolleranze))
+    @if(in_array('glutine', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -23,7 +23,7 @@
       </div>
       Glutine
     </div>
-    @if(in_array('crostacei', $intolleranze))
+    @if(in_array('crostacei', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -37,7 +37,7 @@
       </div>
       Crostacei
     </div>
-    @if(in_array('uova', $intolleranze))
+    @if(in_array('uova', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -49,7 +49,7 @@
       </div>
       Uova
     </div>
-    @if(in_array('pesce', $intolleranze))
+    @if(in_array('pesce', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -68,7 +68,7 @@
       </div>
       Pesce
     </div>
-    @if(in_array('arachidi', $intolleranze))
+    @if(in_array('arachidi', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -81,7 +81,7 @@
       </div>
       Arachidi
     </div>
-    @if(in_array('soia', $intolleranze))
+    @if(in_array('soia', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -108,7 +108,7 @@
       </div>
       Soia
     </div>
-    @if(in_array('lattosio', $intolleranze))
+    @if(in_array('lattosio', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -118,7 +118,7 @@
       </div>
       Lattosio
     </div>
-    @if(in_array('frutta a guscio', $intolleranze))
+    @if(in_array('frutta a guscio', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -128,7 +128,7 @@
       </div>
       <span>Frutta a guscio</span>
     </div>
-    @if(in_array('sedano', $intolleranze))
+    @if(in_array('sedano', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -138,7 +138,7 @@
       </div>
       Sedano
     </div>
-    @if(in_array('senape', $intolleranze))
+    @if(in_array('senape', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -148,7 +148,7 @@
       </div>
       Senape
     </div>
-    @if(in_array('lupini', $intolleranze))
+    @if(in_array('lupini', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -158,7 +158,7 @@
       </div>
       Lupini
     </div>
-    @if(in_array('molluschi', $intolleranze))
+    @if(in_array('molluschi', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -168,7 +168,7 @@
       </div>
       Molluschi
     </div>
-    @if(in_array('anidride solforosa', $intolleranze))
+    @if(in_array('anidride solforosa', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -178,7 +178,7 @@
       </div>
       <span>Anidride solforosa</span>
     </div>
-    @if(in_array('nessuna', $intolleranze))
+    @if(in_array('nessuna', []))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -201,91 +201,91 @@
   <form action="{{route('intollerances.store')}}" method="post">
     @csrf
     <select name="intollerances[]" class="custom-select" multiple>
-      @if(in_array('glutine', $intolleranze))
+      @if(in_array('glutine', []))
       <option value="glutine" selected>glutine</option>
       @else
       <option value="glutine">glutine</option>
       @endif
 
-      @if(in_array('crostacei', $intolleranze))
+      @if(in_array('crostacei', []))
       <option value="crostacei" selected>crostacei</option>
       @else
       <option value="crostacei">crostacei</option>
       @endif
 
-      @if(in_array('uova', $intolleranze))
+      @if(in_array('uova', []))
       <option value="uova" selected>uova</option>
       @else
       <option value="uova">uova</option>
       @endif
 
-      @if(in_array('pesce', $intolleranze))
+      @if(in_array('pesce', []))
       <option value="pesce" selected>pesce</option>
       @else
       <option value="pesce">pesce</option>
       @endif
 
-      @if(in_array('arachidi', $intolleranze))
+      @if(in_array('arachidi', []))
       <option value="arachidi" selected>arachidi</option>
       @else
       <option value="arachidi">arachidi</option>
       @endif
 
-      @if(in_array('soia', $intolleranze))
+      @if(in_array('soia', []))
       <option value="soia" selected>soia</option>
       @else
       <option value="soia">soia</option>
       @endif
 
-      @if(in_array('lattosio', $intolleranze))
+      @if(in_array('lattosio', []))
       <option value="lattosio" selected>lattosio</option>
       @else
       <option value="lattosio">lattosio</option>
       @endif
 
-      @if(in_array('frutta a guscio', $intolleranze))
+      @if(in_array('frutta a guscio', []))
       <option value="frutta a guscio" selected>frutta a guscio</option>
       @else
       <option value="frutta a guscio">frutta a guscio</option>
       @endif
 
-      @if(in_array('sedano', $intolleranze))
+      @if(in_array('sedano', []))
       <option value="sedano" selected>sedano</option>
       @else
       <option value="sedano">sedano</option>
       @endif
 
-      @if(in_array('senape', $intolleranze))
+      @if(in_array('senape', []))
       <option value="senape" selected>senape</option>
       @else
       <option value="senape">senape</option>
       @endif
 
-      @if(in_array('lupini', $intolleranze))
+      @if(in_array('lupini', []))
       <option value="lupini" selected>lupini</option>
       @else
       <option value="lupini">lupini</option>
       @endif
 
-      @if(in_array('molluschi', $intolleranze))
+      @if(in_array('molluschi', []))
       <option value="molluschi" selected>molluschi</option>
       @else
       <option value="molluschi">molluschi</option>
       @endif
 
-      @if(in_array('anidride solforosa', $intolleranze))
+      @if(in_array('anidride solforosa', []))
       <option value="anidride solforosa" selected>anidride solforosa</option>
       @else
       <option value="anidride solforosa">anidride solforosa</option>
       @endif
 
-      @if(in_array('nessuna', $intolleranze))
+      @if(in_array('nessuna', []))
       <option value="nessuna" selected>nessuna</option>
       @else
       <option value="nessuna">nessuna</option>
       @endif
     </select>
-    <a href="">INDIETRO</a>
+    <a href="{{route('intollerances.create')}}">INDIETRO</a>
     <input type="submit" class="confirm-button" value="AVANTI">
   </form>
 </div>

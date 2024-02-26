@@ -5,7 +5,9 @@ use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\SnackController;
+use App\Http\Controllers\ElectrodomesticsController;
 use App\Http\Controllers\CaratteristicheController;
+use App\Models\electiodomestic;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +43,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/caratteristiche', [CaratteristicheController::class, 'store'])
         ->name('caratteristiche.store');
+
+    Route::get('/elettrodomestici', [ElectrodomesticsController::class, 'create']
+        )->name('elettrodomestici.create');
+    
+    Route::post('/elettrodomestici', [ElectrodomesticsController::class, 'store'])
+        ->name('elettrodomestici.store');
     
     Route::get('/snack', [SnackController::class, 'create']
         )->name('snack.create');

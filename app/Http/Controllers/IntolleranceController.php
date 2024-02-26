@@ -29,12 +29,7 @@ class IntolleranceController extends Controller
     {
         $this->userIntollerances->salvaIntolleranzeUtente($request->intollerances);
 
-        if($request->redirect == 'impostazioniPasto') {
-            $user = auth()->user();
-            $user->setup = true;
-            $user->save();
-        }
-        return redirect()->route('caratteristiche.create');
+        return redirect()->route('elettrodomestici.create');
     }
 
     /**
