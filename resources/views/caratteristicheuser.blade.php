@@ -65,7 +65,7 @@
                   {{Form::radio('attivita','moltointensa')}}
                   {{Form::label('inLineRadio1','Molto intensa')}}
               </div>
-          @endif
+          @else
 
               <div class="radio-label">
                @if($user->attivitaGiornaliera == "sedentario")
@@ -113,6 +113,7 @@
                 @endif
               </div>
           </div>
+          @endif
 
           @if($user->genere == null)
           <div class= "radio-div">
@@ -129,7 +130,7 @@
                     {{Form::label('inLineRadio1','Altro')}}
                 </div>
           </div>
-          @endif
+          @else
 
           <div class= "radio-div">
                 <div class="radio-label">
@@ -160,6 +161,7 @@
                 @endif
                 </div>
           </div>
+          @endif
 
           <div class="input-container-btn-div">
               <a href="{{route('intollerances.create')}}" class="torna-indietro">Indietro</a>
