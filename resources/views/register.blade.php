@@ -14,7 +14,7 @@
                 @if($user === null)
                 {{ Form::text('nome', null, ['placeholder' => 'Nome'])}}
                 @else
-                {{ Form::text('nome', $user->nome, ['placeholder' => 'Nome', 'readonly' => 'readonly']) }}
+                {{ Form::text('nome', $user->nome, ['placeholder' => 'Nome']) }}
                 @endif
                     @if ($errors->first('nome'))
                     <ul>
