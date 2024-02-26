@@ -25,7 +25,7 @@
       </div>
   </div>
   <div id="popup" class="popup">
-    <hr width="100%" border-top="1px solid #000" margin="0px">
+    <hr>
     <p>Quando desideri fare lo snack?</p>
     <div class="select-div-popup">
       <div class="select-div">
@@ -52,6 +52,8 @@
         </div>
       </div>
     </div>
+    <br>
+    <hr>
   </div>
   <form action="" method="post">
     <h5>Scrivi i tuoi alimenti preferiti</h5>
