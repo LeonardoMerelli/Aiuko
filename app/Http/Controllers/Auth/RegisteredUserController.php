@@ -21,7 +21,10 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('register');
+        $user = Auth::user();
+
+        return view('register')
+            ->with('user', $user);
     }
 
     public function store(Request $request)
@@ -34,17 +37,25 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
-            'nome' => $request->nome,
-            'cognome' => $request->cognome,
-            'citta' => $request->citta,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        if(auth()->user()) {
+            auth()->user()->update([
+                'cognome' => $request->cognome,
+                'citta' => $request->citta,
+                'password' => Hash::make($request->password),
+            ]);
+        }else {
+            $user = User::create([
+                'nome' => $request->nome,
+                'cognome' => $request->cognome,
+                'citta' => $request->citta,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
 
-        event(new Registered($user));
+            event(new Registered($user));
 
-        Auth::login($user);
+            Auth::login($user);
+        }
 
         return redirect()->route('diets.create');
     }
