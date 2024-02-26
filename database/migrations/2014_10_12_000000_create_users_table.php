@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('citta')->nullable();
             $table->string('email')->unique();
             $table->string('google_id')->nullable();
-            $table->string('facebook_id')->nullable();
             $table->boolean('setup')->default(false);
             ;
         });
