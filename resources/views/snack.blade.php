@@ -25,34 +25,55 @@
       </div>
   </div>
   <div id="popup" class="popup">
+    <hr>
     <p>Quando desideri fare lo snack?</p>
     <div class="select-div-popup">
-      <div class="select-item selected">
+      <div class="select-div">
+        @if(in_array('colazione pranzo', []))
+        <div class="select-item selected">
+        @else
         <div class="select-item">
-          Colazione - Pranzo
+        @endif
+          <span>Colazione <br> - <br> Pranzo</span>
         </div>
-      </div>
-      <div class="select-item selected">
+        @if(in_array('pranzo cena', []))
+        <div class="select-item selected">
+        @else
         <div class="select-item">
-        Pranzo - Cena
+        @endif
+        <span>Pranzo <br> - <br> Cena</span>
         </div>
-      </div>
-      <div class="select-item selected">
+        @if(in_array('dopo cena', []))
+        <div class="select-item selected">
+        @else
         <div class="select-item">
-          Dopo Cena
+        @endif
+        <span>Dopo <br> Cena</span>
         </div>
       </div>
     </div>
+    <br>
+    <hr>
   </div>
   <form action="" method="post">
-    <select name="diet[]" class="custom-select" id="snackSelect">
+    <h5>Scrivi i tuoi alimenti preferiti</h5>
+    <textarea name="preferenze" id="preferenze"></textarea>
+    <select name="diet[]" class="custom-select" id="snackSelect" multiple>
       <option value="si" selected>si</option>
       <option value="si">si</option>
       <option value="no" selected>no</option>
-      <option value="no">no</option>     
+      <option value="no">no</option>
+      <option value="colazione pranzo" selected>colazione pranzo</option>
+      <option value="colazione pranzo">colazione pranzo</option>
+      <option value="pranzo cena" selected>pranzo cena</option>
+      <option value="pranzo cena">pranzo cena</option>
+      <option value="dopo cena" selected>dopo cena</option>
+      <option value="dopo cena">dopo cena</option>
     </select>
-    <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
-    <input type="submit" class="confirm-button" value="AVANTI">
+    <div class="bottoni">
+      <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
+      <input type="submit" class="confirm-button" value="AVANTI">
+    </div>
   </form>
 </div>
 
