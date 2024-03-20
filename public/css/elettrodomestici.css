@@ -31,6 +31,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .elettrodomestici-div {
+        height: 100%;
+    }
+}
+
 @media (max-width: 400px) {
     .elettrodomestici-div .select-div {
         grid-template-columns: repeat(2, 1fr);
