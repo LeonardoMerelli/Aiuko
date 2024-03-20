@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/caratteristiche.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/snack.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/elettrodomestici.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/pranzo.css')}}">
 
     <link href="https://fonts.cdnfonts.com/css/believer2" rel="stylesheet">
                 
