@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="pranzo-div">
-  <span>PRANZO</span>
+  <span>CENA</span>
 
   <div class="select-div">
     @if(in_array('antipasto', []))
