@@ -1,0 +1,195 @@
+.sport-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #2CF5B2;
+    overflow: auto;
+}
+
+.sport-div h3 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
+}
+
+.sport-div .select-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-top: 20px;
+}
+
+@media(max-width: 450px) {
+    .sport-div .select-div {
+        gap: 50px;
+    }
+}
+
+.sport-div .select-div .select-item,
+.sport-div .select-div .select-item--selected  {
+    width: 120px;
+    height: 120px;
+    background-color:rgba(12, 68, 49, 0.9);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0C4431;
+    font-size: 22px;
+}
+
+.sport-div .select-div .select-item-yes,
+.sport-div .select-div .select-item-no  {
+    width: 120px;
+    height: 120px;
+    background-color:rgba(12, 68, 49, 0.9);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0C4431;
+    font-size: 22px;
+}
+
+@media(max-width:500px) {
+    .sport-div .select-div .select-item-yes,
+    .sport-div .select-div .select-item-no  {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.sport-div .select-div .selected-yes,
+.sport-div .select-div .selected-no {
+    background-color:#AEF7DF;
+    color: #000;
+}
+
+.sport-div form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.sport-div h5 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.sport-div form textarea {
+    width: 500px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #0C4431;
+    border-radius: 8px;
+    scroll-behavior: auto;
+    padding: 5px 3px;
+}
+
+input#data-allenamento {
+    background-color: transparent;
+    width: 140px;
+    height: 30px;
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    margin: 6px;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+
+@media (max-width: 550px) {
+    .snack-div form textarea {
+        width: 80%;
+    }
+}
+
+.sport-div form a{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #FFFFFFA1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+}
+
+.sport-div form .confirm-button, 
+.sport-div form .back-to-diets{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 0px;
+    background-color: #1F6845E5;
+    color: #FFFFFFD1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sport-div form .back-to-diets {
+    background-color: #FFFFFFA1;
+    color: #000000;
+}
+
+.sport-div form .confirm-button.disabled {
+    background-color: #303331e5;
+    color: #FFFFFFD1;
+    pointer-events: none;
+}
+
+.select-item span {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.bottoni {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.add {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+.sport-div #box-data {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add svg {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 2px;
+}
