@@ -1,5 +1,6 @@
 @section('scripts')
 <script src="{{ asset('js/multi-selection-diet-intollerances.js') }}" defer></script>
+<script src="{{ asset('js/tempo.js') }}" defer></script>
 @endsection
 
 @extends('body')
@@ -61,8 +62,13 @@
       Dolce
     </div>
   </div>
+
+  <h4>Tempo a disposizione</h4>
+
   <form action="" method="post">
     @csrf
+    <input type="range" id="tempo" name="tempo" min="10" max="60" step="5">
+    <p><output id="value"></output> minuti</p>
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('antipasto', []))
       <option value="antipasto" selected>antipasto</option>
@@ -94,8 +100,10 @@
       <option value="dolce">dolce</option>
       @endif
     </select>
-    <a href="{{route('intollerances.create')}}">INDIETRO</a>
-    <input type="submit" class="confirm-button" value="AVANTI">
-  </form>
+    <div class="bottoni">
+        <a href="{{route('intollerances.create')}}">INDIETRO</a>
+        <input type="submit" class="confirm-button" value="AVANTI">
+    </div>
+    </form>
 </div>
 @endsection
