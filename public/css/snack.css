@@ -210,14 +210,14 @@
     background-color:#AEF7DF;
 }
 
+.snack-div .select-div-popup .select-div .selected span {
+    color:#000000;
+}
+
 .select-item span {
     font-size: 14px;
     color: #FFFFFF;
     margin: 0px;
-}
-
-.snack-div .select-div-popup .select-div .selected span {
-    color:#000000;
 }
 
 .bottoni {

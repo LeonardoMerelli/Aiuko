@@ -24,7 +24,38 @@
         NO
       </div>
   </div>
-
+  <div id="popup" class="popup">
+    <hr>
+    <p>Livello di attività?</p>
+    <div class="select-div-popup">
+      <div class="select-div">
+        @if(in_array('Moderata', []))
+        <div class="select-item selected">
+        @else
+        <div class="select-item">
+        @endif
+          <span>Moderata</span>
+        </div>
+        @if(in_array('Intensa', []))
+        <div class="select-item selected">
+        @else
+        <div class="select-item">
+        @endif
+        <span>Intensa</span>
+        </div>
+        @if(in_array('Molto intensa', []))
+        <div class="select-item selected">
+        @else
+        <div class="select-item">
+        @endif
+        <span>Molto<br>intensa</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+  </div>
+  
   <h5>Inserisci i giorni di allenamento</h5>
 
   <form action="" name="sport" method="post">
