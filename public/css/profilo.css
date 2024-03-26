@@ -1,0 +1,47 @@
+.profilo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    width: 100%;
+    min-height: 100vh;
+    outline: none;
+    background-color: #2CF5B2;
+    justify-content: center;
+  }
+
+.profilo-dati {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.dato {
+    border: 1px solid black;
+    width: 60%;
+    height: 30px;
+}
+
+.modifica {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1F6845E5;
+    color: #FFFFFFD1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modifica a {
+    text-decoration: none;
+    color: #fff;
+}
