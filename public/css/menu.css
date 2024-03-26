@@ -7,6 +7,7 @@
 .menu-view >div {
   max-width: 800px;
 }
+
 .menu-view .profile-div {
   display: flex;
   flex-direction: row;
