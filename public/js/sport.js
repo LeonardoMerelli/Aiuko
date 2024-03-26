@@ -10,6 +10,10 @@ function addDate() {
         document.getElementById("box-data").appendChild(data);
     }
     else {
-        document.querySelector(".add").style.display = "none";
+        document.querySelector(".add").style.pointerEvents = "none";
     }
+    var elemento = document.getElementById("sport-div");
+    var altezzaAttuale = parseInt(elemento.style.height) || window.innerHeight * 0.01 * 100;
+    var nuovaAltezza = altezzaAttuale + 30;
+    elemento.style.height = nuovaAltezza + "px";
 }

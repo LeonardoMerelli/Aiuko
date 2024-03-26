@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="sport-div">
+<div class="sport-div" id="sport-div">
   <h4>PRATICHI SPORT?</h4>
   <div class="select-div">
       <div class="select-item-yes" onclick="showPopup()">
