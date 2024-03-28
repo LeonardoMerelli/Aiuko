@@ -42,6 +42,8 @@
                   </ul>
                   @endif
           </div>
+
+          <h5>Attività giornaliera</h5>
           <div class= "radio-div">
 
           @if($user->attivitaGiornaliera == null)
@@ -114,9 +116,10 @@
               </div>
           </div>
           @endif
-
+        </div>
+        <h5>Genere</h5>
           @if($user->genere == null)
-          <div class= "radio-div">
+        <div class= "radio-div">
                 <div class="radio-label">
                     {{Form::radio('genere','uomo',true)}}
                     {{Form::label('inLineRadio1','Uomo')}}

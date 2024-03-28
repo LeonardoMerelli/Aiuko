@@ -1,8 +1,6 @@
 
 @section('scripts')
-<script src="{{ asset('js/multi-selection-menu.js') }}" defer></script>
-<script src="{{ asset('js/div-swap.js') }}" defer></script>
-@endsection
+ @endsection
 
 @extends('body')
 
@@ -28,10 +26,10 @@
         <a class="dom">D</a>
       </div>
     </div>
-    <div class="pranzo_lun">
+    <div class="pranzo">
       <span id="nomepasto">Pranzo</span>
     </div>
-    <div class="cena_lun">
+    <div class="cena">
       <span id="nomepasto">Cena</span>
     </div>
   </div>
