@@ -1,0 +1,43 @@
+.dispensa-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    width: 100%;
+    min-height: 100vh;
+    outline: none;
+    background-color: #2CF5B2;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.upper-dispensa {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.dispensa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+.alimento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    border-bottom: 1px solid black;
+}
+
+.alimento .immagine {
+    width: auto;
+}

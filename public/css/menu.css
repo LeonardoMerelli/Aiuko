@@ -104,52 +104,131 @@
   color: #FFFFFF;
 }
 
-.pranzo,
-.cena {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
+.menu-view .pasto span {
+  margin: 0px;
 }
 
-.pranzo #nomepasto,
-.cena #nomepasto {
-  font-size: 22px;
-  font-weight: 700;
-  color: #000;
-  position: relative;
-  left: 0;
-}
-
-#carouselpranzo,
-#carouselcena {
+.pasto-section {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.primascelta {
-  background-color: rgba(31, 104, 69, 0.6);
-  padding: 10px 30px 10px 30px;
-  width: 300px;
-  height: 200px;
+.pasto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  height: auto;
+}
+
+.top-pasto {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.pasto #nomepasto {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.pasto .top-pasto .open svg {
+  transition: transform 0.5 ease;
+  transition-duration: 0.7s;
+}
+
+.pasto.active .top-pasto .open svg{
+  transform: rotate(180deg);
+}
+
+.pasto .bottom-pasto {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition-duration: 0.3s;
+
 }
 
-button.carousel-control-next {
-  width: auto;
+.pasto .bottom-pasto .portata {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-button.carousel-control-prev {
-  width: auto;
+.pasto.active .bottom-pasto {
+  max-height: 300px;
+  border: 1px solid black;
+  border-top: 0px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  transition-duration: 0.7s;
 }
 
-.pranzo_lun span,
-.cena_lun span {
-  color: #FFFF;
+.pasto .immagini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: auto;
+  padding: 5px;
+  gap: 8px;
+}
+
+.pasto .nome-ingredienti {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  gap: 34px;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.pasto .quantità-ingredienti {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  gap: 34px;
+  padding-left: 10px;
+}
+
+.ingrediente {
+  font-size: 15px;
+  width: 50%;
+  margin-top: 6px 0 6px 0;
+}
+
+.quantità {
+  font-size: 15px;
+  width: 20%;
+  margin-top: 6px 0 6px 0;
+}
+
+.immagine {
+  overflow: hidden;
+  width: 20%;
+  margin: 6px 0 6px 10px;
+}
+
+.immagine img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

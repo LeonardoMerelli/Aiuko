@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/sport.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/profilo.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/calendario.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/dispensa.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/alimenti.css')}}">
 
     <link href="https://fonts.cdnfonts.com/css/believer2" rel="stylesheet">
                 

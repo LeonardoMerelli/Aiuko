@@ -22,9 +22,6 @@
         <div class="dato"></div>
         <div class="dato"></div>
         <div class="dato"></div>
-        <div class="dato"></div>
-        <div class="dato"></div>
-        <div class="dato"></div>
         
     </div>
     <div class="modifica">
