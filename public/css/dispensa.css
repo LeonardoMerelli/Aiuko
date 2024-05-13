@@ -26,18 +26,33 @@
     gap: 5px;
     margin-top: 20px;
     margin-bottom: 40px;
-    width: 80%;
+    width: 100%;
 }
 
 .alimento {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    gap: 30px;
-    border-bottom: 1px solid black;
+    gap: 15px;
 }
 
 .alimento .immagine {
-    width: auto;
+    width: 50px;
+}
+
+.ingrediente-dispensa {
+    width: 180px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.quantità-dispensa {    
+    width: 90px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
 }

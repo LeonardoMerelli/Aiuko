@@ -15,12 +15,31 @@
     color: #0C4431;
 }
 
+.box-specifiche {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .specifiche {
     display: flex;
-    flex-direction: row;
     margin-top: 20px;
-    justify-content: left;
-    width: 70%;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.nome-quantità {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+@media(min-width:500px) {
+    .specifiche {
+        width: 410px;
+    }
 }
 
 .specifiche h6 {

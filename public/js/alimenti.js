@@ -22,6 +22,6 @@ function addAlimento() {
 
     var elemento = document.getElementById("sport-div");
     var altezzaAttuale = parseInt(elemento.style.height) || window.innerHeight * 0.01 * 100;
-    var nuovaAltezza = altezzaAttuale + 10;
+    var nuovaAltezza = altezzaAttuale + 33;
     elemento.style.height = nuovaAltezza + "px";
 }

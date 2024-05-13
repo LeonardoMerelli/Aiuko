@@ -7,7 +7,7 @@
             <img src="{{ asset('images/logo.png') }}" alt="">
         </div>
         <div class="frase-motivazionale">
-            <span>Il tuo compagno di dieta intelligente</span>
+            Il tuo compagno di dieta intelligente
         </div>
     </div>
     <div class="home-bottom-div">

@@ -9,11 +9,14 @@
   <h4>ALIMENTI POSSEDUTI</h4>
   
   <h5>Inserisci gli alimenti che possiedi</h5>
-
+  <div class="box-specifiche">
     <div class="specifiche">
+      <div class="nome-quantità">
         <h6>Nome</h6>
         <h6>Quantità</h6>
+      </div>
     </div>
+  </div>
 
   <form action="" name="sport" method="post">
     <span id="box-data">
