@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="pranzo-div">
-  <span>CENA</span>
+  <span><strong>CENA</strong></span>
 
   <div class="select-div">
     @if(in_array('antipasto', []))
@@ -67,7 +67,7 @@
 
   <form action="" method="post">
     @csrf
-    <input type="range" id="tempo" name="tempo" min="10" max="60" step="5">
+    <input type="range" id="tempo" name="tempo" min="10" max="90" step="5">
     <p><output id="value"></output> minuti</p>
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('antipasto', []))

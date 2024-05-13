@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="elettrodomestici-div">
-  <span>HAI QUALCHE <br><strong>Elettrodomestico?</strong></span>
+  <span>HAI QUALCHE <br><strong>ELETTRODOMESTICO?</strong></span>
 
   <div class="select-div">
     @if(in_array('forno', []))

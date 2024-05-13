@@ -3,8 +3,8 @@
 @section('content')
 <!--div esterna-->
 <section class="caratteristiche-section">
+  <span><strong>CARATTERISTICHE PERSONALI</strong></span>
         <!--titolo-->
-        <h2>Caratteristiche <br> personali</h2>
         <!--inizio form-->
         {{Form::open(array('route'=>'caratteristiche.store', 'class'=>'input-container-form'))}}
         {{Form::token()}}

@@ -4,7 +4,7 @@
 <!--div esterna-->
 <section class="register-section">
         <!--titolo-->
-        <h2>Registrazione</h2>
+        <span><strong>REGISTRAZIONE</strong></span>
         <!--inizio form-->
         {{Form::open(array('route'=>'register.store', 'class'=>'input-container-form'))}}
         {{Form::token()}}

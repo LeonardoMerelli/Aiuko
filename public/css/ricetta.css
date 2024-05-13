@@ -39,7 +39,7 @@
 
 @media(min-width: 520px) {
     .ricetta {
-        width: 390px;
+        width: auto;
     }
 }
 
@@ -57,14 +57,88 @@
     text-overflow: ellipsis; 
 }
 
+.ricetta .link-video a,
+.ricetta .link-ricetta a {
+    margin-left: 10px;
+}
+
+.ingredienti-ricetta .box-ingrediente {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.ingredienti-ricetta .box-ingrediente .ingrediente-ricetta {
+    width: 250px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.ingredienti-ricetta .box-ingrediente .grammatura-ricetta {
+    width: 80px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media(min-width: 490px) {
+    .ingredienti-ricetta .lista .box-ingrediente .ingrediente-ricetta {
+        width: 300px;
+    }
+    .ingredienti-ricetta .lista .box-ingrediente .grammatura-ricetta {
+        width: 100px;
+    }
+}
+
+@media(min-width: 520px) {
+    .ingredienti-ricetta .lista .box-ingrediente .ingrediente-ricetta {
+        width: 340px;
+    }
+    .ingredienti-ricetta .lista .box-ingrediente .grammatura-ricetta {
+        width: 100px;
+    }
+}
+
+@media(min-width: 650px) {
+    .ingredienti-ricetta .lista .box-ingrediente .ingrediente-ricetta {
+        width: 430px;
+    }
+    .ingredienti-ricetta .lista .box-ingrediente .grammatura-ricetta {
+        width: 100px;
+    }
+}
+
+
+@media(min-width: 850px) {
+    .ingredienti-ricetta .lista .box-ingrediente .ingrediente-ricetta {
+        width: 600px;
+    }
+    .ingredienti-ricetta .lista .box-ingrediente .grammatura-ricetta {
+        width: 100px;
+    }
+}
+
+@media(min-width: 1050px) {
+    .ingredienti-ricetta .lista .box-ingrediente .ingrediente-ricetta {
+        width: 750px;
+    }
+    .ingredienti-ricetta .lista .box-ingrediente .grammatura-ricetta {
+        width: 100px;
+    }
+}
+
+.elettrodomestici-ricetta {
+    margin-bottom: 20px;
+}
+
+.elettrodomestici-ricetta .elettrodomestico-ricetta {
+    margin-left: 10px;
+    width: 100%;
+}
+
 .ingredienti-ricetta .titolo-ingredienti-ricetta,
 .elettrodomestici-ricetta .titolo-elettrodomestici-ricetta {
     font-size: 18px;
     font-weight: 600;
-}
-
-.ingredienti-ricetta .lista ul,
-.elettrodomestici-ricetta .lista ul {
-    list-style-type: none;
-    margin-left: -10px;
 }

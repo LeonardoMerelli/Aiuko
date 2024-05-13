@@ -18,6 +18,13 @@
     margin-top: 20px;
 }
 
+.titolo-dispensa {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
+    text-align: center;
+}
+
 .dispensa {
     display: flex;
     flex-direction: column;

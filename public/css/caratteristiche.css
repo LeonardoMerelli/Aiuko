@@ -8,10 +8,12 @@
     background-color: #2CF5B2;
 }
 
-.caratteristiche-section h2{
-    font-size: 35px;
-    margin-bottom: 50px;
+.caratteristiche-section span{
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .radio-div {

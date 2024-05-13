@@ -7,7 +7,7 @@
 
         </div>
         <div class="titolo-dispensa">
-            Dispensa
+            DISPENSA
         </div>
     </div>
 

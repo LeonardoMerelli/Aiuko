@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/dispensa.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/alimenti.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/ricetta.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/durata.css')}}">
 
     <link href="https://fonts.cdnfonts.com/css/believer2" rel="stylesheet">
                 

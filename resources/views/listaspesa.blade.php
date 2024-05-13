@@ -4,7 +4,7 @@
 <section class="dispensa-section">
     <div class="upper-dispensa">
         <div class="titolo-dispensa">
-            Lista della spesa
+            LISTA DELLA SPESA
         </div>
     </div>
 

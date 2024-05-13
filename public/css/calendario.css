@@ -9,6 +9,14 @@
     overflow: auto;
 }
 
+.calendario-div .titolo-calendario {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    color: #0C4431;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
 .calendario-div h3 {
     font-size: 20px;
     letter-spacing: 0.5px;
@@ -145,6 +153,19 @@ input#data-allenamento {
     color: #000000;
 }
 
+#poco-tempo {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#poco-tempo input#tempo {
+    background-color: transparent;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: 10px;
+    padding: 3px;
+}
+
 .calendario-div form .confirm-button, 
 .calendario-div form .back-to-diets{
     width: 100px;
@@ -238,10 +259,9 @@ select#variazione option:checked {
     color: #000;
 }
 
-span#box-data {
+.select-variazioni span {
     color: #0c4431;
     font-size: 18px;
-    margin: 10px;
 }
 
 input#data-calendario {
@@ -259,4 +279,8 @@ input#data-calendario {
 .cazzo {
     background-color: transparent;
     color: #0C4431;
+}
+
+#numberInput {
+    display: none;
 }

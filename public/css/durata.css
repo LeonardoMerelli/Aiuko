@@ -1,0 +1,43 @@
+.durata-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2CF5B2;
+}
+
+.durata-div .logo {
+    margin-top: -70px;
+}
+
+.frase-finale {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 80%;
+    text-align: center;
+}
+
+.durata-div form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.durata-div a {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #FFFFFFA1;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+}
