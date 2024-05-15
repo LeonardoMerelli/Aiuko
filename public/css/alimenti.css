@@ -1,4 +1,4 @@
-.sport-div {
+.alimenti-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,25 +9,37 @@
     overflow: auto;
 }
 
-.sport-div h3 {
+.alimenti-div .immagine-alimenti {
+    position: fixed;
+    top: -100px;
+}
+
+.alimenti-div h3 {
     font-size: 20px;
     letter-spacing: 0.5px;
     color: #0C4431;
 }
 
-.sport-div h4 {
-    font-size: 28px;
+.alimenti-div h4 {
+    font-size: 32px;
     letter-spacing: 0.5px;
     color: #0C4431;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: -40px;
 }
 
 .box-specifiche {
-    width: 312px;
+    width: 348px;
     display: flex;
     align-items: center;
+}
+
+@media(max-width:430px) {
+    .box-specifiche {
+        width:80%;
     }
+}
 
 .specifiche {
     display: flex;
@@ -55,7 +67,7 @@
 }
 
 .specifiche .nome-quantità .nome {
-    width: 200px;
+    width: 206px;
     margin: 0 10px 0 10px;
     font-size: 18px;
     font-weight: 700;
@@ -68,7 +80,7 @@
     font-weight: 700;
 }
 
-.sport-div form {
+.alimenti-div form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,41 +90,12 @@
     margin: 0 0 30px 0;
 }
 
-.sport-div h5 {
+.alimenti-div h5 {
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-.sport-div form textarea {
-    width: 500px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid #0C4431;
-    border-radius: 8px;
-    scroll-behavior: auto;
-    padding: 5px 3px;
-}
-
-input#data-allenamento {
-    background-color: transparent;
-    width: 140px;
-    height: 30px;
-    color: #000;
-    text-align: left;
-    font-size: 16px;
-    margin: 6px;
-    border-radius: 8px;
-    padding: 3px;
-}
-
-
-@media (max-width: 550px) {
-    .snack-div form textarea {
-        width: 80%;
-    }
-}
-
-.sport-div form a{
+.alimenti-div form a{
     width: 100px;
     height: 30px;
     border-radius: 5px;
@@ -125,8 +108,8 @@ input#data-allenamento {
     color: #000000;
 }
 
-.sport-div form .confirm-button, 
-.sport-div form .back-to-diets{
+.alimenti-div form .confirm-button, 
+.alimenti-div form .back-to-diets{
     width: 100px;
     height: 30px;
     border-radius: 5px;
@@ -141,21 +124,15 @@ input#data-allenamento {
     cursor: pointer;
 }
 
-.sport-div form .back-to-diets {
+.alimenti-div form .back-to-diets {
     background-color: #FFFFFFA1;
     color: #000000;
 }
 
-.sport-div form .confirm-button.disabled {
+.alimenti-div form .confirm-button.disabled {
     background-color: #303331e5;
     color: #FFFFFFD1;
     pointer-events: none;
-}
-
-.select-item span {
-    font-size: 14px;
-    color: #FFFFFF;
-    margin: 0px;
 }
 
 .bottoni {
@@ -174,7 +151,7 @@ input#data-allenamento {
     margin-top: -20px;
 }
 
-.sport-div #box-data {
+.alimenti-div #box-data {
     margin-top: 10px;
     display: flex;
     flex-direction: column;

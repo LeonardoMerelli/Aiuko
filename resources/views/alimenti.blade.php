@@ -5,9 +5,8 @@
 @endsection
 
 @section('content')
-<div class="sport-div" id="sport-div">
-  <h4>ALIMENTI POSSEDUTI</h4>
-  
+<div class="alimenti-div" id="alimenti-div">
+  <h4>ALIMENTI <br> POSSEDUTI</h4>
   <h5>Inserisci gli alimenti che possiedi</h5>
   <div class="box-specifiche">
     <div class="specifiche">
