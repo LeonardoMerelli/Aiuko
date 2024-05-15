@@ -62,7 +62,7 @@
       Dolce
     </div>
   </div>
-  <form action="" method="post">
+  <form action="{{route('pranzo.store')}}" method="post">
     @csrf
     <input type="range" id="tempo" name="tempo" min="10" max="90" step="5">
     <p><output id="value"></output> minuti</p>
@@ -98,7 +98,7 @@
       @endif
     </select>
     <div class="bottoni">
-      <a href="{{route('intollerances.create')}}">INDIETRO</a>
+      <a href="{{route('colazione.create')}}">INDIETRO</a>
       <input type="submit" class="confirm-button" value="AVANTI">
     </div>
   </form>

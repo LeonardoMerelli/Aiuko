@@ -101,7 +101,7 @@
       @endif
     </select>
     <div class="bottoni">
-        <a href="{{route('intollerances.create')}}">INDIETRO</a>
+        <a href="{{route('pranzo.create')}}">INDIETRO</a>
         <input type="submit" class="confirm-button" value="AVANTI">
     </div>
     </form>

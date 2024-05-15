@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pranzo;
+use App\Models\cena;
 use Illuminate\Http\Request;
 
-class PranzoController extends Controller
+class CenaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class PranzoController extends Controller
      */
     public function create()
     {
-        return view("pranzo");
+        return view("cena");
     }
 
     /**
@@ -35,16 +35,16 @@ class PranzoController extends Controller
      */
     public function store(Request $request)
     {
-        return redirect()->route('cena.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\pranzo  $pranzo
+     * @param  \App\Models\cena  $cena
      * @return \Illuminate\Http\Response
      */
-    public function show(pranzo $pranzo)
+    public function show(cena $cena)
     {
         //
     }
@@ -52,10 +52,10 @@ class PranzoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\pranzo  $pranzo
+     * @param  \App\Models\cena  $cena
      * @return \Illuminate\Http\Response
      */
-    public function edit(pranzo $pranzo)
+    public function edit(cena $cena)
     {
         //
     }
@@ -64,10 +64,10 @@ class PranzoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\pranzo  $pranzo
+     * @param  \App\Models\cena  $cena
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pranzo $pranzo)
+    public function update(Request $request, cena $cena)
     {
         //
     }
@@ -75,10 +75,10 @@ class PranzoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\pranzo  $pranzo
+     * @param  \App\Models\cena  $cena
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pranzo $pranzo)
+    public function destroy(cena $cena)
     {
         //
     }

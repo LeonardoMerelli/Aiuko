@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\CenaController;
 use App\Http\Controllers\DietController;
 use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\SnackController;
 use App\Http\Controllers\AlimentiController;
+use App\Http\Controllers\ColazioneController;
+use App\Http\Controllers\PranzoController;
 use App\Http\Controllers\ElectrodomesticsController;
 use App\Http\Controllers\CaratteristicheController;
 use App\Models\electiodomestic;
@@ -68,6 +71,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/pranzo', [PranzoController::class, 'store'])
         ->name('pranzo.store');
+
+    Route::get('/cena', [CenaController::class, 'create']
+        )->name('cena.create');
+    
+    Route::post('/cena', [CenaController::class, 'store'])
+        ->name('cena.store');
         
     Route::get('/alimenti', [AlimentiController::class, 'create']
         )->name('alimenti.create');
