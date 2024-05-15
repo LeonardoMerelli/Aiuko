@@ -10,7 +10,7 @@
   <span>HAI QUALCHE <br><strong>ELETTRODOMESTICO?</strong></span>
 
   <div class="select-div">
-    @if(in_array('forno', []))
+    @if(in_array('forno', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -20,7 +20,7 @@
       </div>
       Forno
     </div>
-    @if(in_array('friggitrice ad aria', []))
+    @if(in_array('friggitrice ad aria', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -30,7 +30,7 @@
       </div>
       <span>Friggitrice ad aria</span>
     </div>
-    @if(in_array('sbattitore', []))
+    @if(in_array('sbattitore', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -40,7 +40,7 @@
       </div>
       Sbattitore
     </div>
-    @if(in_array('microonde', []))
+    @if(in_array('microonde', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -50,7 +50,7 @@
       </div>
       Microonde
     </div>
-    @if(in_array('griglia elettrica', []))
+    @if(in_array('griglia elettrica', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -60,7 +60,7 @@
       </div>
       <span>Griglia elettrica</span>
     </div>
-    @if(in_array('bollitore', []))
+    @if(in_array('bollitore', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -70,7 +70,7 @@
       </div>
       Bollitore
     </div>
-    @if(in_array('frullatore', []))
+    @if(in_array('frullatore', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -80,7 +80,7 @@
       </div>
       Frullatore
     </div>
-    @if(in_array('spremiagrumi', []))
+    @if(in_array('spremiagrumi', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -90,7 +90,7 @@
       </div>
       <span>Spremi agrumi</span>
     </div>
-    @if(in_array('tostapane', []))
+    @if(in_array('tostapane', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -100,7 +100,7 @@
       </div>
       Tostapane
     </div>
-    @if(in_array('piastra ad induzione', []))
+    @if(in_array('piastra ad induzione', $elettrodomestici))
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -112,64 +112,64 @@
     </div>
 
   </div>
-  <form action="" method="post">
+  <form action="{{route('elettrodomestici.store')}}" method="post">
     @csrf
-    <select name="intollerances[]" class="custom-select" multiple>
-      @if(in_array('forno', []))
+    <select name="elettrodomestici[]" class="custom-select" multiple>
+      @if(in_array('forno', $elettrodomestici))
       <option value="forno" selected>forno</option>
       @else
       <option value="forno">forno</option>
       @endif
 
-      @if(in_array('friggitriceadaria', []))
+      @if(in_array('friggitrice ad aria', $elettrodomestici))
       <option value="friggitrice ad aria" selected>friggitrice ad aria</option>
       @else
       <option value="friggitrice ad aria">friggitrice ad aria</option>
       @endif
 
-      @if(in_array('sbattitore', []))
+      @if(in_array('sbattitore', $elettrodomestici))
       <option value="sbattitore" selected>sbattitore</option>
       @else
       <option value="sbattitore">sbattitore</option>
       @endif
 
-      @if(in_array('microonde', []))
+      @if(in_array('microonde', $elettrodomestici))
       <option value="microonde" selected>microonde</option>
       @else
       <option value="microonde">microonde</option>
       @endif
 
-      @if(in_array('griglia elettrica', []))
+      @if(in_array('griglia elettrica', $elettrodomestici))
       <option value="griglia elettrica" selected>griglia elettrica</option>
       @else
       <option value="griglia elettrica">griglia elettrica</option>
       @endif
 
-      @if(in_array('bollitore', []))
+      @if(in_array('bollitore', $elettrodomestici))
       <option value="bollitore" selected>bollitore</option>
       @else
       <option value="bollitore">bollitore</option>
       @endif
 
-      @if(in_array('frullatore', []))
+      @if(in_array('frullatore', $elettrodomestici))
       <option value="frullatore" selected>frullatore</option>
       @else
       <option value="frullatore">frullatore</option>
       @endif
 
-      @if(in_array('spremiagrumi', []))
+      @if(in_array('spremiagrumi', $elettrodomestici))
       <option value="spremiagrumi" selected>spremiagrumi</option>
       @else
       <option value="spremiagrumi">spremiagrumi</option>
       @endif
 
-      @if(in_array('tostapane', []))
+      @if(in_array('tostapane', $elettrodomestici))
       <option value="tostapane" selected>tostapane</option>
       @else
       <option value="tostapane">tostapane</option>
       @endif
 
-      @if(in_array('piastra ad induzione', []))
+      @if(in_array('piastra ad induzione', $elettrodomestici))
       <option value="piastra ad induzione" selected>piastra ad induzione</option>
       @else
       <option value="piastra ad induzione">piastra ad induzione</option>

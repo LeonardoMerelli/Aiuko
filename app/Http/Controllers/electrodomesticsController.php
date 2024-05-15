@@ -23,7 +23,11 @@ class ElectrodomesticsController extends Controller
      */
     public function create()
     {
-        return view("elettrodomestici");
+        $idUser = auth()->user()->idUtente;
+        $elettrodomesticiUtente = electiodomestic::where('idUtente', $idUser)->pluck('elettrodomestico')->toArray();
+
+        return view("elettrodomestici")
+            ->with("elettrodomestici", $elettrodomesticiUtente);
     }
 
     /**
@@ -36,7 +40,7 @@ class ElectrodomesticsController extends Controller
     {
         $this->electrodomestic->salvaElettrodomestici($request->elettrodomestici);
 
-        return redirect()->route('elettrodomestici.create');
+        return redirect()->route('intollerances.create');
     }
 
     /**

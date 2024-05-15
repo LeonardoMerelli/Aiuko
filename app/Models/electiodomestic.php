@@ -12,6 +12,11 @@ class electiodomestic extends Model
     protected $primaryKey = 'idElettrodomestico';
     public $timestamps = false;
 
+    protected $fillable = [
+        'idUtente',
+        'elettrodomestico',
+    ];
+
     public function salvaElettrodomestici($elettrodomestici) {
         $idUser = auth()->user()->idUtente;
         $elettrodomesticiUtente = electiodomestic::where('idUtente', $idUser);
@@ -21,7 +26,7 @@ class electiodomestic extends Model
         }
         if(!is_null($elettrodomestici)) {
             foreach($elettrodomestici as $elettrodomestico) {
-                userIntollerances::create([
+                electiodomestic::create([
                     'idUtente' => $idUser,
                     'elettrodomestico' => $elettrodomestico,
                 ]);
