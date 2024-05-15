@@ -60,16 +60,31 @@
     <h5>Scrivi i tuoi alimenti preferiti</h5>
     <textarea name="preferenze" id="preferenze"></textarea>
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
+      @if(in_array('si', []))
       <option value="si" selected>si</option>
+      @else
       <option value="si">si</option>
+      @endif
+      @if(in_array('no', []))     
       <option value="no" selected>no</option>
+      @else
       <option value="no">no</option>
+      @endif
+      @if(in_array('colazione pranzo', []))
       <option value="colazione pranzo" selected>colazione pranzo</option>
+      @else
       <option value="colazione pranzo">colazione pranzo</option>
+      @endif
+      @if(in_array('pranzo cena', []))
       <option value="pranzo cena" selected>pranzo cena</option>
+      @else
       <option value="pranzo cena">pranzo cena</option>
+      @endif
+      @if(in_array('dopo cena', []))
       <option value="dopo cena" selected>dopo cena</option>
+      @else
       <option value="dopo cena">dopo cena</option>
+      @endif
     </select>
     <div class="bottoni">
       <a href="{{route('caratteristiche.create')}}">INDIETRO</a>
