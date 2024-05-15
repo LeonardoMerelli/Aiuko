@@ -34,7 +34,9 @@ class AlimentiController extends Controller
      */
     public function store(Request $request)
     {
-        
+        dd($request);
+
+        return redirect()->route('elettrodomestici.create');
     }
 
     /**

@@ -19,10 +19,11 @@
   </div>
 
   <form action="{{route('alimenti.store')}}" method="post">
+  @csrf
     <span id="box-data">
         <div id="prova">
-            <input type="text" id="nome-alimento" name="nome-alimento" placeholder="Nome">
-            <input type="number" id="quantità-alimento" name="quantità-alimento" placeholder="Grammi" value="0">
+            <input type="text" id="nome-alimento" name="nome-alimento[]" placeholder="Nome">
+            <input type="number" id="quantità-alimento" name="quantità-alimento[]" placeholder="Grammi" value="0">
         </div>
     </span>
     <div class="add" onclick="addAlimento()">
