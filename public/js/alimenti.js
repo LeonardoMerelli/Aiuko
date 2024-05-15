@@ -1,3 +1,5 @@
+var i = 0;
+
 function addAlimento() {
         let data1 = document.createElement("input");
         let data2 = document.createElement("input");
@@ -5,13 +7,18 @@ function addAlimento() {
         
         divProva.setAttribute("id", "prova");
 
+        i++;
+
+        var nuovoAlimentoID = "nome-alimento" + i;
+        var nuovaQuantitàID = "quantità-alimento" + i;
+
         data1.setAttribute("type", "text");
-        data1.setAttribute("id", "nome-alimento");
+        data1.setAttribute("id", nuovoAlimentoID);
         data1.setAttribute("name", "nome-alimento");
         data1.setAttribute("placeholder", "Nome");
 
         data2.setAttribute("type", "text");
-        data2.setAttribute("id", "quantità-alimento");
+        data2.setAttribute("id", nuovaQuantitàID);
         data2.setAttribute("name", "quantità-alimento");
         data2.setAttribute("placeholder", "Grammi");
 

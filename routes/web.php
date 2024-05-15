@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/Aiuko', function () {
     auth()->logout();
-    return view('home');
+    return view('alimenti');
 })->name('home');
 
 Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
@@ -61,6 +61,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/colazione', [ColazioneController::class, 'store'])
         ->name('colazione.store');
+
+    Route::get('/pranzo', [PranzoController::class, 'create']
+        )->name('pranzo.create');
+    
+    Route::post('/pranzo', [PranzoController::class, 'store'])
+        ->name('pranzo.store');
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {
