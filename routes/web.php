@@ -67,6 +67,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/pranzo', [PranzoController::class, 'store'])
         ->name('pranzo.store');
+        
+    Route::get('/alimenti', [AlimentiController::class, 'create']
+        )->name('alimenti.create');
+
+    Route::post('/alimenti', [AlimentiController::class, 'store'])
+        ->name('alimenti.store');
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {

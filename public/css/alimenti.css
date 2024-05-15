@@ -50,9 +50,18 @@
     }
 }
 
-.specifiche h6 {
+.specifiche .nome-quantità .nome {
     width: 50%;
-    margin: 0 10px 0 10px ;
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.specifiche .nome-quantità .quantità {
+    width: 40%;
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .sport-div form {
@@ -184,9 +193,15 @@ input#data-allenamento {
     margin: 10px;
 }
 
-input#nome-alimento,
-input#quantità-alimento {
+#prova input[type=text] {
     width: 60%;
+    margin: 0 10px 0 10px;
+    background-color: transparent;
+    border-radius: 7px;
+}
+
+#prova input[type=number] {
+    width: 30%;
     margin: 0 10px 0 10px;
     background-color: transparent;
     border-radius: 7px;

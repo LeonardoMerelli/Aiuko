@@ -17,10 +17,11 @@ function addAlimento() {
         data1.setAttribute("name", "nome-alimento");
         data1.setAttribute("placeholder", "Nome");
 
-        data2.setAttribute("type", "text");
+        data2.setAttribute("type", "number");
         data2.setAttribute("id", nuovaQuantitàID);
         data2.setAttribute("name", "quantità-alimento");
         data2.setAttribute("placeholder", "Grammi");
+        data2.setAttribute("value", "0");
 
         divProva.appendChild(data1);
         divProva.appendChild(data2);
