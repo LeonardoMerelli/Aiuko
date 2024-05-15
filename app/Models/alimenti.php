@@ -19,15 +19,15 @@ class alimenti extends Model
 
     public function salvaAlimentiUtente($alimenti, $quantita) {
         $idUser = auth()->user()->idUtente;
-        $alimentiUtente = userAlimenti::where('idUtente', $idUser);
+        $alimentiUtente = alimenti::where('idUtente', $idUser);
 
         if(count($alimentiUtente->get()) != 0) {
             $alimentiUtente->delete();
         }
-        foreach($aliemnti as $dieta) {
-            userDiets::create([
+        foreach($alimentiUtente as $alimento) {
+            alimenti::create([
                 'idUtente' => $idUser,
-                'dieta' => $dieta,
+                'alimento' => $alimento,
             ]);
         }
     }
