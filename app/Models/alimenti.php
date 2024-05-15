@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class alimenti extends Model
 {
     use HasFactory;
-    protected $table = 'user_alimenti';
+    protected $table = 'alimenti';
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
@@ -17,17 +17,18 @@ class alimenti extends Model
         'quantita'
     ];
 
-    public function salvaAlimentiUtente($alimenti, $quantita) {
-        $idUser = auth()->user()->idUtente;
-        $alimentiUtente = alimenti::where('idUtente', $idUser);
+    public function salvaAlimentiUtente($alimentiQuantita) {
+        $alimentiQuantita = json_decode($alimentiQuantita);
 
-        if(count($alimentiUtente->get()) != 0) {
-            $alimentiUtente->delete();
-        }
-        foreach($alimentiUtente as $alimento) {
+        $idUser = auth()->user()->idUtente;
+        
+        for ($i = 0; $i < count($alimentiQuantita); $i += 2) {
+            $alimento = $alimentiQuantita[$i];
+            $quantita = $alimentiQuantita[$i + 1]; 
             alimenti::create([
                 'idUtente' => $idUser,
                 'alimento' => $alimento,
+                'quantita' => $quantita
             ]);
         }
     }
