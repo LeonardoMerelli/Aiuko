@@ -11,6 +11,7 @@ use App\Http\Controllers\ColazioneController;
 use App\Http\Controllers\PranzoController;
 use App\Http\Controllers\ElectrodomesticsController;
 use App\Http\Controllers\CaratteristicheController;
+use App\Http\Controllers\SportController;
 use App\Models\electiodomestic;
 use Illuminate\Support\Facades\Route;
 
@@ -77,6 +78,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/cena', [CenaController::class, 'store'])
         ->name('cena.store');
+    
+    Route::get('/sport', [SportController::class, 'create']
+        )->name('sport.create');
+    
+    Route::post('/sport', [SportController::class, 'store'])
+        ->name('sport.store');
         
     Route::get('/alimenti', [AlimentiController::class, 'create']
         )->name('alimenti.create');

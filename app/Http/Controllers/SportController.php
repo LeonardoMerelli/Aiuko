@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cena;
+use App\Models\sport;
 use Illuminate\Http\Request;
 
-class CenaController extends Controller
+class SportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class CenaController extends Controller
      */
     public function create()
     {
-        return view("cena");
+        return view("sport");
     }
 
     /**
@@ -35,16 +35,16 @@ class CenaController extends Controller
      */
     public function store(Request $request)
     {
-        return redirect()->route('sport.create');
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\cena  $cena
+     * @param  \App\Models\sport  $sport
      * @return \Illuminate\Http\Response
      */
-    public function show(cena $cena)
+    public function show(sport $sport)
     {
         //
     }
@@ -52,10 +52,10 @@ class CenaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\cena  $cena
+     * @param  \App\Models\sport  $sport
      * @return \Illuminate\Http\Response
      */
-    public function edit(cena $cena)
+    public function edit(sport $sport)
     {
         //
     }
@@ -64,10 +64,10 @@ class CenaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\cena  $cena
+     * @param  \App\Models\sport  $sport
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cena $cena)
+    public function update(Request $request, sport $sport)
     {
         //
     }
@@ -75,10 +75,10 @@ class CenaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\cena  $cena
+     * @param  \App\Models\sport  $sport
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cena $cena)
+    public function destroy(sport $sport)
     {
         //
     }
