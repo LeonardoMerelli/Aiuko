@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('snacks', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('idUtente');
+            $table->string('snackPreferiti');
+            $table->foreign('idUtente')->references('idUtente')->on('users');
         });
     }
 
