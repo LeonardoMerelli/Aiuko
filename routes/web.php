@@ -5,6 +5,7 @@ use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
 use App\Http\Controllers\SnackController;
+use App\Http\Controllers\AlimentiController;
 use App\Http\Controllers\ElectrodomesticsController;
 use App\Http\Controllers\CaratteristicheController;
 use App\Models\electiodomestic;

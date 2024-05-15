@@ -40,7 +40,7 @@ class ElectrodomesticsController extends Controller
     {
         $this->electrodomestic->salvaElettrodomestici($request->elettrodomestici);
 
-        return redirect()->route('intollerances.create');
+        return redirect()->route('alimenti.create');
     }
 
     /**

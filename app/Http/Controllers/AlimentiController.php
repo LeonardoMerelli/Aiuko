@@ -23,7 +23,7 @@ class AlimentiController extends Controller
      */
     public function create()
     {
-        //
+        return view("alimenti");
     }
 
     /**
