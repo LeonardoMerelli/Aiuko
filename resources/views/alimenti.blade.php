@@ -12,17 +12,17 @@
   <div class="box-specifiche">
     <div class="specifiche">
       <div class="nome-quantità">
-        <h6>Nome</h6>
-        <h6>Quantità</h6>
+        <div class="nome">Nome</div>
+        <div class="quantità">Quantità</div>
       </div>
     </div>
   </div>
 
-  <form action="" name="sport" method="post">
+  <form action="{{route('alimenti.store')}}" method="post">
     <span id="box-data">
         <div id="prova">
             <input type="text" id="nome-alimento" name="nome-alimento" placeholder="Nome">
-            <input type="text" id="quantità-alimento" name="quantità-alimento" placeholder="Grammi">
+            <input type="number" id="quantità-alimento" name="quantità-alimento" placeholder="Grammi" value="0">
         </div>
     </span>
     <div class="add" onclick="addAlimento()">
