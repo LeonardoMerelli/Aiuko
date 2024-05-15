@@ -24,7 +24,7 @@ class alimenti extends Model
         if(count($alimentiUtente->get()) != 0) {
             $alimentiUtente->delete();
         }
-        foreach($aliemnti as $dieta) {
+        foreach($alimenti as $alimento) {
             userDiets::create([
                 'idUtente' => $idUser,
                 'dieta' => $dieta,
