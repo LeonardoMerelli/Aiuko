@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <form action="{{route('alimenti.store')}}" method="post">
+  <form action="{{route('alimenti.store')}}" id="form-alimenti" method="post">
   @csrf
     <span id="box-data">
         <div id="prova">
@@ -29,6 +29,7 @@
     <div class="add" onclick="addAlimento()">
         <svg viewBox="0 0 24 24" fill="none" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
     </div>
+    <input type="hidden" name="contenutiInput" id="contenutiInput">
     <div class="bottoni">
       <a href="{{route('elettrodomestici.create')}}">INDIETRO</a>
       <input type="submit" class="confirm-button" value="AVANTI">
