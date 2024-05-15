@@ -33,3 +33,29 @@ function addAlimento() {
     var nuovaAltezza = altezzaAttuale + 33;
     elemento.style.height = nuovaAltezza + "px";
 }
+
+document.getElementById("form-alimenti").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    var divs = document.querySelectorAll("#prova");
+
+    // Array per memorizzare i contenuti degli input
+    var contenutiInput = [];
+
+    // Itera su tutte le div
+    divs.forEach(function(div) {
+        // Trova tutti gli input all'interno della div corrente
+        var inputs = div.querySelectorAll("input");
+
+        // Itera su tutti gli input
+        inputs.forEach(function(input) {
+            // Aggiungi il contenuto dell'input all'array
+            contenutiInput.push(input.value);
+        });
+    });
+
+    document.getElementById("contenutiInput").value = JSON.stringify(contenutiInput);
+
+    event.target.submit();
+});
