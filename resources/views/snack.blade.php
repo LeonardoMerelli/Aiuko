@@ -55,7 +55,8 @@
     <br>
     <hr>
   </div>
-  <form action="" method="post">
+  <form action="{{route('snack.store')}}" method="post">
+    @csrf
     <h5>Scrivi i tuoi alimenti preferiti</h5>
     <textarea name="preferenze" id="preferenze"></textarea>
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>

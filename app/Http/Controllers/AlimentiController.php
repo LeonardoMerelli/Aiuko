@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\alimenti;
 use Illuminate\Http\Request;
 
 class AlimentiController extends Controller
 {
+    public function __construct() {
+        $this->alimenti = new alimenti();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -34,9 +38,9 @@ class AlimentiController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $this->alimenti->salvaAlimentiUtente($request->contenutiInput);
 
-        return redirect()->route('elettrodomestici.create');
+        return redirect()->route('snack.create');
     }
 
     /**
