@@ -83,7 +83,6 @@ var selects = document.querySelectorAll('[name="variazione"]');
 
 selects.forEach(function(select) {
     select.addEventListener('change', function() {
-        console.log(select);
         var selectedValue = this.value;
         var pocoTempo = this.nextElementSibling; // Ottieni l'elemento successivo dopo la select
         if (selectedValue === "poco tempo") {
