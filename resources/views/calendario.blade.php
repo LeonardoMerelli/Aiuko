@@ -7,7 +7,8 @@
 @section('content')
 <div class="calendario-div" id="calendario-div">
   <div class="titolo-calendario"><strong>CALENDARIO</strong></div>
-  <form action="" name="calendario" id="calendario" method="post">
+  <form action="{{route('calendario.store')}}" name="calendario" id="calendario" method="post">
+    @csrf
     <div class="select-variazioni" id="select-variazioni">
       <span id="box-data">
         <input type="date" id="data-calendario" name="data-calendario">
