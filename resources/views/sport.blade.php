@@ -29,26 +29,26 @@
     <p>Livello di attività?</p>
     <div class="select-div-popup">
       <div class="select-div">
-        @if(in_array('Moderata', []))
+        @if(in_array('moderata', []))
         <div class="select-item selected">
         @else
         <div class="select-item">
         @endif
           <span>Moderata</span>
         </div>
-        @if(in_array('Intensa', []))
+        @if(in_array('intensa', []))
         <div class="select-item selected">
         @else
         <div class="select-item">
         @endif
-        <span>Intensa</span>
+          <span>Intensa</span>
         </div>
-        @if(in_array('Molto intensa', []))
+        @if(in_array('molto intensa', []))
         <div class="select-item selected">
         @else
         <div class="select-item">
         @endif
-        <span>Molto<br>intensa</span>
+          <span>Molto<br>intensa</span>
         </div>
       </div>
     </div>
@@ -57,7 +57,6 @@
   </div>
   
   <h5>Inserisci i giorni di allenamento</h5>
-
   <form action="" name="sport" method="post">
     @csrf
     <span id="box-data">
@@ -69,11 +68,29 @@
       @else
       <option value="si">si</option>
       @endif
-      
+
       @if(in_array('si', []))
       <option value="no" selected>no</option>
       @else
       <option value="no">no</option>
+      @endif
+
+      @if(in_array('moderata', []))
+      <option value="moderata" selected>moderata</option>
+      @else
+      <option value="moderata">moderata</option>
+      @endif
+
+      @if(in_array('intensa', []))
+      <option value="intensa" selected>intensa</option>
+      @else
+      <option value="intensa">intensa</option>
+      @endif
+      
+      @if(in_array('molto intensa', []))
+      <option value="moltointensa" selected>molto intensa</option>
+      @else
+      <option value="moltointensa">molto intensa</option>
       @endif
     </select>
     <div class="add" onclick="addDate()">

@@ -11,8 +11,8 @@ submitButton.classList.add("disabled");
 function select(itemElement) {
   const index = itemArray.indexOf(itemElement);
   const selectedText = itemElement.textContent.trim().toLowerCase();
-  
-    if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana") {
+  console.log(selectedText);
+    if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana" || selectedText === "intensa" || selectedText === "moderata" || selectedText === "moltointensa") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {
         if (item !== itemElement) {

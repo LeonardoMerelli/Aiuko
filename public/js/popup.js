@@ -13,9 +13,12 @@ function closePopup() {
   document.querySelector('.confirm-button').classList.remove("disabled");
   document.querySelector('.select-item-no').classList.add('selected-no');
   document.querySelector('.select-item-yes').classList.remove('selected-yes');
+  
   if(document.getElementById('popup')) {
-    console.log("aooooooooo");
-    document.querySelector('.select-item').classList.remove('selected');
+    var divs = document.querySelectorAll('.select-item');
+    divs.forEach(function(div) {
+      div.classList.remove('selected');
+    });
     document.getElementById('popup').style.display = 'none';
   }
 
@@ -25,6 +28,7 @@ function closePopup() {
   // Itera su tutte le opzioni selezionate tranne l'ultima
   for (var i = 0; i < selectedOptions.length; i++) {
     if(i != 1) {
+      console.log(selectedOptions[i]);
       selectedOptions[i].selected = false; // Deseleziona l'opzione
     }
   }

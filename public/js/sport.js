@@ -11,6 +11,7 @@ function addDate() {
     }
     else {
         document.querySelector(".add").style.pointerEvents = "none";
+        alert("Massimo 7 giorni");
     }
     var elemento = document.getElementById("sport-div");
     var altezzaAttuale = parseInt(elemento.style.height) || window.innerHeight * 0.01 * 100;
