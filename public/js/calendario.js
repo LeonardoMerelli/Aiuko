@@ -44,7 +44,7 @@ function addDateMotivo() {
         tempoLabel.setAttribute("for", "tempo" + i);
         tempoLabel.innerText = "Tempo";
 
-        tempoInput.setAttribute("type", "text");
+        tempoInput.setAttribute("type", "number");
         tempoInput.setAttribute("id", "tempo" + i);
         tempoInput.setAttribute("name", "tempo");
 
@@ -92,4 +92,44 @@ selects.forEach(function(select) {
             pocoTempo.style.display = "none";
         }
     });
+});
+
+document.getElementById("calendario").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    var divs = document.querySelectorAll("#box-data");
+
+    // Array per memorizzare i contenuti degli input
+    var contenutiInputData = [];
+    var contenutiInputSelect = [];
+    var contenutiInputTempo = [];
+
+    // Itera su tutte le div
+    divs.forEach(function(div) {
+        // Trova tutti gli input all'interno della div corrente
+        var inputsData = div.querySelectorAll("input[type='date']");
+        var inputsSelect = div.querySelectorAll("select[name='variazione']");
+        var inputsTempo = div.querySelectorAll("input[type='number']");
+
+        // Itera su tutti gli input
+        inputsData.forEach(function(input) {
+            // Aggiungi il contenuto dell'input all'array
+            contenutiInputData.push(input.value);
+        });
+        inputsSelect.forEach(function(input) {
+            // Aggiungi il contenuto dell'input all'array
+            contenutiInputSelect.push(input.value);
+        });
+        inputsTempo.forEach(function(input) {
+            // Aggiungi il contenuto dell'input all'array
+            contenutiInputTempo.push(input.value);
+        });
+    });
+
+    document.getElementById("contenutiInputData").value = JSON.stringify(contenutiInputData);
+    document.getElementById("contenutiInputSelect").value = JSON.stringify(contenutiInputSelect);
+    document.getElementById("contenutiInputTempo").value = JSON.stringify(contenutiInputTempo);
+
+    event.target.submit();
 });
