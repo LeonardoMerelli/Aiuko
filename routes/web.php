@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/Aiuko', function () {
     auth()->logout();
-    return view('home');
+    return view('ricetta');
 })->name('home');
 
 Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {

@@ -10,9 +10,12 @@
         <img src="{{ asset('images/logo.png') }}" alt="">
     </div>
     <div class="frase-finale">
-        Grazie per aver scelto Aiuko
+        Grazie per aver scelto Aiuko,
         <br>
-        I tuoi dati sono stati salvati, a breve riceverai il tuo piano.
+        i tuoi dati sono stati salvati. 
+        <br>
+        Riceverai il tuo piano per email
+        <br>
         <br>
         Team Aiuko
     </div>
