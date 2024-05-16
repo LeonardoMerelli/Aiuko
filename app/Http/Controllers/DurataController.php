@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\calendario;
+use App\Models\durata;
 use Illuminate\Http\Request;
 
-class CalendarioController extends Controller
+class DurataController extends Controller
 {
-    public function __construct() {
-        $this->calendarioUtente = new calendario();
-    }
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +24,7 @@ class CalendarioController extends Controller
      */
     public function create()
     {
-        return view("calendario");
+        return view("durata");
     }
 
     /**
@@ -38,18 +35,16 @@ class CalendarioController extends Controller
      */
     public function store(Request $request)
     {
-        $this->calendarioUtente->salvaImpegniUtente($request->contenutiInputData, $request->contenutiInputSelect, $request->contenutiInputTempo);
-        
-        return redirect()->route('durata.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\durata  $durata
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(durata $durata)
     {
         //
     }
@@ -57,10 +52,10 @@ class CalendarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\durata  $durata
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(durata $durata)
     {
         //
     }
@@ -69,10 +64,10 @@ class CalendarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\durata  $durata
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, durata $durata)
     {
         //
     }
@@ -80,10 +75,10 @@ class CalendarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\durata  $durata
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(durata $durata)
     {
         //
     }

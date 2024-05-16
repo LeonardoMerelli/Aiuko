@@ -3,6 +3,7 @@
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\CenaController;
 use App\Http\Controllers\DietController;
+use App\Http\Controllers\DurataController;
 use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\IntolleranceController;
@@ -91,6 +92,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/calendario', [CalendarioController::class, 'store'])
         ->name('calendario.store');
+    
+    Route::get('/durata', [DurataController::class, 'create']
+        )->name('durata.create');
+    
+    Route::post('/durata', [DurataController::class, 'store'])
+        ->name('durata.store');
         
     Route::get('/alimenti', [AlimentiController::class, 'create']
         )->name('alimenti.create');

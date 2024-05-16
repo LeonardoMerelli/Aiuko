@@ -22,7 +22,6 @@ class SnackController extends Controller
     
     public function store(Request $request)
     {
-        dd($request);
         return redirect()->route('colazione.create');
     }
 
