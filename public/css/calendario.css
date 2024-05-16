@@ -166,6 +166,19 @@ input#data-allenamento {
     padding: 3px;
 }
 
+#box-data div {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#box-data div input {
+    background-color: transparent;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: 10px;
+    padding: 3px;
+}
+
 .calendario-div form .confirm-button, 
 .calendario-div form .back-to-diets{
     width: 100px;
@@ -228,7 +241,7 @@ input#data-allenamento {
     justify-content: center;
 }
 
-select#variazione {
+.select-variazioni #box-data select {
     margin-top: 8px;
     margin-left: 6px;
     background-color: transparent;
@@ -237,24 +250,24 @@ select#variazione {
     border: 1px solid black;
 }
 
-select option {
+.select-variazioni #box-data select option {
     background-color: transparent;
 }
 
-select#variazione option:first-child {
+.select-variazioni #box-data select option:first-child {
     font-style: italic;
     color: #000;
     background-color: transparent;
 }
 
 /* Stile per le altre opzioni */
-select#variazione option {
+.select-variazioni #box-data select option {
     background-color: transparent;
     color: #000;
 }
 
 /* Stile per l'opzione selezionata */
-select#variazione option:checked {
+.select-variazioni #box-data select option:checked {
     background-color: transparent;
     color: #000;
 }
@@ -264,7 +277,7 @@ select#variazione option:checked {
     font-size: 18px;
 }
 
-input#data-calendario {
+.select-variazioni #box-data input[type=date]  {
     background-color: transparent;
     width: 140px;
     height: 30px;
