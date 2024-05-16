@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\CenaController;
 use App\Http\Controllers\DietController;
 use App\Http\Controllers\FacebookAuthController;
@@ -84,6 +85,12 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
     
     Route::post('/sport', [SportController::class, 'store'])
         ->name('sport.store');
+    
+    Route::get('/calendario', [CalendarioController::class, 'create']
+        )->name('calendario.create');
+    
+    Route::post('/calendario', [CalendarioController::class, 'store'])
+        ->name('calendario.store');
         
     Route::get('/alimenti', [AlimentiController::class, 'create']
         )->name('alimenti.create');

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\sport;
 use Illuminate\Http\Request;
 
-class SportController extends Controller
+class CalendarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +23,7 @@ class SportController extends Controller
      */
     public function create()
     {
-        return view("sport");
+        return view("calendario");
     }
 
     /**
@@ -35,16 +34,16 @@ class SportController extends Controller
      */
     public function store(Request $request)
     {
-        return redirect()->route('calendario.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\sport  $sport
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(sport $sport)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class SportController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\sport  $sport
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(sport $sport)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class SportController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\sport  $sport
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, sport $sport)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class SportController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\sport  $sport
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(sport $sport)
+    public function destroy($id)
     {
         //
     }
