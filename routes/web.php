@@ -107,8 +107,8 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
         ->name('alimenti.store');
 });
 
-Route::get('/attesa', [AttesaController::class, 'create']
-        )->name('attesa.create');
+Route::get('/attesa', [AttesaController::class, 'create'])
+    ->name('attesa.create');
 
 Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');

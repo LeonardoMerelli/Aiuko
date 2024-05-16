@@ -26,10 +26,14 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        if(auth()->user()->setup == 0){
-            return redirect()->route('diets.create');
+        $user = Auth::user();
+
+        $setupValue = $user->setup;
+
+        if ($setupValue == 0) {
+            return redirect()->route('attesa.create');
         }
-        return redirect()->route('impostazioniPasto');
+        return redirect()->route('attesa.create');
     }
 
     /**
