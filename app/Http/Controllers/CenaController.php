@@ -35,6 +35,7 @@ class CenaController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request);
         return redirect()->route('sport.create');
     }
 

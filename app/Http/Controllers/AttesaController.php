@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\durata;
 use Illuminate\Http\Request;
 
-class DurataController extends Controller
+class AttesaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +23,7 @@ class DurataController extends Controller
      */
     public function create()
     {
-        return view("durata");
+        return view("paginafinale");
     }
 
     /**
@@ -35,18 +34,16 @@ class DurataController extends Controller
      */
     public function store(Request $request)
     {
-        
-
-        return redirect()->route('attesa.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\durata  $durata
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(durata $durata)
+    public function show($id)
     {
         //
     }
@@ -54,10 +51,10 @@ class DurataController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\durata  $durata
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(durata $durata)
+    public function edit($id)
     {
         //
     }
@@ -66,10 +63,10 @@ class DurataController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\durata  $durata
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, durata $durata)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +74,10 @@ class DurataController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\durata  $durata
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(durata $durata)
+    public function destroy($id)
     {
         //
     }

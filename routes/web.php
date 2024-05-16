@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttesaController;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\CenaController;
 use App\Http\Controllers\DietController;
@@ -104,6 +105,9 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
 
     Route::post('/alimenti', [AlimentiController::class, 'store'])
         ->name('alimenti.store');
+
+    Route::get('/attesa', [AttesaController::class, 'create']
+        )->name('attesa.create');
 });
 
 Route::get('/Aiuko/impostazioniPasto', function () {
