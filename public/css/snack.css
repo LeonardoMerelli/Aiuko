@@ -8,6 +8,12 @@
     background-color: #2CF5B2;
     overflow: auto;
 }
+
+@media(max-height:800px) {
+    .snack-div {
+        height: 105vh;
+    }
+}
   
 .snack-div span {
     font-size: 28px;

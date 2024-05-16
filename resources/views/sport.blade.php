@@ -59,14 +59,22 @@
   <h5>Inserisci i giorni di allenamento</h5>
 
   <form action="" name="sport" method="post">
+    @csrf
     <span id="box-data">
     <input type="date" id="data-allenamento" name="data-allenamento">
     </span> 
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
+      @if(in_array('si', []))
       <option value="si" selected>si</option>
+      @else
       <option value="si">si</option>
+      @endif
+      
+      @if(in_array('si', []))
       <option value="no" selected>no</option>
+      @else
       <option value="no">no</option>
+      @endif
     </select>
     <div class="add" onclick="addDate()">
         <svg viewBox="0 0 24 24" fill="none" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
