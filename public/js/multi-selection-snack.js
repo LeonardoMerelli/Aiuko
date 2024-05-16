@@ -9,7 +9,7 @@ const submitButton = document.querySelector(".confirm-button");
 submitButton.classList.add("disabled");
 
 function select(itemElement) {
-  const index = itemArray.indexOf(itemElement);
+  const index = itemArray.indexOf(itemElement) + 2;
   const selectedText = itemElement.textContent.trim().toLowerCase();
 
   if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana" || selectedText === "intensa" || selectedText === "moderata" || selectedText === "moltointensa") {

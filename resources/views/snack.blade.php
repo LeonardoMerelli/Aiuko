@@ -1,7 +1,7 @@
 @extends('body')
 
 @section('scripts')
-<script src="{{ asset('js/multi-selection-diet-intollerances.js') }}" defer></script>
+<script src="{{ asset('js/multi-selection-snack.js') }}" defer></script>
 <script src="{{ asset('js/popup.js') }}" defer></script>
 @endsection
 
