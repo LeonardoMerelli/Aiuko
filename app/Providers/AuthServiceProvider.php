@@ -32,5 +32,12 @@ class AuthServiceProvider extends ServiceProvider
             return false;
         });
 
+        Gate::define('isLinked', function ($user) {
+            if($user->setup == 1) {
+                return true;
+            }
+            return false;
+        });
+
     }
 }

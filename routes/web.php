@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/Aiuko', function () {
     auth()->logout();
-    return view('ricetta');
+    return view('home');
 })->name('home');
 
 Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
@@ -107,8 +107,10 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
         ->name('alimenti.store');
 });
 
-Route::get('/attesa', [AttesaController::class, 'create'])
+Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
+    Route::get('/attesa', [AttesaController::class, 'create'])
     ->name('attesa.create');
+});
 
 Route::get('/Aiuko/impostazioniPasto', function () {
     return view('mealPreSelect');
