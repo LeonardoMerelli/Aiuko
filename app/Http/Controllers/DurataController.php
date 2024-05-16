@@ -35,7 +35,13 @@ class DurataController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $user = auth()->user();
+        $user->setup = 1;
+        $user->save();
+
+        auth()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
         return redirect()->route('attesa.create');
     }
