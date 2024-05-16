@@ -35,7 +35,6 @@ class PranzoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         return redirect()->route('cena.create');
     }
 
