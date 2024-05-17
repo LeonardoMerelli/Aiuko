@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pranzi', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('idUtente');
+            $table->integer('tempoPranzo');
+            $table->boolean('antipasto');
+            $table->boolean('primo');
+            $table->boolean('secondo');
+            $table->boolean('contorno');
+            $table->boolean('dolce');
+            $table->foreign('idUtente')->references('idUtente')->on('users');
         });
     }
 

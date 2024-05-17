@@ -26,8 +26,7 @@ return new class extends Migration
             $table->string('citta')->nullable();
             $table->string('email')->unique();
             $table->string('google_id')->nullable();
-            $table->boolean('snack')->default(false);
-            $table->string('oraSnack')->nullable();
+            $table->integer('durataPiano')->nullable();
             $table->boolean('setup')->default(false);
             ;
         });

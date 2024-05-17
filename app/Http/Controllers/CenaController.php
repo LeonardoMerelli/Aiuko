@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class CenaController extends Controller
 {
+    public function __construct() {
+        $this->preferenzeCena = new cena;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -35,6 +38,8 @@ class CenaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->preferenzeCena->salvaPreferenzeCena($request->tempo, $request->intollerances);
+
         return redirect()->route('sport.create');
     }
 

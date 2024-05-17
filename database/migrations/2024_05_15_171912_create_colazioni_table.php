@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('colazioni', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('idUtente');
+            $table->boolean('faColazione');
+            $table->string('alimentiPreferiti');
+            $table->foreign('idUtente')->references('idUtente')->on('users');
         });
     }
 

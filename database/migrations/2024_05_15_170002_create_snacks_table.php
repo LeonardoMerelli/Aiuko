@@ -16,7 +16,11 @@ return new class extends Migration
         Schema::create('snacks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
+            $table->boolean('faSpuntino');
             $table->string('snackPreferiti');
+            $table->boolean('colazionePranzo');
+            $table->boolean('pranzoCena');
+            $table->boolean('dopoCena');
             $table->foreign('idUtente')->references('idUtente')->on('users');
         });
     }
