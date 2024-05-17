@@ -30,7 +30,7 @@ function addDateMotivo() {
         data3.setAttribute("id", variazione);
         data3.setAttribute("name", "variazione");
 
-        var opzioni1 = ["Seleziona una voce", "Colazione", "Pranzo", "Merenda", "Cena"];
+        var opzioni1 = ["Seleziona una voce", "Colazione", "Pranzo", "Merenda", "Cena", "Tutti"];
         var opzioni2 = ["Seleziona una voce", "Assenza", "Al sacco", "Poco tempo"];
 
         opzioni1.forEach(function(testoOpzione) {
@@ -103,7 +103,8 @@ selects.forEach(function(select) {
     select.addEventListener('change', function() {
         var selectedValue = this.value;
         var pocoTempo = this.nextElementSibling; // Ottieni l'elemento successivo dopo la select
-        if (selectedValue === "poco tempo") {
+        console.log(pocoTempo);
+        if (selectedValue === "Poco tempo") {
             pocoTempo.style.display = "block";
         } else {
             pocoTempo.style.display = "none";

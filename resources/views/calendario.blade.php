@@ -19,12 +19,13 @@
           <option value="pranzo">Pranzo</option>
           <option value="merenda">Merenda</option>
           <option value="cena">Cena</option>
+          <option value="tutti">Tutti i pasti</option>
         </select>
         <select name="variazione" id="variazione">
           <option disabled selected>Seleziona una voce</option>
-          <option value="colazione">Assenza</option>
-          <option value="pranzo">Al sacco</option>
-          <option value="merenda">Poco tempo</option>
+          <option value="Assenza">Assenza</option>
+          <option value="Al sacco">Al sacco</option>
+          <option value="Poco tempo">Poco tempo</option>
         </select>
         <div id="poco-tempo" style="display:none">
           <label for="tempo">Tempo</label>
