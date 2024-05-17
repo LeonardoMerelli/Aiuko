@@ -59,32 +59,32 @@
     @csrf
     <h5>Scrivi i tuoi alimenti preferiti</h5>
     @if($preferenzeSnack != null) 
-      <textarea name="preferenze" id="preferenze">{{$preferenzeSnack['snackPreferiti']}}</textarea>
+      <textarea name="preferenze" id="preferenze">{{$preferenzeSnack[0]['snackPreferiti']}}</textarea>
     @else
       <textarea name="preferenze" id="preferenze"></textarea>
     @endif
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
-      @if($preferenzeSnack != null && $preferenzeSnack['faSpuntino'] == 1)
+      @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 1)
       <option value="si" selected>si</option>
       @else
       <option value="si">si</option>
       @endif
-      @if($preferenzeSnack != null && $preferenzeSnack['faSpuntino'] == 0)   
+      @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 0)   
       <option value="no" selected>no</option>
       @else
       <option value="no">no</option>
       @endif
-      @if($preferenzeSnack != null && $preferenzeSnack['colazionePranzo'] == 1)
+      @if($preferenzeSnack != null && $preferenzeSnack[0]['colazionePranzo'] == 1)
       <option value="colazione pranzo" selected>colazione pranzo</option>
       @else
       <option value="colazione pranzo">colazione pranzo</option>
       @endif
-      @if($preferenzeSnack != null && $preferenzeSnack['pranzoCena'] == 1)
+      @if($preferenzeSnack != null && $preferenzeSnack[0]['pranzoCena'] == 1)
       <option value="pranzo cena" selected>pranzo cena</option>
       @else
       <option value="pranzo cena">pranzo cena</option>
       @endif
-      @if($preferenzeSnack != null && $preferenzeSnack['dopoCena'] == 1)
+      @if($preferenzeSnack != null && $preferenzeSnack[0]['dopoCena'] == 1)
       <option value="dopo cena" selected>dopo cena</option>
       @else
       <option value="dopo cena">dopo cena</option>
