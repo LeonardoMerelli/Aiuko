@@ -128,7 +128,7 @@ document.getElementById("calendario").addEventListener("submit", function(event)
     divs.forEach(function(div) {
         // Trova tutti gli input all'interno della div corrente
         var inputsData = div.querySelectorAll("input[type='date']");
-        var inputsSelectPasto = div.querySelectorAll("select[name='variazione']");
+        var inputsSelectPasto = div.querySelectorAll("select[name='pasto']");
         var inputsSelectVariazione = div.querySelectorAll("select[name='variazione']");
         var inputsTempo = div.querySelectorAll("input[type='number']");
 
