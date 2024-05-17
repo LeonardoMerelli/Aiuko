@@ -38,15 +38,9 @@ class CalendarioController extends Controller
      */
     public function store(Request $request)
     {
-        $this->calendarioUtente->salvaImpegniUtente($request->contenutiInputData, $request->contenutiInputSelect, $request->contenutiInputTempo);
+        $this->calendarioUtente->salvaImpegniUtente($request->contenutiInputData, $request->contenutiInputSelectPasto, $request->contenutiInputSelectVariazione, $request->contenutiInputTempo);
         
-        $user = auth()->user();
-
-        $user->update([
-            'setup' => 1,
-        ]);
-
-        return redirect()->route('attesa.create');
+        return redirect()->route('durata.create');
     }
 
     /**
