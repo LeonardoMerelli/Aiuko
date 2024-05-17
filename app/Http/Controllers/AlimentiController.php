@@ -40,7 +40,7 @@ class AlimentiController extends Controller
     {
         $this->alimenti->salvaAlimentiUtente($request->contenutiInput);
 
-        return redirect()->route('snack.create');
+        return redirect()->route('durata.create');
     }
 
     /**

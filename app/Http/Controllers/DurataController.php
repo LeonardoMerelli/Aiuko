@@ -38,11 +38,10 @@ class DurataController extends Controller
         $user = auth()->user();
 
         $user->update([
-            'setup' => 1,
             'durataPiano' => $request->tempo,
         ]);
 
-        return redirect()->route('attesa.create');
+        return redirect()->route('snack.create');
     }
 
     /**

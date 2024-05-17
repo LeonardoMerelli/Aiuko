@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="snack-div">
-  <span><strong>PASTI</strong></span>
+  <span><strong>SNACK</strong></span>
   <h5>FAI SNACK DURANTE IL GIORNO</h5>
   <div class="select-div">
       <div class="select-item-yes" onclick="showPopup()">
