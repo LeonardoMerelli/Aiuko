@@ -5,6 +5,7 @@ function addDateMotivo() {
 
         let data1 = document.createElement("input");
         let data2 = document.createElement("select");
+        let data3 = document.createElement("select");
         let divProva = document.createElement("span");
         let pocoTempoDiv = document.createElement("div");
         let tempoLabel = document.createElement("label");
@@ -15,6 +16,7 @@ function addDateMotivo() {
         i++;
 
         var dataCalendario = "data-calendario" + i;
+        var pasto = "pasto" + i;
         var variazione = "variazione" + i;
         var pocoTempoId = "poco-tempo" + i;
 
@@ -22,12 +24,16 @@ function addDateMotivo() {
         data1.setAttribute("id", dataCalendario);
         data1.setAttribute("name", "data-calendario");
 
-        data2.setAttribute("id", variazione);
-        data2.setAttribute("name", "variazione");
+        data2.setAttribute("id", pasto);
+        data2.setAttribute("name", "pasto");
 
-        var opzioni = ["Seleziona una voce", "Assenza", "Al sacco", "Poco tempo"];
+        data3.setAttribute("id", variazione);
+        data3.setAttribute("name", "variazione");
 
-        opzioni.forEach(function(testoOpzione, indice) {
+        var opzioni1 = ["Seleziona una voce", "Colazione", "Pranzo", "Merenda", "Cena"];
+        var opzioni2 = ["Seleziona una voce", "Assenza", "Al sacco", "Poco tempo"];
+
+        opzioni1.forEach(function(testoOpzione) {
             var opzione = document.createElement("option");
             opzione.text = testoOpzione;
             opzione.value = testoOpzione;
@@ -36,6 +42,17 @@ function addDateMotivo() {
                 opzione.selected = true;
             }
             data2.appendChild(opzione);
+        });
+
+        opzioni2.forEach(function(testoOpzione) {
+            var opzione = document.createElement("option");
+            opzione.text = testoOpzione;
+            opzione.value = testoOpzione;
+            if(testoOpzione === "Seleziona una voce") {
+                opzione.disabled = true;
+                opzione.selected = true;
+            }
+            data3.appendChild(opzione);
         });
 
         pocoTempoDiv.setAttribute("id", pocoTempoId);
@@ -53,13 +70,14 @@ function addDateMotivo() {
 
         divProva.appendChild(data1);
         divProva.appendChild(data2);
+        divProva.appendChild(data3);
         divProva.appendChild(pocoTempoDiv);
 
         var select = document.getElementById("select-variazioni");
         
         select.appendChild(divProva);
 
-        data2.addEventListener('change', function() {
+        data3.addEventListener('change', function() {
             var selectedValue = this.value;
             var pocoTempo = document.getElementById(pocoTempoId); // Ottieni l'elemento successivo dopo la select
             if (selectedValue === "Poco tempo") {
@@ -101,14 +119,16 @@ document.getElementById("calendario").addEventListener("submit", function(event)
 
     // Array per memorizzare i contenuti degli input
     var contenutiInputData = [];
-    var contenutiInputSelect = [];
+    var contenutiInputSelectPasto = [];
+    var contenutiInputSelectVariazione = [];
     var contenutiInputTempo = [];
 
     // Itera su tutte le div
     divs.forEach(function(div) {
         // Trova tutti gli input all'interno della div corrente
         var inputsData = div.querySelectorAll("input[type='date']");
-        var inputsSelect = div.querySelectorAll("select[name='variazione']");
+        var inputsSelectPasto = div.querySelectorAll("select[name='variazione']");
+        var inputsSelectVariazione = div.querySelectorAll("select[name='variazione']");
         var inputsTempo = div.querySelectorAll("input[type='number']");
 
         // Itera su tutti gli input
@@ -116,9 +136,13 @@ document.getElementById("calendario").addEventListener("submit", function(event)
             // Aggiungi il contenuto dell'input all'array
             contenutiInputData.push(input.value);
         });
-        inputsSelect.forEach(function(input) {
+        inputsSelectPasto.forEach(function(input) {
             // Aggiungi il contenuto dell'input all'array
-            contenutiInputSelect.push(input.value);
+            contenutiInputSelectPasto.push(input.value);
+        });
+        inputsSelectVariazione.forEach(function(input) {
+            // Aggiungi il contenuto dell'input all'array
+            contenutiInputSelectVariazione.push(input.value);
         });
         inputsTempo.forEach(function(input) {
             // Aggiungi il contenuto dell'input all'array
@@ -127,7 +151,8 @@ document.getElementById("calendario").addEventListener("submit", function(event)
     });
 
     document.getElementById("contenutiInputData").value = JSON.stringify(contenutiInputData);
-    document.getElementById("contenutiInputSelect").value = JSON.stringify(contenutiInputSelect);
+    document.getElementById("contenutiInputSelectPasto").value = JSON.stringify(contenutiInputSelectPasto);
+    document.getElementById("contenutiInputSelectVariazione").value = JSON.stringify(contenutiInputSelectVariazione);
     document.getElementById("contenutiInputTempo").value = JSON.stringify(contenutiInputTempo);
 
     event.target.submit();

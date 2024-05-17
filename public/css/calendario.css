@@ -7,6 +7,7 @@
     height: 100vh;
     background-color: #2CF5B2;
     overflow: auto;
+    text-align: center;
 }
 
 .calendario-div .titolo-calendario {
@@ -15,6 +16,10 @@
     color: #0C4431;
     text-align: center;
     margin-bottom: 60px;
+}
+
+.calendario-div .spiegazione-calendario {
+    width: 70%;
 }
 
 .calendario-div h3 {
