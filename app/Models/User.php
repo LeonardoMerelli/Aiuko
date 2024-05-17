@@ -28,6 +28,8 @@ class User extends Authenticatable
         'email',
         'password',
         'google_id',
+        'durataPiano',
+        'setup'
     ];
 
     protected $hidden = [

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ColazioneController extends Controller
 {
+    public function __construct() {
+        $this->colazione = new colazione;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -35,6 +38,8 @@ class ColazioneController extends Controller
      */
     public function store(Request $request)
     {
+        $this->colazione->salvaInfoColazione($request->preferenze, $request->diet);
+
         return redirect()->route('pranzo.create');
     }
 

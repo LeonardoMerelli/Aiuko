@@ -25,11 +25,13 @@ class alimenti extends Model
         for ($i = 0; $i < count($alimentiQuantita); $i += 2) {
             $alimento = $alimentiQuantita[$i];
             $quantita = $alimentiQuantita[$i + 1]; 
-            alimenti::create([
-                'idUtente' => $idUser,
-                'alimento' => $alimento,
-                'quantita' => $quantita
-            ]);
+            if($alimento != "" || $quantita != 0) {
+                alimenti::create([
+                    'idUtente' => $idUser,
+                    'alimento' => $alimento,
+                    'quantita' => $quantita
+                ]);
+            }
         }
     }
 }

@@ -26,14 +26,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        $user = Auth::user();
-
-        $setupValue = $user->setup;
-
-        if ($setupValue == 0) {
+        if(auth()->user()->eta != null || auth()->user()->peso != null || auth()->user()->altezza != null) {
+            return redirect()->route('diets.create');
+        }else if(auth()->user()->setup == 0) {
+            return redirect()->route('caratteristiche.create');
+        }else if(auth()->user()->setup == 1) {
             return redirect()->route('attesa.create');
         }
-        return redirect()->route('attesa.create');
     }
 
     /**

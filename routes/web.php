@@ -107,21 +107,25 @@ Route::middleware(['can:isSetup'])->prefix('Aiuko')->group(function () {
         ->name('alimenti.store');
 });
 
-Route::get('/attesa', [AttesaController::class, 'create'])
+Route::middleware(['can:isLinked'])->prefix('Aiuko')->group(function () {
+    Route::get('/attesa', [AttesaController::class, 'create'])
     ->name('attesa.create');
+});
 
-Route::get('/Aiuko/impostazioniPasto', function () {
-    return view('mealPreSelect');
-})->name('impostazioniPasto');
+Route::prefix('Aiuko')->group(function () {
+    Route::get('/impostazioniPasto', function () {
+        return view('mealPreSelect');
+    })->name('impostazioniPasto');
 
-Route::get('/Aiuko/auth/google', [GoogleAuthController::class, 'redirect'])
-        ->name('google.auth');
+    Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])
+            ->name('google.auth');
 
-Route::get('/Aiuko/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
+    Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-Route::get('/Aiuko/auth/facebook', [FacebookAuthController::class, 'redirect'])
-        ->name('facebook.auth');
+    Route::get('/auth/facebook', [FacebookAuthController::class, 'redirect'])
+            ->name('facebook.auth');
 
-Route::get('/Aiuko/auth/facebook/call-back', [FacebookAuthController::class, 'callbackFacebook']);
+    Route::get('/auth/facebook/call-back', [FacebookAuthController::class, 'callbackFacebook']);
+});
 
 require __DIR__.'/auth.php';

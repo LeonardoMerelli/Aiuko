@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class PranzoController extends Controller
 {
+    public function __construct() {
+        $this->preferenzePranzo = new pranzo;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +27,8 @@ class PranzoController extends Controller
      */
     public function create()
     {
-        return view("pranzo");
+        return view("pranzo")
+            ->with("prova", 20);
     }
 
     /**
@@ -35,6 +39,8 @@ class PranzoController extends Controller
      */
     public function store(Request $request)
     {
+        $this->preferenzePranzo->salvaPreferenzePranzo($request->tempo, $request->intollerances);
+
         return redirect()->route('cena.create');
     }
 
