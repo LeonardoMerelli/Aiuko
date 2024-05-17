@@ -42,7 +42,7 @@
     <input type="hidden" name="contenutiInputTempo" id="contenutiInputTempo">
     <div class="bottoni">
       <a href="{{route('sport.create')}}">INDIETRO</a>
-      <input type="submit" class="confirm-button" value="AVANTI">
+      <input type="submit" class="confirm-button" value="CONFERMA">
     </div>
   </form>
 </div>

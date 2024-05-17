@@ -10,7 +10,7 @@
         <img src="{{ asset('images/logo.png') }}" alt="">
     </div>
     <div class="frase-finale">
-        Abbiamo quasi finito indica quanti giorni vuoi che duri il piano alimentare,
+        Indica quanti giorni vuoi che duri il piano alimentare, <br>
         fino ad arrivare ad un massimo di 7
     </div>
 
