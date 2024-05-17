@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="alimenti-div" id="alimenti-div">
-  <h4>ALIMENTI <br> POSSEDUTI</h4>
+  <h4>LA TUA DISPENSA</h4>
   <h5>Inserisci gli alimenti che possiedi</h5>
   <div class="box-specifiche">
     <div class="specifiche">
