@@ -19,7 +19,7 @@ class SnackController extends Controller
     public function create()
     {
         $idUser = auth()->user()->idUtente;
-        $preferenzeSnack = snack::where('idUtente', $idUser)->select('faSpuntino', 'snackPreferiti', 'colazionePranzo', 'pranzoCena', 'pranzoCena', 'dopoCena')->get()->toArray()[0];
+        $preferenzeSnack = snack::where('idUtente', $idUser)->select('faSpuntino', 'snackPreferiti', 'colazionePranzo', 'pranzoCena', 'pranzoCena', 'dopoCena')->get()->toArray();
 
         return view('snack')
                 ->with("preferenzeSnack", $preferenzeSnack);
