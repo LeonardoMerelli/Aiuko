@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
             $table->string('data');
+            $table->string('tipoPasto');
             $table->string('opzionePasto');
             $table->integer('tempoPasto');
             $table->foreign('idUtente')->references('idUtente')->on('users');
