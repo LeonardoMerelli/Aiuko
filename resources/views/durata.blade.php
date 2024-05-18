@@ -10,12 +10,17 @@
         <img src="{{ asset('images/logo.png') }}" alt="">
     </div>
     <div class="frase-finale">
-        Indica quanti giorni vuoi che duri il piano alimentare, <br>
-        fino ad arrivare ad un massimo di 7
+        Quando vuoi che inizi il piano
     </div>
 
     <form action="{{route('durata.store')}}" method="post">
         @csrf
+        <input type="date" id="data-inizio" name="data-inizio">
+        <label for="frase-finale"> 
+        Quanti giorni vuoi che duri il piano alimentare,
+        <br> 
+        fino ad arrivare ad un massimo di 7
+        </label>
         <input type="range" id="tempo" name="tempo" min="1" max="7" step="1">
         <p><output id="value"></output> giorni</p>
         <div class="bottoni">

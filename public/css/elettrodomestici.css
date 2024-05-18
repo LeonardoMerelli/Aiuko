@@ -69,12 +69,12 @@
 }
 
 .elettrodomestici-div .select-div .selected {
-    background-color:#AEF7DF;
-    color: #000;
+    background-color:#2C64F5;
+    color: #fff;
 }
 
 .elettrodomestici-div .select-div .selected span{
-    color: #000;
+    color: #fff;
 }
 
 .elettrodomestici-div form {

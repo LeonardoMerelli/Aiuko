@@ -47,8 +47,8 @@
 }
 
 .diet-div .select-div .selected {
-  background-color:#AEF7DF;
-  color: #000;
+  background-color:#2C64F5;
+  color: #fff;
 }
 
 .diet-div form {
@@ -176,7 +176,7 @@
 }
 
 .intollerances-div .select-div .selected span{
-  color: #000;
+  color: #fff;
 }
 
 .intollerances-div form {

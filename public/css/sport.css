@@ -120,17 +120,7 @@
     margin-bottom: 0px;
 }
 
-.sport-div form textarea {
-    width: 500px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid #0C4431;
-    border-radius: 8px;
-    scroll-behavior: auto;
-    padding: 5px 3px;
-}
-
-input#data-allenamento {
+input[type="date"] {
     background-color: transparent;
     width: 140px;
     height: 30px;
@@ -142,11 +132,16 @@ input#data-allenamento {
     padding: 3px;
 }
 
-
-@media (max-width: 550px) {
-    .snack-div form textarea {
-        width: 80%;
-    }
+select {
+    background-color: transparent;
+    width: 140px;
+    height: 30px;
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    margin: 6px;
+    border-radius: 8px;
+    padding: 3px;
 }
 
 .sport-div form a{
@@ -212,9 +207,8 @@ input#data-allenamento {
 }
 
 .sport-div #box-data {
-    margin-top: -10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }

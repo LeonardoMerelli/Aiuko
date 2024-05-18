@@ -1,7 +1,7 @@
 @extends('body')
 
 @section('scripts')
-<script src="{{ asset('js/multi-selection-diet-intollerances.js') }}" defer></script>
+<script src="{{ asset('js/multi-selection-sport.js') }}" defer></script>
 <script src="{{ asset('js/popup.js') }}" defer></script>
 <script src="{{ asset('js/sport.js') }}" defer></script>
 @endsection
@@ -57,11 +57,18 @@
   </div>
   
   <h5>Inserisci i giorni di allenamento</h5>
-  <form action="" name="sport" method="post">
+  <form action="" id="sport" name="sport" method="post">
     @csrf
-    <span id="box-data">
-    <input type="date" id="data-allenamento" name="data-allenamento">
-    </span> 
+    <div id="contenitore-date-sport">
+      <span id="box-data">
+      <input type="date" id="data-allenamento-sport" name="data-allenamento-sport">
+      <select name="quando-sport" id="quando-sport">
+        <option value="Mattina" selected>Mattina</option>
+        <option value="Pomeriggio">Pomeriggio</option>
+        <option value="Sera">Sera</option>
+      </select>
+      </span> 
+    </div>
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
       @if(in_array('si', []))
       <option value="si" selected>si</option>
@@ -93,6 +100,9 @@
       <option value="moltointensa">molto intensa</option>
       @endif
     </select>
+    <input type="hidden" name="contenutiInputData" id="contenutiInputData">
+    <input type="hidden" name="contenutiInputSelectLivello" id="contenutiInputSelectLivello">
+    <input type="hidden" name="contenutiInputSelectQuando" id="contenutiInputSelectQuando">
     <div class="add" onclick="addDate()">
         <svg viewBox="0 0 24 24" fill="none" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
     </div>

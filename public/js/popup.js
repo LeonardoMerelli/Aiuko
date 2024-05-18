@@ -28,7 +28,6 @@ function closePopup() {
   // Itera su tutte le opzioni selezionate tranne l'ultima
   for (var i = 0; i < selectedOptions.length; i++) {
     if(i != 1) {
-      console.log(selectedOptions[i]);
       selectedOptions[i].selected = false; // Deseleziona l'opzione
     }
   }

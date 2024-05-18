@@ -69,6 +69,8 @@
     @csrf
     <input type="range" id="tempo" name="tempo" min="10" max="90" step="5">
     <p><output id="value"></output> minuti</p>
+    <h4>I tuoi alimenti preferiti per cena</h4>
+    <textarea name="preferenze-pranzo" id="preferenze-pranzo"></textarea>
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('antipasto', []))
       <option value="antipasto" selected>antipasto</option>

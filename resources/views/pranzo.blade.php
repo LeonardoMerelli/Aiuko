@@ -62,10 +62,15 @@
       Dolce
     </div>
   </div>
+
+  <h4>Tempo a disposizione</h4>
+
   <form action="{{route('pranzo.store')}}" method="post">
     @csrf
     <input type="range" id="tempo" name="tempo" min="10" max="90" step="5">
     <p><output id="value"></output> minuti</p>
+    <h4>I tuoi alimenti preferiti per pranzo</h4>
+    <textarea name="preferenze-pranzo" id="preferenze-pranzo"></textarea>
     <select name="intollerances[]" class="custom-select" multiple>
       @if(in_array('antipasto', []))
       <option value="antipasto" selected>antipasto</option>
