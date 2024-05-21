@@ -38,7 +38,7 @@ class CenaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->preferenzeCena->salvaPreferenzeCena($request->tempo, $request->intollerances);
+        $this->preferenzeCena->salvaPreferenzeCena($request->tempo, $request->intollerances, $request->preferenzeCena);
 
         return redirect()->route('sport.create');
     }
