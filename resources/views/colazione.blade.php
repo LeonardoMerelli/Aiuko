@@ -27,7 +27,11 @@
   <form action="{{route('colazione.store')}}" method="post">
     @csrf
     <h5>Scrivi i tuoi alimenti preferiti</h5>
-    <textarea name="preferenze" id="preferenze"></textarea>
+    @if($preferenzeColazione != null) 
+      <textarea name="preferenze" id="preferenze">{{$preferenzeColazione[0]['alimentiPreferiti']}}</textarea>
+    @else
+      <textarea name="preferenze" id="preferenze"></textarea>
+    @endif
     <select name="diet[]" class="custom-select" id="snackSelect" multiple>
       <option value="si" selected>si</option>
       <option value="si">si</option>

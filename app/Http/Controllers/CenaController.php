@@ -27,7 +27,11 @@ class CenaController extends Controller
      */
     public function create()
     {
-        return view("cena");
+        $idUser = auth()->user()->idUtente;
+        $preferenzeCena = cena::where('idUtente', $idUser)->select('tempoCena', 'alimentiPreferiti', 'antipasto', 'primo', 'secondo', 'contorno', 'dolce')->get()->toArray();
+
+        return view("cena")
+            ->with("preferenzeCena", $preferenzeCena);
     }
 
     /**
