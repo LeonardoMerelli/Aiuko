@@ -29,7 +29,7 @@
     font-size: 18px;
 }
 
-.durata-div form input#data-inizio {
+.durata-div form input#dataInizio {
     background-color: transparent;
     width: 150px;
     height: 30px;
