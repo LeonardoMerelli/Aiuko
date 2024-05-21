@@ -12,7 +12,7 @@ function select(itemElement) {
   const index = itemArray.indexOf(itemElement) + 2;
   const selectedText = itemElement.textContent.trim().toLowerCase();
 
-  if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana" || selectedText === "intensa" || selectedText === "moderata" || selectedText === "moltointensa") {
+  if (selectedText === "no" || selectedText === "intensa" || selectedText === "moderata" || selectedText === "moltointensa") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {
         if (item !== itemElement) {
@@ -30,12 +30,12 @@ function select(itemElement) {
 
       // Rimuove la selezione da "nessuna"
       itemArray.forEach(item => {
-        if (item.textContent.trim().toLowerCase() === "nessuna" || item.textContent.trim().toLowerCase() === "onnivora" || item.textContent.trim().toLowerCase() === "vegana" || item.textContent.trim().toLowerCase() === "intensa" || item.textContent.trim().toLowerCase() === "moderata" || item.textContent.trim().toLowerCase() === "molto intensa") {
+        if (item.textContent.trim().toLowerCase() === "no" || item.textContent.trim().toLowerCase() === "intensa" || item.textContent.trim().toLowerCase() === "moderata" || item.textContent.trim().toLowerCase() === "molto intensa") {
           item.classList.remove("selected");
         }
       });
       optionArray.forEach(option => {
-      if(option.textContent.trim().toLowerCase() === "nessuna" || option.textContent.trim().toLowerCase() === "onnivora" || option.textContent.trim().toLowerCase() === "vegana" || option.textContent.trim().toLowerCase() === "intensa" || option.textContent.trim().toLowerCase() === "moderata" || option.textContent.trim().toLowerCase() === "molto intensa") {
+      if(option.textContent.trim().toLowerCase() === "no" || option.textContent.trim().toLowerCase() === "intensa" || option.textContent.trim().toLowerCase() === "moderata" || option.textContent.trim().toLowerCase() === "molto intensa") {
         option.selected = false;
       }
     });
