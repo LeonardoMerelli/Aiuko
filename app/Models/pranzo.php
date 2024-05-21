@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class pranzo extends Model
 {
@@ -14,6 +15,7 @@ class pranzo extends Model
     protected $fillable = [
         'idUtente',
         'tempoPranzo',
+        'alimentiPreferiti',
         'antipasto',
         'primo',
         'secondo',
@@ -21,7 +23,7 @@ class pranzo extends Model
         'dolce'
     ];
 
-    public function salvaPreferenzePranzo($tempoPranzo, $portate) {
+    public function salvaPreferenzePranzo($tempoPranzo, $portate, $alimentiPreferiti) {
         $idUser = auth()->user()->idUtente;
         $preferenzeSnackUtente = pranzo::where('idUtente', $idUser);
 
@@ -58,6 +60,7 @@ class pranzo extends Model
         pranzo::create([
             'idUtente' => $idUser,
             'tempoPranzo' => $tempoPranzo,
+            'alimentiPreferiti' => DB::raw('"' . $alimentiPreferiti . '"'),
             'antipasto' => $antipasto,
             'primo' => $primo,
             'secondo' => $secondo,

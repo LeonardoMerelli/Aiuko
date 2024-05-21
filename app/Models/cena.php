@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class cena extends Model
 {
@@ -14,6 +15,7 @@ class cena extends Model
     protected $fillable = [
         'idUtente',
         'tempoCena',
+        'alimentiPreferiti',
         'antipasto',
         'primo',
         'secondo',
@@ -21,7 +23,7 @@ class cena extends Model
         'dolce'
     ];
 
-    public function salvaPreferenzeCena($tempoCena, $portate) {
+    public function salvaPreferenzeCena($tempoCena, $portate, $alimentiPreferiti) {
         $idUser = auth()->user()->idUtente;
         $preferenzeSnackUtente = cena::where('idUtente', $idUser);
 
@@ -58,6 +60,7 @@ class cena extends Model
         cena::create([
             'idUtente' => $idUser,
             'tempoCena' => $tempoCena,
+            'alimentiPreferiti' => DB::raw('"' . $alimentiPreferiti . '"'),
             'antipasto' => $antipasto,
             'primo' => $primo,
             'secondo' => $secondo,

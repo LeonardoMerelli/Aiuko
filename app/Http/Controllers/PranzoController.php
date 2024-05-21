@@ -39,7 +39,8 @@ class PranzoController extends Controller
      */
     public function store(Request $request)
     {
-        $this->preferenzePranzo->salvaPreferenzePranzo($request->tempo, $request->intollerances);
+        dd($request);
+        $this->preferenzePranzo->salvaPreferenzePranzo($request->tempo, $request->intollerances, $request->preferenzePranzo);
 
         return redirect()->route('cena.create');
     }

@@ -35,7 +35,6 @@ class DurataController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $user = auth()->user();
 
         $user->update([
@@ -43,7 +42,7 @@ class DurataController extends Controller
             'giornoInizioDieta' => $request->dataInizio,
         ]);
 
-        return redirect()->route('attesa.create');
+        return redirect()->route('snack.create');
     }
 
     /**

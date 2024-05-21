@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
             $table->integer('tempoPranzo');
+            $table->string('alimentiPreferiti');
             $table->boolean('antipasto');
             $table->boolean('primo');
             $table->boolean('secondo');
