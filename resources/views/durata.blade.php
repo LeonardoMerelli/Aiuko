@@ -15,7 +15,7 @@
 
     <form action="{{route('durata.store')}}" method="post">
         @csrf
-        <input type="date" id="data-inizio" name="data-inizio">
+        <input type="date" id="dataInizio" name="dataInizio">
         <label for="frase-finale"> 
         Quanti giorni vuoi che duri il piano alimentare,
         <br> 
