@@ -2,6 +2,7 @@
 
 @section('scripts')
 <script src="{{ asset('js/tempo.js') }}" defer></script>
+<script src="{{ asset('js/dataodierna.js') }}" defer></script>
 @endsection
 
 @section('content')
