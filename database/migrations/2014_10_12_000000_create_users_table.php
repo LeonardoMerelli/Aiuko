@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('google_id')->nullable();
             $table->integer('durataPiano')->nullable();
+            $table->string('giornoInizioDieta')->nullable();
             $table->boolean('setup')->default(false);
             ;
         });

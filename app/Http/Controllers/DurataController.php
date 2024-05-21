@@ -35,11 +35,12 @@ class DurataController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request);
         $user = auth()->user();
 
         $user->update([
             'durataPiano' => $request->tempo,
-            'setup' => 1,
+            'giornoInizioDieta' => $request->dataInizio,
         ]);
 
         return redirect()->route('attesa.create');
