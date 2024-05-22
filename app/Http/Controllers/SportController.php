@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class SportController extends Controller
 {
+    public function __construct() {
+        $this->sportUtente = new sport;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +27,11 @@ class SportController extends Controller
      */
     public function create()
     {
-        return view("sport");
+        $idUser = auth()->user()->idUtente;
+        $preferenzeSport = sport::where('idUtente', $idUser)->select('faSport', 'livelloAttivita')->get()->toArray();
+
+        return view("sport")
+            ->with("preferenzeSport", $preferenzeSport);
     }
 
     /**
@@ -35,6 +42,8 @@ class SportController extends Controller
      */
     public function store(Request $request)
     {
+        $this->sportUtente->salvaSportUtente("si", $request->diet[0], $request->contenutiInputData, $request->contenutiInputSelectLivello);
+
         return redirect()->route('calendario.create');
     }
 
