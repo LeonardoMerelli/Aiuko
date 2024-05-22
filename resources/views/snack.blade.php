@@ -10,7 +10,7 @@
   <span><strong>SNACK</strong></span>
   <h5>FAI SNACK DURANTE IL GIORNO</h5>
   <div class="select-div">
-    @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 1)
+    @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntini'] == 1)
     <div class="selected-yes" onclick="showPopup()">
     @else
     <div class="select-item-yes" onclick="showPopup()">
