@@ -28,7 +28,7 @@ class SnackController extends Controller
     
     public function store(Request $request)
     {   
-        $this->preferenzeSnack->salvaPreferenzeSnack($request->preferenze, $request->diet);
+        $this->preferenzeSnack->salvaPreferenzeSnack($request->preferenzeSnack, $request->diet);
 
         return redirect()->route('colazione.create');
     }
