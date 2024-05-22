@@ -13,8 +13,6 @@ class sport extends Model
     public $timestamps = false;
     protected $fillable = [
         'idUtente',
-        'faSport',
-        'livelloAttivita',
         'dataSport',
         'tempoSport'
     ];
@@ -31,14 +29,23 @@ class sport extends Model
         }
 
         $idUser = auth()->user()->idUtente;
+        User::where('idUtente', $idUser)
+                ->update([
+                        'faSport' => $faSport,
+                        'livelloAttivita' => $livelloAttivita
+                    ]);
+
+
         for ($i = 0; $i < count($dateSport); $i += 1) {
-            sport::create([
-                'idUtente' => $idUser,
-                'livelloAttivita' => $livelloAttivita,
-                'faSport' => $faSport,
-                'dataSport' => $dateSport[$i],
-                'tempoSport' => $tempiSport[$i],
-            ]);
+            if($dateSport[$i] != "") {
+                sport::create([
+                    'idUtente' => $idUser,
+                    'livelloAttivita' => $livelloAttivita,
+                    'faSport' => $faSport,
+                    'dataSport' => $dateSport[$i],
+                    'tempoSport' => $tempiSport[$i],
+                ]);
+            }
         }
     }
 }

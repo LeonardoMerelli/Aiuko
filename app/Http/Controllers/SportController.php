@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\sport;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SportController extends Controller
@@ -28,7 +29,7 @@ class SportController extends Controller
     public function create()
     {
         $idUser = auth()->user()->idUtente;
-        $preferenzeSport = sport::where('idUtente', $idUser)->select('faSport', 'livelloAttivita')->get()->toArray();
+        $preferenzeSport = User::where('idUtente', $idUser)->select('faSport', 'livelloAttivita')->get()->toArray();
 
         return view("sport")
             ->with("preferenzeSport", $preferenzeSport);
@@ -42,7 +43,6 @@ class SportController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $this->sportUtente->salvaSportUtente($request->diet, $request->contenutiInputData, $request->contenutiInputSelectLivello);
 
         return redirect()->route('calendario.create');

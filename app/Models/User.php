@@ -30,7 +30,9 @@ class User extends Authenticatable
         'google_id',
         'durataPiano',
         'giornoInizioDieta',
-        'setup'
+        'setup',
+        'faSport',
+        'livelloAttivita'
     ];
 
     protected $hidden = [

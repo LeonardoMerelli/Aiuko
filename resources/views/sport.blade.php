@@ -37,21 +37,21 @@
     <p>Livello di attività?</p>
     <div class="select-div-popup">
       <div class="select-div">
-        @if(in_array('moderata', []))
+        @if($preferenzeSport != null && $preferenzeSport[0]['livelloAttivita'] == 'moderata')
         <div class="select-item selected">
         @else
         <div class="select-item">
         @endif
           <span>Moderata</span>
         </div>
-        @if(in_array('intensa', []))
+        @if($preferenzeSport != null && $preferenzeSport[0]['livelloAttivita'] == 'intensa')
         <div class="select-item selected">
         @else
         <div class="select-item">
         @endif
           <span>Intensa</span>
         </div>
-        @if(in_array('molto intensa', []))
+        @if($preferenzeSport != null && $preferenzeSport[0]['livelloAttivita'] == 'moltointensa')
         <div class="select-item selected">
         @else
         <div class="select-item">

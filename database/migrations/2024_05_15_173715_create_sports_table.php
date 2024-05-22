@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('sports', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('idUtente');
-            $table->string('faSport');
-            $table->string('livelloAttivita');
             $table->string('dataSport');
             $table->string('tempoSport');
             $table->foreign('idUtente')->references('idUtente')->on('users');
