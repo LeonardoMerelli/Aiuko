@@ -96,8 +96,8 @@
         width: 100px;
         height: 100px;
     }
-    .snack-div .select-div .selected-yes,
-    .snack-div .select-div .selected-no  {
+    .snack-div .select-div .selected,
+    .snack-div .select-div .selected  {
         width: 100px;
         height: 100px;
     }

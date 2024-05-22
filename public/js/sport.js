@@ -45,8 +45,10 @@ function addDate() {
     var nuovaAltezza = altezzaAttuale + 30;
     elemento.style.height = nuovaAltezza + "px";
 }
+var divs = document.querySelectorAll("#box-data");
 
-
+divs.forEach(function(div) {
+console.log( div.querySelectorAll("select[name='diet[]'"));});
 document.getElementById("sport").addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -64,7 +66,6 @@ document.getElementById("sport").addEventListener("submit", function(event) {
         var inputsData = div.querySelectorAll("input[type='date']");
         var inputsSelectLivello = div.querySelectorAll("select[name='quando-sport'");
         var inputsSelectQuando = div.querySelectorAll("select[name='diet[]'");
-
         // Itera su tutti gli input
         inputsData.forEach(function(input) {
             // Aggiungi il contenuto dell'input all'array

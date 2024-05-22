@@ -11,7 +11,6 @@ submitButton.classList.add("disabled");
 function select(itemElement) {
   const index = itemArray.indexOf(itemElement) + 2;
   const selectedText = itemElement.textContent.trim().toLowerCase();
-
   if (selectedText === "intensa" || selectedText === "moderata" || selectedText === "moltointensa") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {
@@ -82,7 +81,7 @@ document.querySelectorAll(".select-div").forEach(selectElementDiv => {
   selectElementDiv.querySelectorAll(".select-item").forEach(selectElementItem => {
     itemArray[i] = selectElementItem;
     i++;
-
+    
     selectElementItem.addEventListener("click",()=> {
       if(selectElementItem.classList.contains("selected")) {
         deselect(selectElementItem);

@@ -60,9 +60,30 @@
     font-size: 22px;
 }
 
+.sport-div .select-div .selected,
+.sport-div .select-div .selected {
+    background-color:#AEF7DF;
+    color: #000;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0C4431;
+    font-size: 22px;
+}
+
 @media(max-width:500px) {
     .sport-div .select-div .select-item-yes,
     .sport-div .select-div .select-item-no  {
+        width: 100px;
+        height: 100px;
+    }
+    .sport-div .select-div .selected,
+    .sport-div .select-div .selected  {
         width: 100px;
         height: 100px;
     }

@@ -81,6 +81,7 @@ document.querySelectorAll(".select-div").forEach(selectElementDiv => {
   i=0;
   selectElementDiv.querySelectorAll(".select-item").forEach(selectElementItem => {
     itemArray[i] = selectElementItem;
+
     i++;
 
     selectElementItem.addEventListener("click",()=> {
