@@ -16,6 +16,7 @@
 
     <form action="{{route('durata.store')}}" method="post">
         @csrf
+        <input type="hidden" id="dataAppoggio" value="{{$infoDurata[0]['giornoInizioDieta']}}">
         @if($infoDurata != null)
             <input type="date" id="dataInizio" name="dataInizio" value="{{$infoDurata[0]['giornoInizioDieta']}}">
         @else

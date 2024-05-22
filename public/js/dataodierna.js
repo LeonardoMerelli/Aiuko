@@ -11,4 +11,8 @@ const day = String(threeDaysLater.getDate()).padStart(2, '0');
 const defaultDate = `${year}-${month}-${day}`;
 
 // Imposta la data di default nell'input di tipo date
-document.getElementById('dataInizio').value = defaultDate;
+if(!document.getElementById('dataAppoggio').value) {
+    document.getElementById('dataInizio').value = defaultDate;
+} else {
+    document.getElementById('dataInizio').value = document.getElementById('dataAppoggio').value;
+}
