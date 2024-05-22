@@ -38,8 +38,8 @@ function closePopup() {
 document.addEventListener('DOMContentLoaded', function () {
   // Controlla se la div "SI" è selezionata
   if(document.getElementById('select-item-yes selected')) {
-    document.getElementById('popup').style.display = 'block';
     document.querySelector('.confirm-button').classList.remove("disabled");
+    document.getElementById('popup').style.display = 'block';
   }
   if(document.getElementById('select-item-no selected')) {
     document.querySelector('.confirm-button').classList.remove("disabled");
