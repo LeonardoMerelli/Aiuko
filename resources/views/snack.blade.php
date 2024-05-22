@@ -11,9 +11,9 @@
   <h5>FAI SNACK DURANTE IL GIORNO</h5>
   <div class="select-div">
     @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 1)
-    <div class="select-item-yes selected" onclick="showPopup()">
+    <div class="select-item-yes selected" id="select-item-yes selected" onclick="showPopup()">
     @else
-    <div class="select-item-yes" onclick="showPopup()">
+    <div class="select-item-yes" id="select-item-yes" onclick="showPopup()">
     @endif
         <div>
           <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="tick"> <polyline fill="none" points="3.7 14.3 9.6 19 20.3 5" stroke="#2cc92f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> </g> </g> </g></svg>
