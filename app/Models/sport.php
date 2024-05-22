@@ -19,15 +19,22 @@ class sport extends Model
         'tempoSport'
     ];
 
-    public function salvaSportUtente($faSport, $livello, $dateSport, $tempiSport) {
+    public function salvaSportUtente($livello, $dateSport, $tempiSport) {
         $dateSport = json_decode($dateSport);
         $tempiSport = json_decode($tempiSport);
+
+        $faSport = false;
+        $livelloAttivita = null;
+        if($livello != null){
+            $livelloAttivita = $livello[0];
+            $faSport = true;
+        }
 
         $idUser = auth()->user()->idUtente;
         for ($i = 0; $i < count($dateSport); $i += 1) {
             sport::create([
                 'idUtente' => $idUser,
-                'livelloAttivita' => $livello,
+                'livelloAttivita' => $livelloAttivita,
                 'faSport' => $faSport,
                 'dataSport' => $dateSport[$i],
                 'tempoSport' => $tempiSport[$i],

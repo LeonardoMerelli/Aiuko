@@ -29,7 +29,7 @@ class snack extends Model
             $preferenzeSnackUtente->delete();
         }
 
-        $faSpuntino = true;
+        $faSpuntino = false;
         $colazionePranzo = false;
         $pranzoCena = false;
         $dopoCena = false;
@@ -44,9 +44,8 @@ class snack extends Model
                 if($orari == "dopo cena") {
                     $dopoCena = true;
                 }
+                $faSpuntino = true;
             }
-        }else{
-            $faSpuntino = false;
         }
 
         snack::create([
