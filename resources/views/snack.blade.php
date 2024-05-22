@@ -11,7 +11,7 @@
   <h5>FAI SNACK DURANTE IL GIORNO</h5>
   <div class="select-div">
     @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 1)
-    <div class="selected-yes" onclick="showPopup()">
+    <div class="select-item-yes selected" onclick="showPopup()">
     @else
     <div class="select-item-yes" onclick="showPopup()">
     @endif
@@ -22,7 +22,7 @@
       </div>
 
     @if($preferenzeSnack != null && $preferenzeSnack[0]['faSpuntino'] == 0)
-    <div class="selected-no" onclick="closePopup()">
+    <div class="select-item-no selected" onclick="closePopup()">
     @else
     <div class="select-item-no" onclick="closePopup()">
     @endif

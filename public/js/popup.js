@@ -2,6 +2,9 @@ document.querySelector('.confirm-button').classList.add("disabled");
 
 function showPopup() {
   document.querySelector('.confirm-button').classList.remove("disabled");
+  document.querySelector('.select-item-yes').classList.add('selected');
+  document.querySelector('.select-item-no').classList.remove('selected');
+
   
   if(document.getElementById('popup'))
     document.getElementById('popup').style.display = 'block';
@@ -9,6 +12,9 @@ function showPopup() {
 
 function closePopup() {
   document.querySelector('.confirm-button').classList.remove("disabled");
+  document.querySelector('.select-item-no').classList.add('selected');
+  document.querySelector('.select-item-yes').classList.remove('selected');
+
   
   if(document.getElementById('popup')) {
     var divs = document.querySelectorAll('.select-item');

@@ -20,14 +20,14 @@ class SnackController extends Controller
     {
         $idUser = auth()->user()->idUtente;
         $preferenzeSnack = snack::where('idUtente', $idUser)->select('faSpuntino', 'snackPreferiti', 'colazionePranzo', 'pranzoCena', 'pranzoCena', 'dopoCena')->get()->toArray();
-
+        
         return view('snack')
                 ->with("preferenzeSnack", $preferenzeSnack);
     }
 
     
     public function store(Request $request)
-    {
+    {   
         $this->preferenzeSnack->salvaPreferenzeSnack($request->preferenze, $request->diet);
 
         return redirect()->route('colazione.create');
