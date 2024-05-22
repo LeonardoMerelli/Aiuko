@@ -27,8 +27,11 @@ class PranzoController extends Controller
      */
     public function create()
     {
+        $idUser = auth()->user()->idUtente;
+        $preferenzePranzo = pranzo::where('idUtente', $idUser)->select('tempoPranzo', 'alimentiPreferiti', 'antipasto', 'primo', 'secondo', 'contorno', 'dolce')->get()->toArray();
+
         return view("pranzo")
-            ->with("prova", 20);
+            ->with("preferenzePranzo", $preferenzePranzo);
     }
 
     /**

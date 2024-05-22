@@ -27,7 +27,11 @@ class ColazioneController extends Controller
      */
     public function create()
     {
-        return view("colazione");
+        $idUser = auth()->user()->idUtente;
+        $preferenzeColazione = colazione::where('idUtente', $idUser)->select('faColazione', 'alimentiPreferiti')->get()->toArray();
+
+        return view("colazione")
+                ->with("preferenzeColazione", $preferenzeColazione);
     }
 
     /**

@@ -25,7 +25,7 @@
         <input type="range" id="tempo" name="tempo" min="1" max="7" step="1">
         <p><output id="value"></output> giorni</p>
         <div class="bottoni">
-            <a href="{{route('calendario.create')}}">INDIETRO</a>
+            <a href="{{route('alimenti.create')}}">INDIETRO</a>
             <input type="submit" class="confirm-button" value="AVANTI">
         </div>
     </form>

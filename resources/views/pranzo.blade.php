@@ -11,7 +11,7 @@
   <span><strong>PRANZO</strong></span>
 
   <div class="select-div">
-    @if(in_array('antipasto', []))
+    @if($preferenzePranzo != null && $preferenzePranzo[0]['antipasto'] == 1)
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -21,7 +21,7 @@
       </div>
       <span>Antipasto</span>
     </div>
-    @if(in_array('primo', []))
+    @if($preferenzePranzo != null && $preferenzePranzo[0]['primo'] == 1)
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -31,7 +31,7 @@
       </div>
       Primo
     </div>
-    @if(in_array('secondo', []))
+    @if($preferenzePranzo != null && $preferenzePranzo[0]['secondo'] == 1)
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -41,7 +41,7 @@
       </div>
       Secondo
     </div>
-    @if(in_array('contorno', []))
+    @if($preferenzePranzo != null && $preferenzePranzo[0]['contorno'] == 1)
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -51,7 +51,7 @@
       </div>
       <span>Contorno</span>
     </div>
-    @if(in_array('dolce', []))
+    @if($preferenzePranzo != null && $preferenzePranzo[0]['dolce'] == 1)
     <div class="select-item selected">
     @else
     <div class="select-item">
@@ -67,36 +67,46 @@
 
   <form action="{{route('pranzo.store')}}" method="post">
     @csrf
-    <input type="range" id="tempo" name="tempo" min="10" max="90" step="5">
+    @if($preferenzePranzo != null)
+      <input type="range" id="tempo" name="tempo" min="10" max="90" step="5" value="{{$preferenzePranzo[0]['tempoPranzo']}}">
+    @else
+      <input type="range" id="tempo" name="tempo" min="10" max="90" step="5" value="">
+    @endif
+
     <p><output id="value"></output> minuti</p>
     <h4>I tuoi alimenti preferiti per pranzo</h4>
-    <textarea name="preferenzePranzo" id="preferenzePranzo"></textarea>
+    @if($preferenzePranzo != null) 
+      <textarea name="preferenzePranzo" id="preferenzePranzo">{{$preferenzePranzo[0]['alimentiPreferiti']}}</textarea>
+    @else
+      <textarea name="preferenzePranzo" id="preferenzePranzo"></textarea>
+    @endif
+
     <select name="intollerances[]" class="custom-select" multiple>
-      @if(in_array('antipasto', []))
+      @if($preferenzePranzo != null && $preferenzePranzo[0]['antipasto'] == 1)
       <option value="antipasto" selected>antipasto</option>
       @else
       <option value="antipasto">antipasto</option>
       @endif
 
-      @if(in_array('primo', []))
+      @if($preferenzePranzo != null && $preferenzePranzo[0]['primo'] == 1)
       <option value="primo" selected>primo</option>
       @else
       <option value="primo">primo</option>
       @endif
 
-      @if(in_array('secondo', []))
+      @if($preferenzePranzo != null && $preferenzePranzo[0]['secondo'] == 1)
       <option value="secondo" selected>secondo</option>
       @else
       <option value="secondo">secondo</option>
       @endif
 
-      @if(in_array('contorno', []))
+      @if($preferenzePranzo != null && $preferenzePranzo[0]['contorno'] == 1)
       <option value="contorno" selected>contorno</option>
       @else
       <option value="contorno">contorno</option>
       @endif
 
-      @if(in_array('dolce', []))
+      @if($preferenzePranzo != null && $preferenzePranzo[0]['dolce'] == 1)
       <option value="dolce" selected>dolce</option>
       @else
       <option value="dolce">dolce</option>
