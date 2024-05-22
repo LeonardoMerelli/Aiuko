@@ -16,13 +16,22 @@
 
     <form action="{{route('durata.store')}}" method="post">
         @csrf
-        <input type="date" id="dataInizio" name="dataInizio">
+        @if($infoDurata != null)
+            <input type="date" id="dataInizio" name="dataInizio" value="{{$infoDurata[0]['giornoInizioDieta']}}">
+        @else
+            <input type="date" id="dataInizio" name="dataInizio">
+        @endif
+
         <label for="frase-finale"> 
         Quanti giorni vuoi che duri il piano alimentare,
         <br> 
         fino ad arrivare ad un massimo di 7
         </label>
-        <input type="range" id="tempo" name="tempo" min="1" max="7" step="1">
+        @if($infoDurata != null)
+            <input type="range" id="tempo" name="tempo" min="1" max="7" step="1" value="{{$infoDurata[0]['durataPiano']}}">
+        @else
+            <input type="range" id="tempo" name="tempo" min="1" max="7" step="1">
+        @endif
         <p><output id="value"></output> giorni</p>
         <div class="bottoni">
             <a href="{{route('alimenti.create')}}">INDIETRO</a>

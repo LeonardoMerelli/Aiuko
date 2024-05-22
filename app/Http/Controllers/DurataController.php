@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\durata;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DurataController extends Controller
@@ -24,7 +25,11 @@ class DurataController extends Controller
      */
     public function create()
     {
-        return view("durata");
+        $idUser = auth()->user()->idUtente;
+        $infoDurata = User::where('idUtente', $idUser)->select('giornoInizioDieta', 'durataPiano')->get()->toArray();
+
+        return view("durata")
+            ->with("infoDurata", $infoDurata);
     }
 
     /**

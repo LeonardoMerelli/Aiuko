@@ -42,6 +42,7 @@ class SportController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request);
         $this->sportUtente->salvaSportUtente("si", $request->diet[0], $request->contenutiInputData, $request->contenutiInputSelectLivello);
 
         return redirect()->route('calendario.create');
