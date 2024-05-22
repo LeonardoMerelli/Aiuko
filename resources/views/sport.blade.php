@@ -10,13 +10,22 @@
 <div class="sport-div" id="sport-div">
   <h4>PRATICHI SPORT?</h4>
   <div class="select-div">
-      <div class="select-item-yes" onclick="showPopup()">
+    @if($preferenzeSport != null && $preferenzeSport[0]['faSport'] == 1)
+      <div class="select-item-yes selected" id="select-item-yes selected" onclick="showPopup()">
+      @else
+      <div class="select-item-yes" id="select-item-yes" onclick="showPopup()">
+      @endif
         <div>
           <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="tick"> <polyline fill="none" points="3.7 14.3 9.6 19 20.3 5" stroke="#2cc92f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> </g> </g> </g></svg>
         </div>
         SI
       </div>
 
+    @if($preferenzeSport != null && $preferenzeSport[0]['faSport'] == 0)
+    <div class="select-item-no selected" id="select-item-no selected" onclick="closePopup()">
+    @else
+    <div class="select-item-no" id="select-item-no selected" onclick="closePopup()">
+    @endif
       <div class="select-item-no" onclick="closePopup()">
         <div>
           <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="#ff0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
