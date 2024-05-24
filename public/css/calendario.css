@@ -247,8 +247,7 @@ input#data-allenamento {
 }
 
 .select-variazioni #box-data select {
-    margin-top: 8px;
-    margin-left: 6px;
+    margin: 6px;
     background-color: transparent;
     border-radius: 8px;
     padding: 2.5px;
@@ -282,7 +281,7 @@ input#data-allenamento {
 
 .select-variazioni span {
     color: #0c4431;
-    font-size: 18px;
+    font-size: 0px;
 }
 
 .select-variazioni #box-data input[type=date]  {

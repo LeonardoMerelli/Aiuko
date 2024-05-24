@@ -11,7 +11,6 @@ submitButton.classList.add("disabled");
 function select(itemElement) {
   const index = itemArray.indexOf(itemElement);
   const selectedText = itemElement.textContent.trim().toLowerCase();
-  console.log(index);
   if (selectedText === "nessuna" || selectedText === "onnivora" || selectedText === "vegana") {
       // Deseleziona tutte le altre opzioni nella select
       itemArray.forEach(item => {

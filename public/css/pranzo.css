@@ -62,12 +62,12 @@
 }
 
 .pranzo-div .select-div .selected {
-    background-color:#AEF7DF;
-    color: #000;
+    background-color:#2C64F5;
+    color: #fff;
 }
 
 .pranzo-div .select-div .selected span{
-    color: #000;
+    color: #fff;
 }
 
 .pranzo-div form {
@@ -75,7 +75,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     text-align: center;
     font-size: 16px;
 }
@@ -98,7 +98,7 @@
 }
 
 .pranzo-div form textarea {
-    width: 100%;
+    width: 500px;
     height: 150px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid #0C4431;
@@ -107,6 +107,18 @@
     padding: 5px 3px;
     margin-bottom: 30px;
     margin-top: 10px;
+}
+
+@media (max-width: 390px) {
+    .pranzo-div form textarea {
+        width: 280px;
+    }
+}
+
+@media (max-width: 580px) {
+    .pranzo-div form textarea {
+        width: 100%;
+    }
 }
 
 .pranzo-div form .confirm-button {
@@ -182,6 +194,6 @@ input[type=range]::-webkit-slider-thumb {
         height: 105vh;
     }
     .pranzo-div form textarea {
-        height: 80px;
+        height: 120px;
     }
 }

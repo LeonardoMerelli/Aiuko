@@ -1,7 +1,6 @@
 @extends('body')
 
 @section('scripts')
-<script src="{{ asset('js/tempo.js') }}" defer></script>
 @endsection
 
 @section('content')
