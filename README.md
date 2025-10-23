@@ -10,5 +10,4 @@ Built using Laravel, a open-source PHP-based framework which follows the **MVC (
 
 ## Contributions
 Leonardo Merelli (https://github.com/LeonardoMerelli)
-
 Nicola Biagioli (https://github.com/NicolaB01)
