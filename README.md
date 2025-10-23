@@ -9,4 +9,5 @@ Aiuko combines a secure backend architecture with an intuitive and modern user i
 Built using Laravel, a open-source PHP-based framework which follows the **MVC (Model–View–Controller)** architecture and already provides all the essential components: an **authentication system**, **Eloquent ORM** to interact with the database through PHP objects, **security features** against SQL injection and CSRF attacks, a **routing service**, and more.
 
 ## Contributions
+Leonardo Merelli (https://github.com/LeonardoMerelli)
 Nicola Biagioli (https://github.com/NicolaB01)
